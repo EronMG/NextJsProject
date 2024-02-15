@@ -14,13 +14,14 @@ const config: Config = {
         lg: '1024px',
         xl: '1280px',
       },
-      container: {
-        screens: {
-          sm: '640px',
-          md: '768px',
-          lg: '1024px',
-          xl: '1280px',
-        },
+      fontFamily: {
+        Thin: ['ALSthin', 'sans-serif'],
+        Regular: ['ALSregular', 'sans-serif'],
+        Medium: ['ALSmedium', 'sans-serif'],
+        Light: ['ALSlight', 'sans-serif'],
+        Book: ['ALSbook', 'sans-serif'],
+        Bold: ['ALSbold', 'sans-serif'],
+        Black: ['ALSblack', 'sans-serif'],
       },
       colors: {
         dark: '#161919',
