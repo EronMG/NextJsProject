@@ -14,7 +14,7 @@ const Business = () => {
       </h2>
       <div className='pt-[17px] flex justify-center relative'>
         <img src={Person.src} alt='icon' className='' />
-        <div className='overflow-x-scroll whitespace-nowrap w-full absolute top-7  left-4'>
+        {/* <div className='overflow-x-scroll whitespace-nowrap w-full absolute top-7  left-4'>
           <div className='flex justify-center '>
             {images.map((image, index) => (
               <img
@@ -25,7 +25,7 @@ const Business = () => {
               />
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

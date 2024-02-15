@@ -1,4 +1,5 @@
 import Business from '@/components/Business/Business';
+import Create from '@/components/Create/Create';
 import Header from '@/components/Header/Header';
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
       <Header />
       <Business />
+      <Create />
     </div>
   );
 }

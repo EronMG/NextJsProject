@@ -34,3 +34,17 @@
   font-family: ALSblack;
   src: url('../fonts/ALSHauss-Black.woff');
 }
+
+/* Create.css */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-icon {
+  animation: rotate 10s linear infinite; /* Измените значение времени (5s) по вашему усмотрению */
+}
