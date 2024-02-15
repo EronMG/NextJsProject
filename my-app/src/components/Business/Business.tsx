@@ -7,8 +7,8 @@ const Business = () => {
   const images = Array(9).fill(Message);
 
   return (
-    <section className='flex flex-col items-center'>
-      <h2 className='text-[22px] font-Regular text-dark text-center w-[269px]'>
+    <section className='flex flex-col items-center pt-[78px]'>
+      <h2 className='text-[22px] font-Regular text-dark text-center w-[269px] leading-[26.4px]'>
         Идеально для бизнеса, где надо обрабатывать большой поток однотипных
         сообщений
       </h2>

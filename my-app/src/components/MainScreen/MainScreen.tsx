@@ -52,7 +52,13 @@ const MainScreen = () => {
               className='flex flex-col items-center mt-[17px] relative'
             >
               <div className='w-[260px] h-[52px] flex items-center justify-center text-center rounded-[10px] border-[1px]  border-cloud'>
-                <p className='w-[240px] text-[12px] font-Regular '>{item}</p>
+                <p
+                  className={`w-[240px] text-[12px] font-Regular ${
+                    index === 1 ? 'max-w-[170px]' : ''
+                  } `}
+                >
+                  {item}
+                </p>
               </div>
               <div className='flex justify-center items-center size-4 rounded-full bg-cloud absolute -top-2'>
                 <div className='size-2 rounded-full bg-blue'></div>

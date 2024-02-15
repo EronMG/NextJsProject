@@ -4,10 +4,11 @@ import Diagramms from '@/Images/diagramms.svg';
 import Messanger from '@/Images/Messanger.jpg';
 import AI from '@/Images/AI.svg';
 import { bussinesArr } from '@/Types/Arrays';
+import { FaArrowUp } from 'react-icons/fa6';
 
 function Array() {
   return (
-    <div className='flex flex-wrap gap-[10px] justify-center'>
+    <div className='flex flex-wrap gap-[10px] justify-center pt-[13px]'>
       {bussinesArr.map((item, _) => (
         <div
           key={item.id}
@@ -38,7 +39,7 @@ function Array() {
             }`}
           >
             <img src={AI.src} alt='icon' className='w-[35px] mm:w-[50px]' />
-            <h4 className='text-white text-[12px] font-Regular mm:max-w-[210px] mm:text-base'>
+            <h4 className='text-white text-[12px] font-Regular mm:max-w-[210px] mm:text-base leading-[15.4px]'>
               <span className='text-lime'>{item.title.split(' ')[0]}</span>{' '}
               {item.title.slice(item.title.indexOf(' ') + 1)}
             </h4>
@@ -51,31 +52,32 @@ function Array() {
 
 const Create = () => {
   return (
-    <section className='flex flex-col items-center px-[10px]'>
+    <section className='flex flex-col items-center px-[10px] pt-[78px] leading-[26.4px]'>
       <h2 className='text-[22px] font-Regular text-dark text-center w-[267px]'>
         Вы соберете ИИ-бота под задачи вашего бизнеса, который может заменить
         <span className='text-blue italic'>
           консультанта, администратора, менеджера по продажам, помощника РОПа
         </span>
       </h2>
-      <div className='flex border-b-[4px] border-blue justify-between'>
+      <div className='flex border-b-[4px] pb-1 border-blue gap-3 justify-between pt-7'>
         <img
           src={Settings.src}
           alt='icon'
-          className='rotate-icon w-[63px] h-[63px]'
+          className='rotate- w-[65px] h-[65px]'
         />
-        <h3 className='text-blue text-base font-Medium mm:text-lg mm:w-[400px]'>
+        <h3 className='text-blue text-base font-Medium mm:text-lg  mm:w-[400px] leading-[20.8px]'>
           Можете пройти бесплатное обучение и создать ИИ-бота самостоятельно или
           заказать разработку у нас
         </h3>
       </div>
-      <div className='flex'>
-        <h4 className='text-[14px] text-dark font-Medium mm:max-w-[274px] mm:text-lg'>
+      <div className='flex pt-8'>
+        <h4 className='text-[14px] text-dark font-Medium mm:max-w-[274px] mm:text-lg leading-[18.2px]'>
           Бот совершает столько касаний, чтобы к вам попадал максимально теплый
           лид
         </h4>
         <img src={Diagramms.src} alt='icon' className='mm:w-[200px]' />
       </div>
+      <FaArrowUp className='rotate-180 text-cloud text-[28px] mt-1' />
       {Array()}
     </section>
   );
