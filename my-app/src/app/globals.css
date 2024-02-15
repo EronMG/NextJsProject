@@ -48,3 +48,7 @@
 .rotate-icon {
   animation: rotate 10s linear infinite; /* Измените значение времени (5s) по вашему усмотрению */
 }
+
+.trans {
+  transform: translate(-48%, -50%);
+}
