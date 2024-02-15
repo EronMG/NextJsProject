@@ -1,8 +1,9 @@
 import React from 'react';
+import { RxHamburgerMenu } from 'react-icons/rx';
 
 const Header = () => {
   return (
-    <header className='mt-[31px] flex justify-center'>
+    <header className='md:mt-[31px] flex justify-center'>
       <div className='hidden md:flex w-full max-w-[1576px] justify-between gap-3'>
         <div className='text-xl font-Regular text-dark border-[1px] border-dark rounded-[41px] min-w-[145px] h-[51px] flex justify-center items-center'>
           NEXT BOT
@@ -23,11 +24,11 @@ const Header = () => {
           </button>
         </div>
       </div>
-      <div>
-        <div className='text-xl font-Regular text-dark border-[1px] border-dark rounded-[41px] min-w-[145px] h-[51px] flex justify-center items-center'>
+      <div className='md:hidden flex justify-between items-center pt-[10px] w-full px-2 mm:px-8'>
+        <div className='text-[10px] font-Regular text-dark border-[1px] border-dark rounded-[41px] min-w-[68px] h-[19px] flex justify-center items-center'>
           NEXT BOT
         </div>
-        <img src='src/Images/OPEN_BURGER.svg' alt='icon' />
+        <RxHamburgerMenu className='text-lg' />
       </div>
     </header>
   );
