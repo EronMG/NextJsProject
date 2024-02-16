@@ -63,7 +63,7 @@ const Create = () => {
         <img
           src={Settings.src}
           alt='icon'
-          className='rotate- w-[65px] h-[65px]'
+          className='rotate-icon w-[65px] h-[65px]'
         />
         <h3 className='text-blue text-base font-Medium mm:text-lg  mm:w-[400px] leading-[20.8px]'>
           Можете пройти бесплатное обучение и создать ИИ-бота самостоятельно или
