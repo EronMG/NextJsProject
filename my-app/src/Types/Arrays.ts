@@ -1,4 +1,4 @@
-import { BusinessItem } from './Types';
+import { BusinessItem, HelpItem } from './Types';
 
 export const bussinesArr: BusinessItem[] = [
   { id: 1, title: 'Обрабатывает заявки клиентов быстро и без ошибок' },
@@ -148,5 +148,28 @@ export const courseArr = [
         ],
       },
     ],
+  },
+];
+
+export const helpArr: HelpItem[] = [
+  {
+    id: 1,
+    title: 'Что делал ИИ-бот на Avito',
+  },
+  {
+    id: 2,
+    title: 'консультировал и отвечал на вопросы клиентов',
+  },
+  {
+    id: 3,
+    title: 'поддерживал разговор',
+  },
+  {
+    id: 4,
+    title: 'собирал данные для доставки',
+  },
+  {
+    id: 5,
+    title: 'передавал готовую заявку менеджеру',
   },
 ];

@@ -3,6 +3,7 @@ import Press from '@/Images/press.svg';
 import Star from '@/Images/star.svg';
 import { FaArrowUp } from 'react-icons/fa6';
 import { courseArr } from '@/Types/Arrays';
+import ArrowBtn from '@/Images/ArrowBtn.svg';
 
 const Course = () => {
   return (
@@ -66,6 +67,16 @@ const Course = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className='flex justify-center items-center'>
+          <button className='z-10 w-[234px] h-[50px] flex flex-row items-center gap-2 rounded-[40px] bg-lime md:w-[280px] mt-[35px]'>
+            <p className='text-[14px] text-dark font-Medium ml-7 md:text-[18px]'>
+              Создать ии-ассистента
+            </p>
+            <div className='flex items-center justify-center size-7 rounded-full bg-dark'>
+              <img src={ArrowBtn.src} alt='ArrowBtn' />
+            </div>
+          </button>
         </div>
       </div>
     </section>
