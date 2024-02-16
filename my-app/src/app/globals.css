@@ -4,35 +4,35 @@
 
 @font-face {
   font-family: ALSthin;
-  src: url('../fonts/ALSHauss-Thin.woff');
+  src: url("../fonts/ALSHauss-Thin.woff");
 }
 @font-face {
   font-family: ALSregular;
-  src: url('../fonts/ALSHauss-Regular.woff');
+  src: url("../fonts/ALSHauss-Regular.woff");
 }
 @font-face {
   font-family: ALSmedium;
-  src: url('../fonts/ALSHauss-Medium.woff');
+  src: url("../fonts/ALSHauss-Medium.woff");
 }
 
 @font-face {
   font-family: ALSlight;
-  src: url('../fonts/ALSHauss-Light.woff');
+  src: url("../fonts/ALSHauss-Light.woff");
 }
 
 @font-face {
   font-family: ALSbook;
-  src: url('../fonts/ALSHauss-Book.woff');
+  src: url("../fonts/ALSHauss-Book.woff");
 }
 
 @font-face {
   font-family: ALSbold;
-  src: url('../fonts/ALSHauss-Bold.woff');
+  src: url("../fonts/ALSHauss-Bold.woff");
 }
 
 @font-face {
   font-family: ALSblack;
-  src: url('../fonts/ALSHauss-Black.woff');
+  src: url("../fonts/ALSHauss-Black.woff");
 }
 
 /* Create.css */
@@ -51,4 +51,43 @@
 
 .trans {
   transform: translate(-48%, -50%);
+}
+
+@layer utilities {
+  .bg-inner {
+    background: linear-gradient(
+      180deg,
+      rgba(209, 212, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 80%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+
+  .bg-inner-reverse {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 20%,
+      rgba(209, 212, 255, 1) 100%
+    );
+  }
+
+  .bg-outer {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(209, 212, 255, 1) 50%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+
+  .bg-outer-md {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 20%,
+      rgba(209, 212, 255, 1) 50%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
 }
