@@ -3,7 +3,13 @@ import NEXTBOT from '@/Images/nextbot.svg';
 import Rotate from '@/Images/rotate.svg';
 import Hands from '@/Images/hands.svg';
 import BG from '@/Images/helpBG.svg';
-import { helpArr } from '@/Types/Arrays';
+import Star from '@/Images/LimeStar.svg';
+import AI from '@/Images/AI.svg';
+import Circle1 from '@/Images/Ellipse38.svg';
+import Circle2 from '@/Images/Ellipse39.svg';
+import Line from '@/Images/LineHelp.svg';
+import ArrowBtn from '@/Images/ArrowBtn.svg';
+import { helpArr, helpArrBlock } from '@/Types/Arrays';
 
 const Help = () => {
   return (
@@ -14,17 +20,17 @@ const Help = () => {
             <img src={NEXTBOT.src} alt='nextbot' />
           </div>
           <h2 className='text-white font-Regular leading-[28.6px] text-center text-[22px] '>
-            Давайте посмотрим на конкретном примере,{' '}
+            Давайте посмотрим на конкретном примере,
             <span className='text-lime italic'>что умеет ИИ-бот</span>
           </h2>
         </div>
         <div className='pt-[30px] pl-[6px] w-full'>
           <p className='text-white font-Regular leading-[19.2px] text-[16px]'>
-            ИИ-консультант обработал{' '}
+            ИИ-консультант обработал
             <span className='text-lime italic'>
               <br className='md:hidden' />
               440 обращений
-            </span>{' '}
+            </span>
             на Avito
           </p>
           <div className='flex items-end justify-end pt-9 relative'>
@@ -118,7 +124,89 @@ const Help = () => {
           </span>{' '}
           В 2023 г. нам потребовалось бы нанять для этого двух менеджеров
         </h2>
-        <div className='flex flex-wrap gap-[10px]'></div>
+        <div className='flex flex-wrap gap-[10px]'>
+          {helpArrBlock.map((item, _) => (
+            <div
+              key={item.id}
+              className={`${
+                item.id === 1 ? 'border-[1px] border-lime' : ''
+              } rounded-[20px] p-2 bg-[#1E2121]`}
+            >
+              <h2 className='text-lime text-base leading-[20.8px] font-Medium w-[187px]'>
+                {item.name}
+              </h2>
+              <div className='pt-[10px] flex flex-col gap-2'>
+                {item.titleArr.map((item, _) => (
+                  <span
+                    key={item.id}
+                    className='flex items-start justify-center gap-1 text-white font-[12px] leading-[15.6px] font-Regular'
+                  >
+                    <img src={Star.src} alt='star' className='' />
+                    {item.title}
+                  </span>
+                ))}
+              </div>
+              <p className='text-white italic text-base leading-[20.8px] font-Regular pt-2'>
+                {item.title}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className='px-[10px] flex flex-wrap gap-[14px] pt-8'>
+        <div>
+          <h2 className='text-lime text-base leading-[20.8px] font-Regular text-center'>
+            После внедрения ИИ-бота в 2024 году продажи на Avito и в розничных
+            точках суммарно выросли на 80%
+          </h2>
+        </div>
+        <div className='relative'>
+          <div>
+            <img
+              src={Circle1.src}
+              alt='icon'
+              className='absolute left-[6px] top-[1px]'
+            />
+            <img src={Circle2.src} alt='icon' />
+            <img
+              src={AI.src}
+              alt='icon'
+              className='w-[88px] h-[80px] absolute top-[50px] left-[47px]'
+            />
+          </div>
+          <div className='flex flex-col absolute top-10 right-[-95px]'>
+            <div className='size-[13px] bg-cloud rounded-full flex justify-center items-center absolute top-[29px] left-[-5px]'>
+              <div className='bg-blue size-[7px] rounded-full' />
+            </div>
+            <p className='text-lime text-[20px] font-Bold uppercase absolute right-[-3px] top-[-23px]'>
+              на 80%
+            </p>
+            <img src={Line.src} alt='icon' className='w-[110px] h-[35px]' />
+            <p className='text-lime text-[12px] font-Regular absolute right-0 top-[5px]'>
+              рост продаж
+            </p>
+          </div>
+        </div>
+        <div>
+          <p className='text-white text-[12px] leading-[15.6px] font-Regular w-[258px]'>
+            Говорить, что это на 100% последствие внедрения ИИ-консультанта, мы
+            не можем. Но это нововведение однозначно оказало влияние на
+            увеличение прибыли.
+          </p>
+          <p className='text-white text-[12px] leading-[15.6px] font-Regular w-[194px] pt-3'>
+            И мы можем предположить, что это было существенное влияние.
+          </p>
+        </div>
+      </div>
+      <div className='flex justify-center'>
+        <button className='z-10 w-[234px] h-[50px] flex flex-row items-center gap-2 justify-end rounded-[40px] bg-lime md:w-[280px] mt-6'>
+          <p className='text-[14px] text-dark font-Medium md:text-[18px] mr-8'>
+            Создать ии-бота
+          </p>
+          <div className='flex items-center justify-center size-7 rounded-full bg-dark mr-3'>
+            <img src={ArrowBtn.src} alt='ArrowBtn' />
+          </div>
+        </button>
       </div>
     </section>
   );
