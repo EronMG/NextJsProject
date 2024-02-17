@@ -122,4 +122,12 @@
     );
     /* backdrop-filter: blur(0.5px); */
   }
+
+  .footer-table-l {
+    font-size: clamp(0.75rem, 0.3929rem + 1.7857vw, 1.25rem);
+  }
+
+  .footer-table-b {
+    font-size: clamp(0.875rem, 0.5179rem + 1.7857vw, 1.375rem);
+  }
 }
