@@ -8,13 +8,13 @@ const NextBot = () => {
         <span className='text-blue font-Bold'>
           {' '}
           легко и быстро,
-          <br /> без специальных знаний
+          <br className='ss:hidden' /> без специальных знаний
         </span>{' '}
         создать ИИ-бота для бизнеса
       </h2>
       <div className='flex flex-col items-center pt-[10px]'>
         <div className='border-b-[1px] rounded-[20px] border-blue pb-2 px-6'>
-          <p className='text-base text-dark font-Regular text-center leading-[20.8px] w-[259px]'>
+          <p className='text-base text-dark font-Regular text-center leading-[20.8px] w-[259px] mm:w-fit'>
             Мы бесплатно научим, как правильно выставить настройки
             <br /> и какую инструкцию написать для бота, чтобы он отвечал
             корректно
@@ -26,12 +26,12 @@ const NextBot = () => {
           </div>
         </div>
       </div>
-      <div className='pt-[14px]'>
-        <p className=' text-[14px] text-dark font-Regular text-center leading-[18.2px] '>
+      <div className='pt-[14px] flex flex-col items-center mm:pt-5'>
+        <p className=' text-[14px] text-dark font-Regular text-center leading-[18.2px] mm:text-base '>
           Посмотрите видео и за 5 минут сами убедитесь, что собрать ИИ-бота под{' '}
-          <br /> силу каждому
+          <br className='ss:hidden' /> силу каждому
         </p>
-        <div className='bg-blue flex justify-center items-center rounded-[10px] h-[168px] mt-2'>
+        <div className='bg-blue flex justify-center items-center rounded-[10px] h-[168px] mt-2 ss:w-[355px] w-[310px]'>
           <div className='w-[67px] h-[67px] flex justify-center items-center bg-cloud rounded-full pl-2'>
             <div
               className='relative w-0 h-0 rotate-90'

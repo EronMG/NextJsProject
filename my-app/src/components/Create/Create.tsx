@@ -53,24 +53,26 @@ function Array() {
 const Create = () => {
   return (
     <section className='flex flex-col items-center px-[10px] pt-[78px] leading-[26.4px]'>
-      <h2 className='text-[22px] font-Regular text-dark text-center w-[267px]'>
-        Вы соберете ИИ-бота под задачи вашего бизнеса, который может заменить
-        <span className='text-blue italic'>
-          консультанта, администратора, менеджера по продажам, помощника РОПа
-        </span>
-      </h2>
-      <div className='flex border-b-[4px] pb-1 border-blue gap-3 justify-between pt-7'>
-        <img
-          src={Settings.src}
-          alt='icon'
-          className='rotate-icon w-[65px] h-[65px]'
-        />
-        <h3 className='text-blue text-base font-Medium mm:text-lg  mm:w-[400px] leading-[20.8px]'>
-          Можете пройти бесплатное обучение и создать ИИ-бота самостоятельно или
-          заказать разработку у нас
-        </h3>
+      <div className='md:flex flex-wrap justify-center items-center md:gap-6'>
+        <h2 className='text-[22px] font-Regular text-dark text-center w-[267px] ss:max-w-[472px] ss:w-fit'>
+          Вы соберете ИИ-бота под задачи вашего бизнеса, который может заменить
+          <span className='text-blue italic'>
+            консультанта, администратора, менеджера по продажам, помощника РОПа
+          </span>
+        </h2>
+        <div className='flex border-b-[4px] pb-1 border-blue gap-3 justify-between pt-7 md:pt-0'>
+          <img
+            src={Settings.src}
+            alt='icon'
+            className='rotate-icon w-[65px] h-[65px]'
+          />
+          <h3 className='text-blue text-base font-Medium mm:text-lg  mm:w-[400px] leading-[20.8px]'>
+            Можете пройти бесплатное обучение и создать ИИ-бота самостоятельно
+            или заказать разработку у нас
+          </h3>
+        </div>
       </div>
-      <div className='flex pt-8'>
+      <div className='flex pt-8 md:items-center'>
         <h4 className='text-[14px] text-dark font-Medium mm:max-w-[274px] mm:text-lg leading-[18.2px]'>
           Бот совершает столько касаний, чтобы к вам попадал максимально теплый
           лид

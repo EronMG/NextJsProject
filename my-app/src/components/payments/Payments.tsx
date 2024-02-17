@@ -1,11 +1,11 @@
 'use client';
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Arrow from '@/Images/ArrowCloud.svg';
 import Hand from '@/Images/HandVector.svg';
 import Star from '@/Images/star.svg';
 import { paymentsArr } from '@/Types/Arrays';
 import ArrowBtn from '@/Images/ArrowBtn.svg';
-import Eye from '@/Images/Eye.svg';
+import Eye1 from '@/Images/Eye1.svg';
 
 const Payments = () => {
   const [active, setActive] = useState('first');
@@ -43,6 +43,43 @@ const Payments = () => {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const rotateImage = (degrees: number) => {
+    return {
+      transform: `rotateY(${degrees}deg)`,
+      transition: 'transform 0.5s ease',
+    } as React.CSSProperties;
+  };
+
+  useEffect(() => {
+    const icon = document.getElementById('icon') as HTMLImageElement;
+
+    const rotateRight = () => {
+      icon.style.cssText = Object.entries(rotateImage(180))
+        .map(([key, value]) => `${key}:${value}`)
+        .join(';');
+      setTimeout(() => {
+        icon.style.cssText = '';
+      }, 500);
+    };
+
+    const rotateLeft = () => {
+      icon.style.cssText = Object.entries(rotateImage(-180))
+        .map(([key, value]) => `${key}:${value}`)
+        .join(';');
+      setTimeout(() => {
+        icon.style.cssText = '';
+      }, 500);
+    };
+
+    const rightInterval = setInterval(rotateRight, 6000);
+    const leftInterval = setInterval(rotateLeft, 12000);
+
+    // Очистка интервалов при размонтировании компонента
+    return () => {
+      clearInterval(rightInterval);
+      clearInterval(leftInterval);
+    };
+  }, []);
   return (
     <section className='px-[10px] pt-20'>
       <div className='flex flex-col items-center'>
@@ -65,7 +102,7 @@ const Payments = () => {
           Можете выбрать любой тариф – от пробного до премиум
         </p>
       </div>
-      <div className='pt-6 flex flex-wrap justify-center'>
+      <div className='pt-6 flex flex-col items-center justify-center'>
         <div className='flex items-center gap-3'>
           <img
             src={Arrow.src}
@@ -81,17 +118,17 @@ const Payments = () => {
             className='rotate-180 cursor-pointer active:scale-110 duration-300'
           />
         </div>
-        <div>
-          <div className='flex justify-center gap-[10px] pt-4'>
-            {paymentsArr.map((item, index) => (
-              <div
-                key={item.id}
-                className={`size-2 rounded-full ${
-                  index === activeIndex ? 'active' : ''
-                } ${index === activeIndex ? 'bg-blue' : 'bg-cloud'}`}
-              ></div>
-            ))}
-          </div>
+        <div className='flex justify-center gap-[10px] pt-4'>
+          {paymentsArr.map((item, index) => (
+            <div
+              key={item.id}
+              className={`size-2 rounded-full ${
+                index === activeIndex ? 'active' : ''
+              } ${index === activeIndex ? 'bg-blue' : 'bg-cloud'}`}
+            ></div>
+          ))}
+        </div>
+        <div className='flex'>
           <div className='hidden xl:flex'>
             {paymentsArr.map((item, _) => (
               <div
@@ -136,7 +173,7 @@ const Payments = () => {
               </div>
             ))}
           </div>
-          <div className={` ${active === 'second' ? 'pt-6' : 'pt-3'}`}>
+          <div className={`pt-3`}>
             {active &&
               paymentsArr
                 .slice(
@@ -158,17 +195,10 @@ const Payments = () => {
                 .map((item, index) => (
                   <div
                     key={item.id}
-                    className={`pt-8 pb-12 px-[13px] bg-cloud rounded-[20px] ${
+                    className={`pt-8 max-w-[300px] pb-12 px-[13px] bg-cloud rounded-[20px] ${
                       active === 'second' && 'relative border-[1px] border-blue'
                     }`}
                   >
-                    {active === 'second' && index === 0 && (
-                      <div className='absolute bg-blue rounded-[10px] flex justify-center items-center h-11 px-3 top-[-20px] left-11'>
-                        <p className='text-white font-Regular text-[14px] leading-[28.6px]'>
-                          Самый популярный вариант
-                        </p>
-                      </div>
-                    )}
                     <h2 className='text-[36px] text-dark font-Regular leading-[43.2px] text-center'>
                       {item.name}
                     </h2>
@@ -241,7 +271,9 @@ const Payments = () => {
           можно подключить к WhatsApp, Avito или Instagram*
         </p>
         <div className='flex justify-center items-center flex-col pt-20'>
-          <img src={Eye.src} alt='icon' />
+          <div className='size-[58px] bg-gray rounded-[10px] flex justify-center items-center'>
+            <img src={Eye1.src} alt='icon' id='icon' />
+          </div>
           <p className='font-Medium text-base leading-[20.8px] text-center text-gray pt-2'>
             В некоторых случаях ИИ-ассистент
             <br /> от NextBot может полностью <br />
