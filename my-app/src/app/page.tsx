@@ -25,6 +25,7 @@ export default function Home() {
       <Help />
       <Tryit />
       <Links />
+      <Base />
       <II />
       <Steps />
       <Payments />

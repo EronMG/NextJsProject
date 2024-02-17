@@ -3,7 +3,7 @@ import React from 'react';
 
 const Steps = () => {
   return (
-    <section className='pl-[10px] pt-[96px] overflow-hidden'>
+    <section className='pl-[10px] pt-[84px] overflow-hidden'>
       <div className='relative flex flex-col justify-center items-center'>
         <h2 className='text-dark text-[22px] font-Regular text-center leading-[26.4px]'>
           <span className='text-blue font-Medium'>Всего 5 шагов</span> и у вас

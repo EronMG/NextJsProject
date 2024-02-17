@@ -11,7 +11,7 @@ const MainScreen = () => {
     <>
       <section className='w-screen flex flex-col items-center overflow-hidden md:mt-[35px] lg:mt-[71px]'>
         <div className='z-10 flex flex-col items-center gap-3 mt-[15px]'>
-          <h1 className='fade-in-out md:max-w-[1000px] max-w-[287px] text-[22px] leading-[26.4px] text-center font-Bold text-dark pl-2 md:text-[32px] md:leading-[36.4px] lg:text-[42px] lg:leading-[50.4px]'>
+          <h1 className='md:max-w-[1000px] max-w-[287px] text-[22px] leading-[26.4px] text-center font-Bold text-dark pl-2 md:text-[32px] md:leading-[36.4px] lg:text-[42px] lg:leading-[50.4px]'>
             <em className='text-blue not-italic underline underline-offset-4 decoration-[1.5px] lg:underline-offset-[8px]'>
               Создай ИИ-ассистента
             </em>{' '}
@@ -73,7 +73,7 @@ const MainScreen = () => {
           ))}
         </div>
 
-        <div className='hidden relative xl:flex flex-col items-center mt-[14px] '>
+        <div className='hidden relative xl:flex flex-col items-center mt-[14px] md:grid md:grid-cols-2 md:gap-x-4'>
           {[
             'Общается как живой человек. Понимает, что пишет и говорит клиент',
             'Отвечает на типовые вопросы 24/7 на любом языке',

@@ -102,7 +102,7 @@ const Help = () => {
                     </div>
                   </div>
                 </div>
-                <div className='flex flex-col items-end gap-[10px]'>
+                <div className='md:flex flex-col items-end gap-[10px] hidden'>
                   <p className='text-[14px] text-white font-Regular leading-[18.2px] md:text-base md:text-start md:max-w-[364px]'>
                     Поставили ИИ-боту задачу – собрать все необходимые данные
                     для оформления доставки.
