@@ -74,16 +74,16 @@ function Links() {
           />
         </div>
 
-        <div className="z-50 flex flex-col items-start gap-[10px] mt-[65px]">
+        <div className="z-50 flex flex-col items-start mt-[70px] ">
           <p className="w-[306px] h-[76px] text-[16px] leading-[19.2px] text-dark font-Regular">
             ИИ-ассистента можно подключить к Telegram, Вконтакте, Avito,
             WhatsApp, Instagram*, Facebook*, Online-chat, Viber, Email, Юла,
             WhatsApp Business
           </p>
-          <p className="w-[255px] h-[38px] text-[16px] leading-[19.2px] text-dark font-Regular">
+          <p className="w-[255px] h-[38px] mt-[10px] text-[16px] leading-[19.2px] text-dark font-Regular">
             Можно сделать виджет для сайта с ИИ-консультантом
           </p>
-          <p className="w-[285px] h-[24px] text-[10px] leading-[12.1px] text-dark font-Regular">
+          <p className="w-[285px] h-[24px] mt-[13px] text-[10px] leading-[12.1px] text-dark font-Regular">
             Instagram* – продукт компании Meta. Признана экстремистской
             организацией на территории РФ
           </p>
