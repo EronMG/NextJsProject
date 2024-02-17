@@ -4,7 +4,7 @@ import Mobile from '@/Images/mobile.jpg';
 
 const II = () => {
   return (
-    <section className='pt-20 px-[10px]'>
+    <section className='pt-[71px] px-[10px]'>
       <h2 className='text-[22px] leading-[26.4px] font-Regular text-center text-dark'>
         ИИ-бот на 100% походит на человека и не придумывает ничего лишнего при{' '}
         <br className='md:hidden' />
