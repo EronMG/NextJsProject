@@ -12,7 +12,10 @@ const II = () => {
       </h2>
       <div className='flex flex-wrap gap-7 justify-center pt-6'>
         {iiArr.map((item, _) => (
-          <div key={item.id} className='flex flex-col items-center'>
+          <div
+            key={item.id}
+            className='flex flex-col items-center max-w-[355px]'
+          >
             <div className='size-[21px] bg-cloud rounded-full justify-center items-center flex'>
               <div className='size-[11px] bg-blue rounded-full' />
             </div>

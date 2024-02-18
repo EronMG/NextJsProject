@@ -1,24 +1,27 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import CurvedLineOne from '@/Images/CurvedLineOne.svg';
 import CurvedLineTwo from '@/Images/CurvedLineTwo.svg';
 import CurvedLineThree from '@/Images/CurvedLineThree.svg';
 import CurvedLineFour from '@/Images/CurvedLineFour.svg';
 
 import ArrowBtn from '@/Images/ArrowBtn.svg';
+import AnimatedHeading from './H1';
 
 const MainScreen = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [animationKey, setAnimationKey] = useState(0); // Для сброса анимации
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    setAnimationKey((prevKey) => prevKey + 1); // Сброс анимации стрелки
+  };
+
   return (
     <>
-      <section className='w-screen flex flex-col items-center overflow-hidden md:mt-[35px] lg:mt-[71px]'>
-        <div className='z-10 flex flex-col items-center gap-3 mt-[15px]'>
-          <h1 className='md:max-w-[1000px] max-w-[287px] text-[22px] leading-[26.4px] text-center font-Bold text-dark pl-2 md:text-[32px] md:leading-[36.4px] lg:text-[42px] lg:leading-[50.4px]'>
-            <em className='text-blue not-italic underline underline-offset-4 decoration-[1.5px] lg:underline-offset-[8px]'>
-              Создай ИИ-ассистента
-            </em>{' '}
-            для бизнеса
-            <em className='font-Regular'> за 5 минут</em> без знаний
-            программирования
-          </h1>
+      <section className='w-screen flex flex-col items-center overflow-hidden md:mt-[35px] lg:mt-[71px] xx:mt-20 xx:mb-2'>
+        <div className='z-10 flex flex-col items-center gap-3 mt-[15px] xx:gap-1'>
+          <AnimatedHeading text={''} size={'normal'} />
           <p className='max-w-[300px] text-base text-center text-[16px] leading-[20.8px] font-Regular text-dark md:text-[20px] mm:max-w-[722px] mm:min-w-[300px] lg:text-[20px] lg:leading-[26px]'>
             Бот и ассистент на базе ChatGPT возьмет на себя до 100% рутинных
             задач. Заменит или разгрузит вашего администратора, консультанта,
@@ -28,12 +31,45 @@ const MainScreen = () => {
 
         <div className='md:flex-col-reverse relative flex flex-col items-center gap-6 pt-4 md:gap-10 lg:mt-[11px]'>
           <div className='z-10 w-[139px] h-[216px] bg-black opacity-5 md:w-[249px] md:h-[390px]'></div>
-          <button className='z-10 w-[234px] h-[50px] flex flex-row items-center gap-2 rounded-[40px] bg-lime md:w-[280px]'>
-            <p className='text-[14px] text-dark font-Medium ml-7 md:text-[18px]'>
+          <button
+            className={`relative z-10 w-[234px] h-[50px] flex flex-row items-center gap-2 rounded-[40px] bg-lime md:w-[280px] ${
+              isHovered ? 'button-hovered' : ''
+            }`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <p
+              className={`text-[14px] font-Medium ml-7 md:text-[18px] ${
+                isHovered ? 'text-blue duration-300' : ' text-dark'
+              }`}
+            >
               Создать ии-ассистента
             </p>
-            <div className='flex items-center justify-center size-7 rounded-full bg-dark'>
-              <img src={ArrowBtn.src} alt='ArrowBtn' />
+            <div
+              className={`flex items-center justify-center size-7 rounded-full  ${
+                isHovered ? ' bg-blue duration-300' : 'bg-dark'
+              }`}
+            >
+              <img
+                src={ArrowBtn.src}
+                alt='ArrowBtn'
+                className={`transition-opacity duration-500 ${
+                  isHovered ? 'arrow-out' : ''
+                }`}
+                key={animationKey}
+              />
+              {isHovered && (
+                <img
+                  src={ArrowBtn.src}
+                  alt='ArrowBtn'
+                  className='arrow-in'
+                  style={{
+                    position: 'absolute',
+                    right: '23px',
+                    top: '20px',
+                  }} // Позиционирование новой стрелки
+                />
+              )}
             </div>
           </button>
 

@@ -73,6 +73,27 @@
   }
 }
 
+.fade-in-out3 {
+  opacity: 0;
+  animation: fadeInOut3 1s ease-in-out forwards;
+}
+
+@keyframes fadeInOut3 {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    transform: rotate(12deg);
+  }
+}
+
 @layer utilities {
   .bg-inner {
     background: linear-gradient(
@@ -130,4 +151,162 @@
   .footer-table-b {
     font-size: clamp(0.875rem, 0.5179rem + 1.7857vw, 1.375rem);
   }
+}
+
+/* Add this style to your CSS/SCSS file */
+.hover-effect:hover {
+  transition: all 1s ease;
+  background: #4f56d3;
+}
+
+.hover-effect:hover .text {
+  transform: translateX(40px);
+  color: #d1d4ff;
+  transition: all 0.5s ease;
+}
+
+.hover-effect:hover img {
+  transform: translateX(40px);
+  transition: all 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideArrowOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20px) translateY(-20px);
+  }
+}
+
+@keyframes slideArrowIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.arrow-out {
+  animation: slideArrowOut 0.5s forwards;
+}
+
+.arrow-in {
+  animation: slideArrowIn 0.5s forwards;
+}
+
+@keyframes slideArrowOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(20px) translateY(-20px);
+  }
+}
+
+@keyframes slideArrowIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.arrow-out {
+  animation: slideArrowOut 0.5s forwards;
+}
+
+.arrow-in {
+  animation: slideArrowIn 0.5s forwards;
+}
+
+/* styles.css */
+.scroll-container {
+  overflow-x: scroll;
+  whitespace: nowrap;
+  overflow-y: hidden; /* Предотвращает вертикальный скролл */
+  -ms-overflow-style: none; /* IE и Edge */
+  scrollbar-width: none; /* Firefox */
+  height: 87px; /* Задайте фактическую высоту контента */
+}
+
+.icon {
+  transition: transform 0.5s ease-in-out;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.scroll-container::before,
+.scroll-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px; /* Ширина эффекта прозрачности, настройте под ваш контент */
+  height: 100%;
+  pointer-events: none; /* Позволяет кликам проходить сквозь элемент */
+}
+
+.scroll-container::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.scroll-container::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.icon:first-child,
+.icon:last-child {
+  opacity: 0.5; /* Настройте уровень прозрачности */
+}
+
+.last-icon {
+  opacity: 0.25; /* Дополнительно уменьшенная прозрачность для последней картинки */
+}
+
+.scroll-wrapper {
+  overflow: hidden; /* Скрывает скроллбар */
+  width: 100%; /* или конкретная ширина в зависимости от вашего дизайна */
+  height: 97px; /* Высота должна быть на несколько пикселей больше, чем высота scroll-container, чтобы скрыть скроллбар */
 }

@@ -3,16 +3,16 @@ function Tryit() {
     <>
       <section className='w-screen flex flex-col items-center mt-[80px]'>
         <div className='flex justify-center items-center pb-[11px] border-b-2 border-blue'>
-          <h2 className='max-w-[292px] text-[22px] leading-[26.4px] text-center font-Regular'>
+          <h2 className='max-w-[292px] text-[22px] leading-[26.4px] text-center font-Regular md:max-w-[600px]'>
             В NextBot вы создадите бота с искусственным интеллектом. Он общается
             как человек. Клиенты не отличают его от настоящего консультанта
           </h2>
         </div>
         <div className='flex flex-col items-center pt-5'>
-          <p className='text-[16px] leading-[20.8px] text-center font-Regular pb-5'>
+          <p className='text-[16px] leading-[20.8px] text-center font-Regular pb-5 md:text-xl'>
             Без сложных настроек
           </p>
-          <div className='flex flex-col items-center gap-5'>
+          <div className='flex flex-wrap justify-center items-center gap-5 w-full'>
             {[
               'ИИ-бот на основе ChatGPT 3,5 Turbo и ChatGPT 4 Turbo',
               'Настройка без знаний программирования',

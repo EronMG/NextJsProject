@@ -15,6 +15,7 @@ const config: Config = {
         md: '768px',
         lg: '1024px',
         xl: '1280px',
+        xx: '1738px',
       },
       fontFamily: {
         Thin: ['ALSthin', 'sans-serif'],

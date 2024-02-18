@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useRef, useState } from 'react';
 import NEXTBOT from '@/Images/nextbot.svg';
 import Rotate from '@/Images/rotate.svg';
 import Hands from '@/Images/hands.svg';
@@ -13,6 +14,32 @@ import { helpArr, helpArrBlock } from '@/Types/Arrays';
 import LineMain from '@/Images/Line.svg';
 
 const Help = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const headingRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    if (headingRef.current) {
+      observer.observe(headingRef.current);
+    }
+
+    return () => {
+      if (headingRef.current) {
+        observer.unobserve(headingRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section className='bg-dark rounded-[40px] pt-[30px] pb-[33px] mx-[10px] mt-[78.5px] overflow-hidden'>
       <div className='px-[10px]'>
@@ -65,9 +92,12 @@ const Help = () => {
               на Avito
             </p>
             <img
+              ref={headingRef}
               src='https://s3-alpha-sig.figma.com/img/4be6/c15e/79d43dd925d1f844dce8930a03e43f91?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=q8nUcuxgLUUdb4qbSLhaFINh4JQhbKrAaNa~BASSG8B3do16DDs7KC~EL00mzdoRM43Br~x5t4V066n-qd5TItrEY7fhDyHbsqQ5bSO2yGsAgEh7ltLoNCPjEZ6iHaaWCfEjjPuVqYUyEA0u9g4JaLQqe9RuCyL9ywCCC20LoP-cTna7m054ZS3aYEgIbM0jUoYNUpXgwQ0sp3qDWQlDzbwC-j3BiVPXmz2A7LVC7q8chVB9YEW-s08JDZFYnjKUdJadMQeDK7IsQWsRdGxR3~W0Le6v~Nnaj4-guhiao8tUC6G-2-hb-PmD5Ht2v1qh9VnrHMtMyasmWyJ-hxQDJw__'
               alt='icon'
-              className='w-[260px] absolute left-[240px] rotate-12 top-[-10px]'
+              className={`w-[280px] absolute left-[230px] rotate-12 top-[-25px] ${
+                isVisible ? 'fade-in-out3' : ''
+              }`}
             />
             <p className='text-white font-Regular leading-[19.2px] w-[125px] text-end text-[16px] md:w-[205px] absolute right-[25px] bottom-[-27px]'>
               сэкономил почти <span className='text-lime'>50 000 ₽</span>
@@ -96,7 +126,11 @@ const Help = () => {
                     Прописали для ИИ-бота сценарий и настройки в сервисе NextBot
                   </p>
                   <div className='absolute top-[-30px] left-0'>
-                    <img src={Rotate.src} alt='icon' className='z-20' />
+                    <img
+                      src={Rotate.src}
+                      alt='icon'
+                      className='z-20 rotate-icon'
+                    />
                     <div className='size-4 rounded-full bg-cloud flex justify-center items-center absolute top-[22px] left-[20px]  z-30'>
                       <div className='size-2 rounded-full bg-blue' />
                     </div>
