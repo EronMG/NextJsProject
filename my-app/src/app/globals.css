@@ -4,35 +4,35 @@
 
 @font-face {
   font-family: ALSthin;
-  src: url('../fonts/ALSHauss-Thin.woff');
+  src: url("../fonts/ALSHauss-Thin.woff");
 }
 @font-face {
   font-family: ALSregular;
-  src: url('../fonts/ALSHauss-Regular.woff');
+  src: url("../fonts/ALSHauss-Regular.woff");
 }
 @font-face {
   font-family: ALSmedium;
-  src: url('../fonts/ALSHauss-Medium.woff');
+  src: url("../fonts/ALSHauss-Medium.woff");
 }
 
 @font-face {
   font-family: ALSlight;
-  src: url('../fonts/ALSHauss-Light.woff');
+  src: url("../fonts/ALSHauss-Light.woff");
 }
 
 @font-face {
   font-family: ALSbook;
-  src: url('../fonts/ALSHauss-Book.woff');
+  src: url("../fonts/ALSHauss-Book.woff");
 }
 
 @font-face {
   font-family: ALSbold;
-  src: url('../fonts/ALSHauss-Bold.woff');
+  src: url("../fonts/ALSHauss-Bold.woff");
 }
 
 @font-face {
   font-family: ALSblack;
-  src: url('../fonts/ALSHauss-Black.woff');
+  src: url("../fonts/ALSHauss-Black.woff");
 }
 
 /* Create.css */
@@ -150,6 +150,18 @@
 
   .footer-table-b {
     font-size: clamp(0.875rem, 0.5179rem + 1.7857vw, 1.375rem);
+  }
+
+  .footer-table-ex-b {
+    font-size: clamp(1.375rem, 0.1707rem + 1.8817vw, 2.25rem);
+  }
+
+  .footer-table-ex-m {
+    font-size: clamp(1rem, 0.4839rem + 0.8065vw, 1.375rem);
+  }
+
+  .footer-table-ex-l {
+    font-size: clamp(0.75rem, 0.4059rem + 0.5376vw, 1rem);
   }
 }
 
@@ -270,7 +282,7 @@
 
 .scroll-container::before,
 .scroll-container::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   width: 100px; /* Ширина эффекта прозрачности, настройте под ваш контент */
