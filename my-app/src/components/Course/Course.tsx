@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import Press from '@/Images/press.svg';
 import Star from '@/Images/star.svg';
 import { FaArrowUp } from 'react-icons/fa6';
@@ -6,15 +7,28 @@ import { courseArr } from '@/Types/Arrays';
 import ArrowBtn from '@/Images/ArrowBtn.svg';
 
 const Course = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [animationKey, setAnimationKey] = useState(0); // Для сброса анимации
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    setAnimationKey((prevKey) => prevKey + 1); // Сброс анимации стрелки
+  };
   return (
-    <section className='px-[10px] pt-[77px]' id='case'>
-      <div className='flex flex-wrap justify-center items-center border-b-[2px] border-blue'>
-        <h2 className=' font-Regular text-dark text-[22px] leading-[26.4px] text-center max-w-[278px] ss:max-w-[450px]'>
-          На бесплатном обучении вы получите пошаговую инструкцию,
-          <br className='sm:hidden' /> как собрать ИИ-бота, который поддерживает
-          беседу и мотивирует клиента оставить заявку
-        </h2>
-        <img src={Press.src} alt='icon' className='mt-[11px]' />
+    <section className='px-[10px] pt-[77px] xx:pt-[270px]' id='case'>
+      <div className='xx:flex justify-center'>
+        <div className='flex flex-wrap xx:relative justify-center xx:justify-between items-center border-b-[2px] border-blue xx:w-[1576px]'>
+          <h2 className=' font-Regular text-dark text-[22px] leading-[26.4px] text-center max-w-[278px] xx:pb-[14px] ss:max-w-[450px] xx:text-[36px] xx:leading-[43.2px] xx:max-w-[1198px] xx:text-start'>
+            На бесплатном обучении вы получите пошаговую инструкцию,
+            <br className='sm:hidden xx:flex' /> как собрать ИИ-бота, который
+            поддерживает беседу и мотивирует клиента оставить заявку
+          </h2>
+          <img
+            src={Press.src}
+            alt='icon'
+            className='mt-[11px] xx:w-[260px] xx:h-[233px] xx:mr-20 xx:absolute right-[-4px] top-[-95px]'
+          />
+        </div>
       </div>
       <div className='pt-3 flex flex-col items-center mm:pt-6'>
         <div className='flex flex-wrap justify-end gap-2 ss:justify-center mm:flex-col mm:items-center'>
@@ -69,12 +83,45 @@ const Course = () => {
           ))}
         </div>
         <div className='flex justify-center items-center'>
-          <button className='z-10 w-[234px] h-[50px] flex flex-row items-center gap-2 rounded-[40px] bg-lime md:w-[280px] mt-[35px]'>
-            <p className='text-[14px] text-dark font-Medium ml-7 md:text-[18px]'>
+          <button
+            className={`relative z-10 w-[234px] h-[50px] flex flex-row items-center gap-2 rounded-[40px] bg-lime md:w-[280px] ${
+              isHovered ? 'button-hovered' : ''
+            }`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <p
+              className={`text-[14px] font-Medium ml-7 md:text-[18px] ${
+                isHovered ? 'text-blue duration-300' : ' text-dark'
+              }`}
+            >
               Создать ии-ассистента
             </p>
-            <div className='flex items-center justify-center size-7 rounded-full bg-dark'>
-              <img src={ArrowBtn.src} alt='ArrowBtn' />
+            <div
+              className={`flex items-center justify-center size-7 rounded-full  ${
+                isHovered ? ' bg-blue duration-300' : 'bg-dark'
+              }`}
+            >
+              <img
+                src={ArrowBtn.src}
+                alt='ArrowBtn'
+                className={`transition-opacity duration-500 ${
+                  isHovered ? 'arrow-out' : ''
+                }`}
+                key={animationKey}
+              />
+              {isHovered && (
+                <img
+                  src={ArrowBtn.src}
+                  alt='ArrowBtn'
+                  className='arrow-in'
+                  style={{
+                    position: 'absolute',
+                    right: '23px',
+                    top: '20px',
+                  }}
+                />
+              )}
             </div>
           </button>
         </div>

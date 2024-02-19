@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Settings from '@/Images/Settings.svg';
 import Diagramms from '@/Images/diagramms.svg';
 import Messanger from '@/Images/Messanger.jpg';
@@ -85,12 +85,20 @@ const Create = () => {
     const rightInterval = setInterval(rotateRight, 6000);
     const leftInterval = setInterval(rotateLeft, 12000);
 
-    // Очистка интервалов при размонтировании компонента
     return () => {
       clearInterval(rightInterval);
       clearInterval(leftInterval);
     };
   }, []);
+
+  const [isHovered, setIsHovered] = useState(false);
+  const [animationKey, setAnimationKey] = useState(0);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    setAnimationKey((prevKey) => prevKey + 1);
+  };
+
   return (
     <section className='flex flex-col items-center px-[10px] pt-[78px] leading-[26.4px] xx:pt-[184px]'>
       <div className='md:flex flex-wrap justify-center items-center md:gap-6 xx:gap-20'>
@@ -160,12 +168,45 @@ const Create = () => {
               очередь, ИИ-ассистент закрывает рутинные операции, освобождает
               время для развития бизнеса и решения важных задач
             </p>
-            <button className='z-10 w-[234px] h-[50px] flex flex-row items-center gap-2 justify-end rounded-[40px] bg-lime md:w-[280px] mt-1'>
-              <p className='text-[14px] text-dark font-Medium md:text-[18px] mr-8'>
+            <button
+              className={`relative z-10 w-[234px] h-[50px] flex flex-row items-center gap-12 pr-4 justify-end rounded-[40px] bg-lime md:w-[280px] ${
+                isHovered ? 'button-hovered' : ''
+              }`}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              <p
+                className={`text-[14px] font-Medium ml-7 md:text-[18px] ${
+                  isHovered ? 'text-blue duration-300' : ' text-dark'
+                }`}
+              >
                 Создать ии-бота
               </p>
-              <div className='flex items-center justify-center size-7 rounded-full bg-dark mr-3'>
-                <img src={ArrowBtn.src} alt='ArrowBtn' />
+              <div
+                className={`flex items-center justify-center size-7 rounded-full  ${
+                  isHovered ? ' bg-blue duration-300' : 'bg-dark'
+                }`}
+              >
+                <img
+                  src={ArrowBtn.src}
+                  alt='ArrowBtn'
+                  className={`transition-opacity duration-500 ${
+                    isHovered ? 'arrow-out' : ''
+                  }`}
+                  key={animationKey}
+                />
+                {isHovered && (
+                  <img
+                    src={ArrowBtn.src}
+                    alt='ArrowBtn'
+                    className='arrow-in'
+                    style={{
+                      position: 'absolute',
+                      right: '25px',
+                      top: '21px',
+                    }}
+                  />
+                )}
               </div>
             </button>
           </div>

@@ -67,7 +67,7 @@ const MainScreen = () => {
                     position: 'absolute',
                     right: '23px',
                     top: '20px',
-                  }} // Позиционирование новой стрелки
+                  }}
                 />
               )}
             </div>
