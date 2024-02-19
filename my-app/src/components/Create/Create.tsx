@@ -8,6 +8,11 @@ import { bussinesArr } from '@/Types/Arrays';
 import { FaArrowUp } from 'react-icons/fa6';
 import Eye1 from '@/Images/Eye1.svg';
 import ArrowBtn from '@/Images/ArrowBtn.svg';
+import Mobile from '@/Images/mobile.jpg';
+interface BusinessItem {
+  id: number;
+  title: string;
+}
 
 function Array() {
   return (
@@ -53,7 +58,16 @@ function Array() {
   );
 }
 
-const Create = () => {
+const Create: React.FC<BusinessItem> = () => {
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
+    setCursorPos({
+      x: event.clientX,
+      y: event.clientY,
+    });
+  };
   const rotateImage = (degrees: number) => {
     return {
       transform: `rotateY(${degrees}deg)`,
@@ -143,6 +157,9 @@ const Create = () => {
           <div className='overflow-hidden pt-1'>
             {bussinesArr.map((item, index) => (
               <div
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
+                onMouseMove={handleMouseMove}
                 key={item.id}
                 className={`flex w-[1044px] gap-[37px] items-center h-[93px]  ${
                   item.id === bussinesArr.length
@@ -156,6 +173,32 @@ const Create = () => {
                 <img src={AI.src} alt='icon' className='w-[66px] h-[59px]' />
               </div>
             ))}
+            {isHovering && (
+              <div
+                className='bg-cloud rounded-[20px]'
+                style={{
+                  position: 'fixed',
+                  left: cursorPos.x,
+                  top: cursorPos.y,
+                  transform: 'translate(-50%, -50%)',
+                  // Стилизация блока
+                  width: '331px',
+                  height: '331px',
+                  color: '#FFF',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  pointerEvents: 'none', // Чтобы блок не мешал другим событиям мыши
+                }}
+              >
+                {/* Содержимое блока, которое следует за курсором */}
+                <img
+                  src={Mobile.src}
+                  alt='icon'
+                  className='w-[261px] h-[270px] object-cover'
+                />
+              </div>
+            )}
           </div>
           <div className='flex items-center pt-12'>
             <div className='size-[58px] bg-gray rounded-[10px] flex justify-center items-center mr-[12px]'>

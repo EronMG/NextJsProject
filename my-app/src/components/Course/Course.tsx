@@ -30,9 +30,9 @@ const Course = () => {
           />
         </div>
       </div>
-      <div className='pt-3 flex flex-col items-center mm:pt-6'>
+      <div className='pt-3 flex flex-col items-center mm:pt-6 xx:pt-12'>
         <div className='flex flex-wrap justify-end gap-2 ss:justify-center mm:flex-col mm:items-center'>
-          <p className='text-[14px] leading-[18.2px] text-dark font-Regular text-center mm:max-w-[500px] md:text-base'>
+          <p className='text-[14px] leading-[18.2px] text-dark font-Regular text-center mm:max-w-[500px] md:text-base xx:text-[22px] xx:leading-[28.6px] xx:max-w-[720px] xx:text-start '>
             Вам не нужно программировать. Достаточно текстом ПРАВИЛЬНО описать,
             как должен действовать бот. Этому мы вас тоже научим
           </p>
@@ -45,31 +45,31 @@ const Course = () => {
             </button>
           </div>
         </div>
-        <div className='flex overflow-hidden pt-[25px] max-w-[300px] md:flex-wrap md:max-w-[1576px] md:justify-center md:gap-3'>
+        <div className='flex overflow-hidden pt-[25px] max-w-[300px] md:flex-wrap md:max-w-[1576px] xx:max-w-[1920px] md:justify-center md:gap-3 xx:gap-5 xx:pt-[34px]'>
           {courseArr.map((item, _) => (
             <div
               key={item.id}
-              className='p-3 rounded-[10px] bg-cloud min-w-[300px] md:w-[300px] md:h-[416px]'
+              className='p-3 rounded-[10px] bg-cloud min-w-[300px] md:w-[300px] md:h-[416px] xx:w-[440px] xx:h-[513px]'
             >
               <div className='flex flex-col gap-2'>
-                <div className='rounded-[5px] bg-blue text-white text-[14px] font-Regular w-[64px] h-6 flex justify-center items-center'>
+                <div className='rounded-[5px] bg-blue text-white text-[14px] font-Regular w-[64px] h-6 flex justify-center items-center xx:text-xl xx:leading-[26px] xx:w-[94px] xx:h-[45px]'>
                   День {item.id}
                 </div>
-                <h2 className='text-blue text-[14px] font-Medium leading-[18.2px]'>
+                <h2 className='text-blue text-[14px] font-Medium leading-[18.2px] xx:text-xl xx:leading-[26px]'>
                   {item.name}
                 </h2>
               </div>
               <div className='pt-[10px] flex flex-col gap-[10px]'>
                 {item.titleArr.map((item, _) => (
                   <div key={item.id}>
-                    <p className='text-dark text-[14px] font-Medium leading-[18.2px]'>
+                    <p className='text-dark text-[14px] font-Medium leading-[18.2px] xx:text-base xx:leading-[20.8px]'>
                       {item.title}
                     </p>
                     <div className='flex flex-col pl-3'>
                       {item.liArr.map((item, _) => (
                         <span
                           key={item.id}
-                          className='flex items-start text-dark text-[12px] font-Regular leading-[15.6px] pt-[6px] gap-[6px]'
+                          className='flex items-start text-dark text-[12px] font-Regular leading-[15.6px] pt-[6px] gap-[6px] xx:text-base xx:leading-[20.8px]'
                         >
                           <img src={Star.src} alt='icon' className='pt-[0px]' />
                           {item.span}
@@ -82,7 +82,7 @@ const Course = () => {
             </div>
           ))}
         </div>
-        <div className='flex justify-center items-center'>
+        <div className='flex justify-center items-center xx:pt-12'>
           <button
             className={`relative z-10 w-[234px] h-[50px] flex flex-row items-center gap-2 rounded-[40px] bg-lime md:w-[280px] ${
               isHovered ? 'button-hovered' : ''

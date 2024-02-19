@@ -43,7 +43,7 @@ const Help = () => {
 
   return (
     <div className='xx:flex justify-center'>
-      <section className='bg-dark rounded-[40px] pt-[30px] pb-[33px] mx-[10px] xx:mr-[26px] xx:rounded-[60px] mt-[78.5px] overflow-hidden xx:mt-[337px] xx:w-[1738px]'>
+      <section className='bg-dark rounded-[40px] pt-[30px] pb-[33px] mx-[10px] xx:mr-[26px] xx:rounded-[60px] mt-[78.5px] overflow-hidden xx:mt-[175px] xx:w-[1738px]'>
         <div className='px-[10px]'>
           <div className='flex flex-col gap-[10px]'>
             <div className='xx:flex justify-center'>
@@ -146,13 +146,13 @@ const Help = () => {
                       Прописали для ИИ-бота сценарий и настройки{' '}
                       <br className='hidden xx:flex' />в сервисе NextBot
                     </p>
-                    <div className='absolute top-[-30px] left-0'>
+                    <div className='absolute top-[-30px] left-0 xx:left-[-52px] xx:top-[-62px]'>
                       <img
                         src={Rotate.src}
                         alt='icon'
-                        className='z-20 rotate-icon'
+                        className='z-20 rotate-icon xx:size-[118px]'
                       />
-                      <div className='size-4 xx:size-[35px] rounded-full bg-cloud flex justify-center items-center absolute top-[22px] left-[20px]  z-30'>
+                      <div className='size-4 xx:size-[35px] rounded-full bg-cloud flex justify-center items-center absolute top-[22px] left-[20px]  z-30 xx:left-[43px] xx:top-11'>
                         <div className='size-2 xx:size-[19px] rounded-full bg-blue' />
                       </div>
                     </div>
@@ -327,8 +327,8 @@ const Help = () => {
             </p>
           </div>
         </div>
-        <div className='hidden justify-between xx:flex xx:pt-[147px]'>
-          <div className='flex flex-col items-end gap-[386px] xx:pl-[201px]'>
+        <div className='hidden justify-start gap-5 xx:flex xx:pt-[147px] xx:pb-[92px]'>
+          <div className='flex flex-col items-end gap-[363px] xx:pl-[201px]'>
             <h2 className='text-lime text-[22px] leading-[28.6px] font-Regular text-end w-[398px]'>
               После внедрения ИИ-бота в 2024 году продажи на Avito и в розничных
               точках суммарно выросли на 80%
@@ -342,7 +342,7 @@ const Help = () => {
               </div>
             </button>
           </div>
-          <div className='relative xx:mr-[110px]'>
+          <div className='relative xx:mr-[110px] w-[800px]'>
             <div>
               <img
                 src={Circle1.src}
@@ -356,26 +356,26 @@ const Help = () => {
                 className='w-[244px] min-h-[218px] absolute top-[140px] left-[137px]'
               />
             </div>
-            <div className='flex flex-col absolute top-10 ll:right-6 right-[-92px]'>
+            <div className='flex flex-col absolute top-[71px] ll:right-6 right-[-112px]'>
               <div className='size-[13px] bg-cloud rounded-full flex justify-center items-center absolute top-[29px] left-[-5px]'>
                 <div className='bg-blue size-[7px] rounded-full' />
               </div>
-              <p className='text-lime text-[20px] font-Bold uppercase absolute right-[-3px] top-[-23px]'>
+              <p className='text-lime text-[100px] font-Bold uppercase absolute right-[-8px] top-[-112px]'>
                 на 80%
               </p>
               <img src={LINEMAIN.src} alt='icon' className='' />
-              <p className='text-lime text-[12px] font-Regular absolute right-0 top-[5px]'>
+              <p className='text-lime text-[22px] font-Regular absolute right-[-1px] top-[10px]'>
                 рост продаж
               </p>
             </div>
           </div>
-          <div className='flex flex-col items-end'>
+          <div className='flex flex-col items-end absolute right-[208px] pt-[322px]'>
             <p className='text-white text-[22px] leading-[28.6px] font-Regular text-start w-[476px]'>
               Говорить, что это на 100% последствие внедрения ИИ-консультанта,
               мы не можем. Но это нововведение однозначно оказало влияние на
               увеличение прибыли.
             </p>
-            <p className='text-white text-[22px] leading-[28.6px] font-Regular text-start w-[476px]'>
+            <p className='text-white text-[22px] leading-[28.6px] font-Regular text-start w-[476px] pt-7'>
               И мы можем предположить, что это было существенное влияние.
             </p>
           </div>

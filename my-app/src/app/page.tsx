@@ -19,7 +19,7 @@ export default function Home() {
       <Header />
       <MainScreen />
       <Business />
-      <Create />
+      <Create id={0} title={''} />
       <NextBot />
       <Course />
       <Help />

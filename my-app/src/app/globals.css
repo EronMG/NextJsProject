@@ -154,20 +154,26 @@
 }
 
 /* Add this style to your CSS/SCSS file */
+.hover-effect {
+  transition: all 1s ease; /* Перенесено сюда для обеспечения плавности и при возвращении */
+}
+
+.hover-effect .text,
+.hover-effect img {
+  transition: transform 0.5s ease, color 0.5s ease; /* Указываем явно свойства для анимации */
+}
+
 .hover-effect:hover {
-  transition: all 1s ease;
   background: #4f56d3;
 }
 
 .hover-effect:hover .text {
   transform: translateX(40px);
   color: #d1d4ff;
-  transition: all 0.5s ease;
 }
 
 .hover-effect:hover img {
   transform: translateX(40px);
-  transition: all 0.5s ease;
 }
 
 @keyframes fadeIn {
