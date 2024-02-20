@@ -50,7 +50,7 @@ const Help = () => {
   }, []);
 
   return (
-    <div className='xx:flex justify-center'>
+    <div className='xx:flex justify-center' id='case'>
       <section className='bg-dark rounded-[40px] pt-[30px] pb-[33px] mx-[10px] xx:mr-[26px] xx:rounded-[60px] mt-[78.5px] overflow-hidden xx:mt-[175px] xx:w-[1738px]'>
         <div className='px-[10px]'>
           <div className='flex flex-col gap-[10px]'>
@@ -414,7 +414,7 @@ const Help = () => {
               </p>
             </div>
           </div>
-          <div className='flex flex-col items-end xx:absolute right-[208px] pt-[322px]'>
+          <div className='flex flex-col items-end xx:absolute xx:right-0 bb:right-[208px] pt-[322px]'>
             <p className='text-white text-[22px] leading-[28.6px] font-Regular text-start w-[476px]'>
               Говорить, что это на 100% последствие внедрения ИИ-консультанта,
               мы не можем. Но это нововведение однозначно оказало влияние на

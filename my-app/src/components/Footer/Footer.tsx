@@ -1,19 +1,46 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Star from '@/Images/StarWhite.svg';
 import Cursor from '@/Images/Cursor.svg';
 import Comp from '@/Images/Comp.svg';
 import NoAIICON from '@/Images/NoAI_icon.svg';
 import WithAIICON from '@/Images/WithAI_icon.svg';
 import ArrowBtn from '@/Images/ArrowBtn.svg';
-
+import { useSpring, animated } from 'react-spring';
 const Footer = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (e: any) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
+
+  const [styles, set] = useSpring(() => ({
+    right: 80,
+    top: 20,
+    config: { tension: 100, friction: 12 },
+  }));
+
+  useEffect(() => {
+    set({
+      right: mousePosition.x / 50,
+      top: mousePosition.y / 50,
+    });
+  }, [mousePosition, set]);
+
   const [isHovered, setIsHovered] = useState(false);
-  const [animationKey, setAnimationKey] = useState(0); // Для сброса анимации
+  const [animationKey, setAnimationKey] = useState(0);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
-    setAnimationKey((prevKey) => prevKey + 1); // Сброс анимации стрелки
+    setAnimationKey((prevKey) => prevKey + 1);
   };
   return (
     <div className='xx:flex justify-center'>
@@ -46,25 +73,39 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
-          <div className='hidden lg:flex pt-[31px] absolute pb-[87px] top-[20px] right-[80px] xm:right-[200px] xx:right-0 xx:top-[30.5%] xx:left-[48.8%]'>
-            <div className='relative pl-4 py-4 bg-blue rounded-[20px] w-[271px] h-[107px] xx:h-[147px]'>
-              <p className='text-[18px] leading-[22.4px] font-Regular text-white w-[225px] xx:text-[22px] xx:leading-[26.4px]'>
-                С ИИ-ботом стоимость обработки одного сообщения в{' '}
-                <span className='font-Medium'>4 раза ниже</span>
-              </p>
-              <img
-                src={Star.src}
-                alt='icon'
-                className='absolute right-4 bottom-3'
-              />
-              <div className='absolute -right-[60px] -bottom-[60px] xx:-right-[130px] xx:-bottom-[55px]'>
-                <img src={Cursor.src} alt='cursor' className='' />
-                <div className='bg-white text-[20px] text-dark font-Regular w-[114px] h-[31px] pt-1 flex justify-center items-center rounded-[16px] ml-3'>
-                  NEXTBOT
+          <div className='hidden lg:flex xx:right-0 xx:top-[30.5%] xx:left-[48.8%]'>
+            <animated.div
+              style={{
+                ...styles,
+                position: 'absolute',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'flex-end',
+                paddingBottom: '[31px]',
+                paddingTop: '[87px]',
+                marginRight: '400px',
+                marginTop: '100px',
+              }}
+              className={`hidden top-[20px] right-[80px] xm:right-[10px] xx:right-0 xx:top-[30.5%] xx:left-[48.8%]`}
+            >
+              <div className='relative pl-4 py-4 bg-blue rounded-[20px] w-[271px] h-[107px] xx:h-[147px]'>
+                <p className='text-[18px] leading-[22.4px] font-Regular text-white w-[225px] xx:text-[22px] xx:leading-[26.4px]'>
+                  С ИИ-ботом стоимость обработки одного сообщения в{' '}
+                  <span className='font-Medium'>4 раза ниже</span>
+                </p>
+                <img
+                  src={Star.src}
+                  alt='icon'
+                  className='absolute right-4 bottom-3'
+                />
+                <div className='absolute -right-[60px] -bottom-[60px] xx:-right-[130px] xx:-bottom-[55px]'>
+                  <img src={Cursor.src} alt='cursor' className='' />
+                  <div className='bg-white text-[20px] text-dark font-Regular w-[114px] h-[31px] pt-1 flex justify-center items-center rounded-[16px] ml-3'>
+                    NEXTBOT
+                  </div>
                 </div>
               </div>
-            </div>
+            </animated.div>
           </div>
         </div>
 
@@ -341,8 +382,35 @@ const Footer = () => {
                 alt='computer'
                 className=' xx:w-[532px] xx:h-[383px]'
               />
-              <div className='w-[276px] flex justify-center items-center border-[1px] border-lime bg-[#1E2121] rounded-[10px] py-3 px-1 sm:hidden lg:flex xx:absolute xx:py-[25px] xx:w-[418px] xx:top-[203px] xx:-left-[240px]'>
-                <p className='text-white text-[14px] leading-[16.8px] text-center xx:text-[22px] xx:leading-[26.4px]'>
+              <div className='hidden xx:flex'>
+                <animated.div
+                  style={{
+                    ...styles,
+                    position: 'absolute',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'flex-end',
+                    paddingBottom: '[31px]',
+                    paddingTop: '[87px]',
+                    marginRight: '340px',
+                    marginTop: '200px',
+                  }}
+                  className={`sm:hidden lg:flex xx:absolute xx:py-[25px] xx:w-[418px] xx:top-[203px] xx:-left-[240px]'`}
+                >
+                  <div className='w-[276px] xx:w-[416px] flex justify-center items-center border-[1px] border-lime bg-[#1E2121] rounded-[10px] py-3 px-1 '>
+                    <p className='text-white text-[14px] leading-[16.8px] text-center xx:text-[22px] xx:leading-[26.4px]'>
+                      При одинаковой конверсии{' '}
+                      <span className='text-lime font-Medium'>
+                        ваша прибыль растет
+                      </span>{' '}
+                      просто за счет увеличения трафика и быстро обработанных
+                      заявок
+                    </p>
+                  </div>
+                </animated.div>
+              </div>
+              <div className='w-[276px] flex justify-center items-center border-[1px] xx:hidden sm:hidden lg:flex border-lime bg-[#1E2121] rounded-[10px] py-6 px-1'>
+                <p className='text-white text-[14px] leading-[16.8px] text-center'>
                   При одинаковой конверсии{' '}
                   <span className='text-lime font-Medium'>
                     ваша прибыль растет
@@ -351,7 +419,6 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-
             <div className='hidden sm:h-[219px] sm:flex sm:flex-col sm:items-center sm:justify-between sm:pt-[0px] lg:hidden'>
               <div className='w-[276px] flex justify-center items-center border-[1px] border-lime bg-[#1E2121] rounded-[10px] py-6 px-1'>
                 <p className='text-white text-[14px] leading-[16.8px] text-center'>

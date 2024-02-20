@@ -105,7 +105,7 @@ const Payments = () => {
         </p>
       </div>
       <div className='pt-6 flex flex-col items-center justify-center'>
-        <div className='flex items-center gap-3 xx:hidden'>
+        <div className='flex items-center gap-3 lg:hidden'>
           <img
             src={Arrow.src}
             alt='icon'
@@ -130,7 +130,7 @@ const Payments = () => {
             ></div>
           ))}
         </div>
-        <div className='flex'>
+        <div className='flex' id='payments'>
           <div className='hidden xx:flex gap-5 pt-[78px]'>
             {paymentsArr.map((item, _) => (
               <div
@@ -239,7 +239,7 @@ const Payments = () => {
               </div>
             ))}
           </div>
-          <div className={`pt-[10px] xx:hidden`}>
+          <div className={`pt-[10px] xx:hidden lg:hidden`}>
             {active &&
               paymentsArr
                 .slice(
@@ -262,7 +262,8 @@ const Payments = () => {
                   <div
                     key={item.id}
                     className={`pt-8 max-w-[300px] md:max-w-[500px] pb-12 px-[13px] bg-cloud rounded-[20px] ${
-                      active === 'second' && 'relative border-[2px] border-blue'
+                      active === 'second' &&
+                      'relative border-[2px] border-blue mt-5'
                     }`}
                   >
                     {item.id === 2 && (
@@ -331,6 +332,115 @@ const Payments = () => {
                     </div>
                   </div>
                 ))}
+          </div>
+          <div className='hidden xx:hidden lg:flex  gap-5'>
+            {paymentsArr.map((item, _) => (
+              <div
+                key={item.id}
+                className={`relative pt-8 pb-12 ${
+                  item.id !== 2 ? 'h-[1258px]' : 'h-[1360px]'
+                } pl-[13px] pr-[18px] bg-cloud ${
+                  item.id === 1 && 'mt-[52px]'
+                } ${
+                  item.id === 3 && 'mt-[52px]'
+                } rounded-[20px] max-w-[320px] ${
+                  item.id === 2 && 'border-[2px] border-blue'
+                }`}
+              >
+                {item.id === 2 && (
+                  <div className='bg-blue rounded-[10px] w-[196px] h-[45px] flex justify-center items-center absolute top-[-24px] pt-[6px] left-[17.8%]'>
+                    <p className='  text-[13px] leading-[28.6px] text-white font-Regular'>
+                      Самый популярный вариант
+                    </p>
+                  </div>
+                )}
+                <h2
+                  className={`text-[36px] ${
+                    item.id !== 2 && ' pl-0'
+                  } text-dark font-Regular leading-[67.2px] text-center pt-0 ${
+                    item.id === 2 && 'flex items-center justify-center pl-0px]'
+                  }`}
+                >
+                  {item.id === 2 && (
+                    <img
+                      src={StarBlack.src}
+                      alt='icon'
+                      className='pr-[11.6px] pb-[10px]'
+                    />
+                  )}{' '}
+                  {item.name}{' '}
+                  {item.id === 2 && (
+                    <img
+                      src={StarBlack.src}
+                      alt='icon'
+                      className='pb-[10px] pl-[19px]'
+                    />
+                  )}
+                </h2>
+                <div className='pl-[7.5px] pt-[13px]'>
+                  <p className='text-blue font-Medium  text-[16px] w-[262px] leading-[26.4px]'>
+                    {item.title}
+                  </p>
+                  <div className='flex flex-col gap-[5px] pt-4'>
+                    {item.titleArr.map((item, _) => (
+                      <span
+                        key={item.id}
+                        className='text-[16px] leading-[26px] text-dark font-Regular flex gap-1 items-start'
+                      >
+                        <img src={Star.src} alt='icon' className='pt-1' />
+                        {item.title}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className='flex flex-col gap-5 pt-[42px] pl-6'>
+                  {item.spanArr.map((item, _) => (
+                    <p
+                      key={item.id}
+                      className='max-w-[350px] text-[20px] leading-[28.6px] text-dark font-Medium'
+                    >
+                      {item.title}
+                    </p>
+                  ))}
+                </div>
+                <div>
+                  <div
+                    className={`flex gap-2 flex-row-reverse items-center justify-center ${
+                      item.id === 1 && 'pt-[164px] '
+                    } ${item.id === 3 && 'pt-[28px]'}
+                    ${item.id === 2 && 'pt-[244px] '}`}
+                  >
+                    <h3
+                      className={`font-Regular text-[36px] leading-[67.2px] ${
+                        item.id !== 1 && 'text-blue'
+                      }`}
+                    >
+                      {item.deleteCost} ₽
+                    </h3>
+                    {item.id === 2 && (
+                      <h3 className='font-Regular text-[36px] leading-[67.2px] text-dark line-through decoration-2 decoration-lime'>
+                        {item.cost}
+                      </h3>
+                    )}
+                    {item.id === 3 && (
+                      <h3 className='font-Regular text-[36px] leading-[67.2px] text-dark line-through decoration-2 decoration-lime'>
+                        {item.cost}
+                      </h3>
+                    )}
+                  </div>
+                  <div className='flex justify-center pl-0'>
+                    <button className='z-10 w-[234px] h-[50px] flex flex-row items-center gap-2 justify-end rounded-[40px] bg-lime md:w-[280px] mt-0'>
+                      <p className='text-[14px] text-dark font-Medium md:text-[18px] mr-8'>
+                        Создать ии-бота
+                      </p>
+                      <div className='flex items-center justify-center size-7 rounded-full bg-dark mr-3'>
+                        <img src={ArrowBtn.src} alt='ArrowBtn' />
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

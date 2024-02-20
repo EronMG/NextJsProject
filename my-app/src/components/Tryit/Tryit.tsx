@@ -29,9 +29,9 @@ function Tryit() {
   const [activeTab, setActiveTab] = useState(0);
   return (
     <>
-      <section className='w-screen flex flex-col items-center mt-[80px] xx:mt-[183px]'>
+      <section className='w-screen flex flex-col items-center mt-[80px] xx:mt-[189px]'>
         <div className='flex justify-center items-center pb-[11px] border-b-2 border-blue'>
-          <h2 className='max-w-[292px] text-[22px] leading-[26.4px] text-center font-Regular md:max-w-[600px] xx:w-[1576px] xx:max-w-[1576px] xx:text-start xx:text-[36px] xx:leading-[43.2px]'>
+          <h2 className='max-w-[292px] text-[22px] leading-[26.4px] text-center font-Regular md:max-w-[600px] xx:mr-1 xx:w-[1576px] xx:max-w-[1576px] xx:text-start xx:text-[36px] xx:leading-[43.2px]'>
             В NextBot вы создадите бота с искусственным интеллектом. Он общается{' '}
             <br className='hidden xx:flex' />
             как человек. Клиенты не отличают его от настоящего консультанта

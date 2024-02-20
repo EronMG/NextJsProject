@@ -15,7 +15,7 @@ const Course = () => {
     setAnimationKey((prevKey) => prevKey + 1); // Сброс анимации стрелки
   };
   return (
-    <section className='px-[10px] pt-[77px] xx:pt-[270px]' id='case'>
+    <section className='px-[10px] pt-[77px] xx:pt-[270px]'>
       <div className='xx:flex justify-center'>
         <div className='flex flex-wrap xx:relative justify-center xx:justify-between items-center border-b-[2px] border-blue xx:w-[1576px]'>
           <h2 className=' font-Regular text-dark text-[22px] leading-[26.4px] text-center max-w-[278px] xx:pb-[14px] ss:max-w-[450px] xx:text-[36px] xx:leading-[43.2px] xx:max-w-[1198px] xx:text-start'>
@@ -45,7 +45,10 @@ const Course = () => {
             </button>
           </div>
         </div>
-        <div className='flex overflow-hidden pt-[25px] max-w-[300px] md:flex-wrap md:max-w-[1576px] xx:max-w-[1920px] md:justify-center md:gap-3 xx:gap-5 xx:pt-[34px]'>
+        <div
+          className='flex overflow-hidden pt-[25px] max-w-[300px] md:flex-wrap md:max-w-[1576px] xx:max-w-[1920px] md:justify-center md:gap-3 xx:gap-5 xx:pt-[34px]'
+          id='course'
+        >
           {courseArr.map((item, _) => (
             <div
               key={item.id}

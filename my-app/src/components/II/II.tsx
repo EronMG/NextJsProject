@@ -1,9 +1,59 @@
+'use client';
+import React, { useEffect, useRef, useState } from 'react';
 import { iiArr } from '@/Types/Arrays';
-import React from 'react';
 import Mobile from '@/Images/mobile.jpg';
 import Line from '@/Images/IIline.svg';
 
 const II = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [imageWidth, setImageWidth] = useState(0);
+  const imageRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
+    }
+
+    return () => {
+      if (imageRef.current) {
+        observer.unobserve(imageRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      const animationDuration = 2000; // 2 seconds
+      const startTime = performance.now();
+      const initialWidth = imageWidth;
+
+      const updateImageWidth = (currentTime: number) => {
+        const elapsedTime = currentTime - startTime;
+        const progress = Math.min(1, elapsedTime / animationDuration);
+        const newWidth = initialWidth + 50 * progress; // Adjust the factor as needed
+
+        setImageWidth(newWidth + 70);
+
+        if (progress < 1) {
+          requestAnimationFrame(updateImageWidth);
+        }
+      };
+
+      requestAnimationFrame(updateImageWidth);
+    }
+  }, [isVisible]);
+
   return (
     <section className='pt-[71px] px-[10px] xx:pt-[180px] xx:px-0 xx:relative xx:flex justify-center'>
       <div className='xx:w-[1920px] xx:relative'>
@@ -49,7 +99,15 @@ const II = () => {
         <img
           src={Line.src}
           alt='line'
-          className='absolute bottom-[-258px] xx:flex hidden'
+          style={{
+            width: `${imageWidth}%`,
+            height: '308px', // Set the height explicitly
+            left: '50%', // Center the image
+            transform: 'translateX(-50%)', // Center the image
+            transition: 'width 2s ease', // Adjust the duration and easing function as needed
+          }}
+          className='absolute bottom-[-275px] xx:flex hidden'
+          ref={imageRef}
         />
       </div>
     </section>

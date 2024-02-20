@@ -327,3 +327,8 @@
   width: 100%;
   height: 97px;
 }
+
+.www {
+  width: 100%;
+  transition: width 2s ease; /* Adjust the duration and easing function as needed */
+}

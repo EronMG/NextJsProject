@@ -21,7 +21,7 @@ const MainScreen = () => {
 
   return (
     <>
-      <section className='w-screen relative flex flex-col items-center overflow-hidden md:overflow-visible md:pt-[35px] lg:pt-[71px] xx:pt-20 xx:mb-2'>
+      <section className='w-screen relative flex flex-col items-center overflow-hidden md:overflow-visible md:pt-[35px] lg:pt-[71px] xx:pt-[84px] xx:mb-2'>
         <div className='z-10 flex flex-col items-center gap-3 mt-[15px] xx:gap-2 xx:mt-[8px]'>
           <AnimatedHeading text={''} size={'normal'} />
           <p className='max-w-[300px] text-base text-center text-[16px] leading-[20.8px] font-Regular text-dark md:text-[20px] mm:max-w-[522px] mm:min-w-[300px] lg:text-[20px] lg:leading-[26px] xx:max-w-[722px]'>
@@ -34,12 +34,12 @@ const MainScreen = () => {
         <img
           src={BGImageOne.src}
           alt=''
-          className='absolute z-50 -top-[82px] right-0'
+          className='absolute z-[-1] -top-[82px] right-0'
         />
         <img
           src={BGImageTwo.src}
           alt=''
-          className='absolute -top-[82px] right-0'
+          className='absolute z-[-1] -top-[82px] right-0'
         />
 
         <div className='md:flex-col-reverse relative flex flex-col items-center gap-6 pt-4 md:gap-10 lg:mt-[11px]'>

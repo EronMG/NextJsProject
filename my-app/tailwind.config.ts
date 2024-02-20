@@ -17,6 +17,7 @@ const config: Config = {
         xl: '1280px',
         xm: '1440px',
         xx: '1577px',
+        bb: '1920px',
       },
       fontFamily: {
         Thin: ['ALSthin', 'sans-serif'],
