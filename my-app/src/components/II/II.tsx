@@ -12,7 +12,7 @@ const II = () => {
           <br className='md:hidden' />
           общении с клиентами
         </h2>
-        <div className='flex flex-wrap gap-7 justify-center pt-6 xx:gap-[200px] xx:pt-[62px] xx:pl-[1110px]'>
+        <div className='flex flex-wrap gap-5 justify-center pt-6 xx:gap-[200px] xx:pt-[62px] xx:pl-[1110px]'>
           {iiArr.map((item, _) => (
             <div
               key={item.id}
@@ -46,7 +46,11 @@ const II = () => {
             </div>
           ))}
         </div>
-        <img src={Line.src} alt='line' className='absolute bottom-[-258px]' />
+        <img
+          src={Line.src}
+          alt='line'
+          className='absolute bottom-[-258px] xx:flex hidden'
+        />
       </div>
     </section>
   );

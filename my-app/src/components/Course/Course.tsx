@@ -82,7 +82,7 @@ const Course = () => {
             </div>
           ))}
         </div>
-        <div className='flex justify-center items-center xx:pt-12'>
+        <div className='flex justify-center items-center xx:pt-12 pt-[34px]'>
           <button
             className={`relative z-10 w-[234px] h-[50px] flex flex-row items-center gap-2 rounded-[40px] bg-lime md:w-[280px] ${
               isHovered ? 'button-hovered' : ''

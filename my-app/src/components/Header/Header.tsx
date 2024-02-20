@@ -28,7 +28,7 @@ const Header = () => {
         </div>
       </div>
       <div className='md:hidden flex justify-between items-center pt-[10px] w-full px-2 mm:px-8 bg-[#F9FAFE] pb-[10px]'>
-        <div className='text-[10px] font-Regular text-dark border-[1px] border-dark rounded-[41px] min-w-[68px] h-[19px] flex justify-center items-center'>
+        <div className='text-[10px] font-Regular pt-[2px] text-dark border-[1px] border-dark rounded-[41px] min-w-[68px] h-[19px] flex justify-center items-center'>
           NEXT BOT
         </div>
         <RxHamburgerMenu className='text-lg' />

@@ -242,7 +242,7 @@ const Help = () => {
             />
           </div>
         </div>
-        <div className='px-[10px] pt-[30px] xx:pl-[86px] xx:pt-[147px]'>
+        <div className='px-[10px] pt-[32px] xx:pl-[86px] xx:pt-[147px]'>
           <h2 className='text-white font-Regular text-base leading-[20.8px] text-center xx:text-[36px] xx:leading-[46.8px] xx:text-start'>
             ИИ-ассистент за месяц обработал{' '}
             <span className='text-lime font-Bold'>
@@ -251,22 +251,22 @@ const Help = () => {
             <br className='hidden xx:flex' />В 2023 г. нам потребовалось бы
             нанять для этого двух менеджеров
           </h2>
-          <div className='flex flex-wrap gap-[10px] md:justify-center md:pt-7 xx:justify-end xx:gap-5 xx:pr-[62px] xx:pt-10'>
+          <div className='flex flex-wrap gap-[10px] pt-4 md:justify-center md:pt-7 xx:justify-end xx:gap-5 xx:pr-[62px] xx:pt-10'>
             {helpArrBlock.map((item, _) => (
               <div
                 key={item.id}
                 className={`${
                   item.id === 1 ? 'border-[1px] border-lime' : ''
-                } rounded-[20px] p-2 bg-[#1E2121] max-w-[512px] md:p-5 xx:pt-[34px] xx:pl-[23px] xx:w-full xx:h-[345px]`}
+                } rounded-[20px] pt-[14px] pl-[13px] pb-[13px] bg-[#1E2121] max-w-[512px] md:p-5 xx:pt-[34px] xx:pl-[23px] xx:w-full xx:h-[345px]`}
               >
                 <h2 className='text-lime text-base leading-[20.8px] font-Medium w-[187px]  xx:text-xl xx:leading-[26px] xx:w-fit'>
                   {item.name}
                 </h2>
-                <div className='pt-[10px] flex flex-col gap-2'>
+                <div className='pt-[8px] flex flex-col gap-[7px]'>
                   {item.titleArr.map((item, _) => (
                     <span
                       key={item.id}
-                      className='flex items-start justify-start gap-1 text-white font-[12px] leading-[15.6px] font-Regular xx:text-base xx:leading-[20.8px] xx:max-w-[430px]'
+                      className='flex items-start justify-start gap-1 text-white text-[12px] leading-[15.6px] font-Regular xx:text-base xx:leading-[20.8px] xx:max-w-[430px]'
                     >
                       <img src={Star.src} alt='star' className='' />
                       {item.title}
@@ -274,8 +274,8 @@ const Help = () => {
                   ))}
                 </div>
                 <p
-                  className={`text-white italic text-base leading-[20.8px] font-Regular pt-2 xx:text-xl xx:leading-[26px]  ${
-                    item.id === 1 ? 'pt-[27px]' : 'pt-[47px]'
+                  className={`text-white italic text-base leading-[20.8px] font-Regular xx:text-xl xx:leading-[26px]  ${
+                    item.id === 1 ? 'pt-[9px]' : 'pt-[25px]'
                   }`}
                 >
                   {item.title}
@@ -284,7 +284,7 @@ const Help = () => {
             ))}
           </div>
         </div>
-        <div className='px-[10px] flex flex-wrap  justify-start ss:justify-center gap-[14px] pt-8 xx:hidden'>
+        <div className='px-[10px] flex flex-wrap  justify-start ss:justify-center gap-[14px] pt-12 xx:hidden'>
           <h2 className='text-lime text-base leading-[20.8px] font-Regular text-center md:max-w-[298px] md:text-end h-fit'>
             После внедрения ИИ-бота в 2024 году продажи на Avito и в розничных
             точках суммарно выросли на 80%
@@ -381,7 +381,7 @@ const Help = () => {
           </div>
         </div>
         <div className='flex justify-center xx:hidden'>
-          <button className='z-10 w-[234px] h-[50px] flex flex-row items-center gap-2 justify-end rounded-[40px] bg-lime md:w-[280px] mt-6'>
+          <button className='z-10 w-[234px] h-[50px] flex flex-row items-center gap-2 justify-end rounded-[40px] bg-lime md:w-[280px] mt-[22px]'>
             <p className='text-[14px] text-dark font-Medium md:text-[18px] mr-8'>
               Создать ии-бота
             </p>

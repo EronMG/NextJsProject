@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import Star from '@/Images/StarWhite.svg';
 import Cursor from '@/Images/Cursor.svg';
 import Comp from '@/Images/Comp.svg';
@@ -7,6 +8,13 @@ import WithAIICON from '@/Images/WithAI_icon.svg';
 import ArrowBtn from '@/Images/ArrowBtn.svg';
 
 const Footer = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [animationKey, setAnimationKey] = useState(0); // Для сброса анимации
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    setAnimationKey((prevKey) => prevKey + 1); // Сброс анимации стрелки
+  };
   return (
     <div className='xx:flex justify-center'>
       <section className='mx-[10px] bg-dark rounded-t-[40px] py-[33px] mt-10 lg:mx-[5%] lg:px-[60px] lg:pt-[93px] xm:px-[80px] xm:pt-[137px] xm:rounded-t-[60px] xx:pb-[65px] xx:mt-[188px] max-w-[1738px]'>
@@ -363,13 +371,45 @@ const Footer = () => {
                 </div>
               </button>
             </div>
-
-            <button className='z-10 h-[50px] flex flex-row items-center gap-2 justify-center rounded-[40px] bg-lime w-[280px] mt-6 sm:hidden'>
-              <p className='text-[18px] text-dark font-Medium mr-1'>
+            <button
+              className={`relative z-10 w-[280px] h-[50px] mt-4 flex flex-row items-center justify-center gap-2 pr-7 rounded-[40px] bg-lime ${
+                isHovered ? 'button-hovered' : ''
+              }`}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              <p
+                className={`text-[18px] font-Medium ml-7 ${
+                  isHovered ? 'text-blue duration-300' : ' text-dark'
+                }`}
+              >
                 Создать ии-бота
               </p>
-              <div className='flex items-center justify-center size-7 rounded-full bg-dark mr-3'>
-                <img src={ArrowBtn.src} alt='ArrowBtn' />
+              <div
+                className={`flex items-center justify-center size-7 rounded-full  ${
+                  isHovered ? ' bg-blue duration-300' : 'bg-dark'
+                }`}
+              >
+                <img
+                  src={ArrowBtn.src}
+                  alt='ArrowBtn'
+                  className={`transition-opacity duration-500 ${
+                    isHovered ? 'arrow-out' : ''
+                  }`}
+                  key={animationKey}
+                />
+                {isHovered && (
+                  <img
+                    src={ArrowBtn.src}
+                    alt='ArrowBtn'
+                    className='arrow-in'
+                    style={{
+                      position: 'absolute',
+                      right: '60px',
+                      top: '20px',
+                    }}
+                  />
+                )}
               </div>
             </button>
 
@@ -412,7 +452,7 @@ const Footer = () => {
             <span className='text-white text-base leading-[19.2px] font-Regular text-center max-w-[286px] lg:text-left lg:max-w-[240px] xx:text-[20px] xx:leading-[24px] xx:max-w-[340px]'>
               Если у вас остались вопросы, свяжитесь с нами в WhatsApp
             </span>
-            <button className='text-lime border-[1px] border-lime rounded-[40px] w-[242px] h-[51px] flex justify-center items-center text-[18px] font-Medium'>
+            <button className='hover:bg-lime hover:text-dark duration-300 transition-all text-lime border-[1px] border-lime rounded-[40px] w-[242px] h-[51px] flex justify-center items-center text-[18px] font-Medium'>
               написать в WhatsApp
             </button>
           </div>
