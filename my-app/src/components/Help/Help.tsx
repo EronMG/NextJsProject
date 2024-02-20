@@ -342,7 +342,7 @@ const Help = () => {
               </div>
             </button>
           </div>
-          <div className='relative xx:mr-[110px] w-[800px]'>
+          <div className='relative  xx:mr-[110px] w-[800px]'>
             <div>
               <img
                 src={Circle1.src}
@@ -369,7 +369,7 @@ const Help = () => {
               </p>
             </div>
           </div>
-          <div className='flex flex-col items-end absolute right-[208px] pt-[322px]'>
+          <div className='flex flex-col items-end xx:absolute right-[208px] pt-[322px]'>
             <p className='text-white text-[22px] leading-[28.6px] font-Regular text-start w-[476px]'>
               Говорить, что это на 100% последствие внедрения ИИ-консультанта,
               мы не можем. Но это нововведение однозначно оказало влияние на

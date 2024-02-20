@@ -1,14 +1,43 @@
+'use client';
+import tabs from '@/Images/tabs.svg';
+import { useState } from 'react';
+
+const TabContent = [
+  {
+    title: 'ИИ-бот на основе ChatGPT 3,5 Turbo и ChatGPT 4 Turbo',
+    imageSrc:
+      'https://www.figma.com/file/2xzC7PiYlt9Zkqn9M7sAST/image/34eda0e497db142bfac37284807115474f9d0027',
+  },
+  {
+    title: 'Настройка без знаний программирования',
+    imageSrc:
+      'https://www.figma.com/file/2xzC7PiYlt9Zkqn9M7sAST/image/34eda0e497db142bfac37284807115474f9d0027',
+  },
+  {
+    title: 'Все основные настройки вынесены в интерфейс сервиса',
+    imageSrc:
+      'https://www.figma.com/file/2xzC7PiYlt9Zkqn9M7sAST/image/34eda0e497db142bfac37284807115474f9d0027',
+  },
+  {
+    title: 'Понятное объяснение для каждого пункта настроек',
+    imageSrc:
+      'https://www.figma.com/file/2xzC7PiYlt9Zkqn9M7sAST/image/34eda0e497db142bfac37284807115474f9d0027',
+  },
+];
+
 function Tryit() {
+  const [activeTab, setActiveTab] = useState(0);
   return (
     <>
-      <section className='w-screen flex flex-col items-center mt-[80px]'>
+      <section className='w-screen flex flex-col items-center mt-[80px] xx:mt-[183px]'>
         <div className='flex justify-center items-center pb-[11px] border-b-2 border-blue'>
-          <h2 className='max-w-[292px] text-[22px] leading-[26.4px] text-center font-Regular md:max-w-[600px]'>
-            В NextBot вы создадите бота с искусственным интеллектом. Он общается
+          <h2 className='max-w-[292px] text-[22px] leading-[26.4px] text-center font-Regular md:max-w-[600px] xx:w-[1576px] xx:max-w-[1576px] xx:text-start xx:text-[36px] xx:leading-[43.2px]'>
+            В NextBot вы создадите бота с искусственным интеллектом. Он общается{' '}
+            <br className='hidden xx:flex' />
             как человек. Клиенты не отличают его от настоящего консультанта
           </h2>
         </div>
-        <div className='flex flex-col items-center pt-5'>
+        <div className='flex flex-col items-center pt-5 xx:hidden'>
           <p className='text-[16px] leading-[20.8px] text-center font-Regular pb-5 md:text-xl'>
             Без сложных настроек
           </p>
@@ -40,6 +69,49 @@ function Tryit() {
               </div>
             ))}
           </div>
+        </div>
+        <div className='hidden xx:flex justify-end items-start pt-10 w-[1576px] gap-[44px] '>
+          <div>
+            <p className='text-[22px] leading-[28.6px] font-Regular text-dark'>
+              Без сложных настроек
+            </p>
+            <div className='flex flex-col gap-[10px] pt-5'>
+              {TabContent.map((item, index) => (
+                <div
+                  key={index}
+                  className={`max-w-[380px] h-[68px] border-[1px] border-blue rounded-[10px] flex justify-start font-Regular items-center transition-all duration-500 pl-[11px] pt-[10px] pb-[6px] cursor-pointer ${
+                    activeTab === index
+                      ? 'bg-blue text-white'
+                      : 'bg-white text-dark'
+                  }`}
+                  onClick={() => setActiveTab(index)}
+                >
+                  <p
+                    className={`text-xl leading-[26px] font-Regular ${
+                      index === 0 && 'max-w-[286px]'
+                    } ${index === 2 && 'max-w-[306px]'} ${
+                      index === 3 && 'max-w-[325px]'
+                    }`}
+                  >
+                    {item.title}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className='relative flex pt-[150px] pr-[24px] '>
+            <img
+              src={tabs.src}
+              alt='icon'
+              className='rotate-180 absolute top-[135px] right-[-3px]'
+            />
+            <img src={tabs.src} alt='icon' />
+          </div>
+          <img
+            src={TabContent[activeTab].imageSrc}
+            alt='Tab Content'
+            className='w-[780px] h-[534px] rounded-[10px] py-[29px] px-[42px] bg-cloud mt-[50px]'
+          />
         </div>
       </section>
     </>

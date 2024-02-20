@@ -427,7 +427,7 @@ export const paymentsArr: PaymentsBlock[] = [
     deleteCost: 2900,
   },
   {
-    id: 1,
+    id: 3,
     name: 'Премиум',
     title: 'Доступ ко всему функционалу сервиса NextBot',
     titleArr: [
