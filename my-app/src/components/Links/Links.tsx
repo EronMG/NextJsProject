@@ -127,7 +127,7 @@ function Links() {
                 style={{ animationDelay: `${index * 0.3}s` }}
               >
                 <div className="flex justify-center items-center size-[26px] rounded-full bg-blue lg:size-[38px] xx:size-[56px] bb:size-[75px]">
-                  <img src={item} alt="" />
+                  <img src={item} alt="" className="lg:size-[70%]" />
                 </div>
               </div>
             ))}
