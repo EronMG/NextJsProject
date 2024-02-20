@@ -84,13 +84,13 @@ const Payments = () => {
   return (
     <section className='px-[10px] pt-20 xx:pt-[180px]'>
       <div className='flex flex-col items-center'>
-        <h2 className='font-Regular text-[22px] leading-[26.4px] text-center text-dark xx:text-[36px] xx:leading-[43.2px]'>
+        <h2 className='font-Regular text-[22px] leading-[26.4px] text-center text-dark xx:text-[36px] xx:leading-[43.2px] md:text-[26px]'>
           Вы можете попробовать сервис <br className='hidden xx:flex' /> NextBot
           бесплатно
         </h2>
         <div className='flex flex-col items-center pt-[10px]'>
           <div className='border-b-[1px] rounded-[20px] border-blue pb-2 px-6 xx:pb-[19px] xx:px-[215px]'>
-            <p className='font-Regular text-base leading-[19.2px] text-center text-dark xx:text-[22px] xx:leading-[26.4px]'>
+            <p className='font-Regular text-base leading-[19.2px] text-center text-dark xx:text-[22px] xx:leading-[26.4px] md:text-[18px]'>
               БЕСПЛАТНОЕ обучение, как ПРАВИЛЬНО делать ИИ-ботов
             </p>
           </div>
@@ -100,7 +100,7 @@ const Payments = () => {
             </div>
           </div>
         </div>
-        <p className='font-Regular text-[14px] leading-[16.8px] text-center text-dark w-[218px] pt-[18px] xx:text-[22px] xx:leading-[26.4px] xx:w-fit'>
+        <p className='font-Regular text-[14px] leading-[16.8px] text-center text-dark w-[218px] pt-[18px] xx:text-[22px] xx:leading-[26.4px] xx:w-fit md:text-[18px] md:w-[270px]'>
           Можете выбрать любой тариф – от пробного до премиум
         </p>
       </div>
@@ -109,15 +109,15 @@ const Payments = () => {
           <img
             src={Arrow.src}
             alt='icon'
-            className='cursor-pointer active:scale-110 duration-300'
+            className='cursor-pointer active:scale-110 duration-300 md:scale-125'
             onClick={handlePrev}
           />
-          <img src={Hand.src} alt='icon' className='' />
+          <img src={Hand.src} alt='icon' className=' md:scale-125' />
           <img
             src={Arrow.src}
             alt='icon'
             onClick={handleNext}
-            className='rotate-180 cursor-pointer active:scale-110 duration-300'
+            className='rotate-180 cursor-pointer active:scale-110 duration-300 md:scale-125'
           />
         </div>
         <div className='flex justify-center gap-[10px] pt-4 xx:hidden'>
@@ -239,7 +239,7 @@ const Payments = () => {
               </div>
             ))}
           </div>
-          <div className={`pt-3 xx:hidden`}>
+          <div className={`pt-10 xx:hidden`}>
             {active &&
               paymentsArr
                 .slice(
@@ -258,27 +258,38 @@ const Payments = () => {
                     ? 3
                     : 0
                 )
-                .map((item, index) => (
+                .map((item, _) => (
                   <div
                     key={item.id}
-                    className={`pt-8 max-w-[300px] pb-12 px-[13px] bg-cloud rounded-[20px] ${
-                      active === 'second' && 'relative border-[1px] border-blue'
+                    className={`pt-8 max-w-[300px] md:max-w-[500px] pb-12 px-[13px] bg-cloud rounded-[20px] ${
+                      active === 'second' && 'relative border-[2px] border-blue'
                     }`}
                   >
+                    {item.id === 2 && (
+                      <div className='bg-blue rounded-[10px] w-[326px] h-[45px] flex justify-center items-center absolute top-[-24px] pt-[6px] left-[17.8%]'>
+                        <p className='  text-[22px] leading-[28.6px] text-white font-Regular'>
+                          Самый популярный вариант
+                        </p>
+                      </div>
+                    )}
                     <h2 className='text-[36px] text-dark font-Regular leading-[43.2px] text-center'>
                       {item.name}
                     </h2>
                     <div className='pt-4'>
-                      <p className='text-blue font-Medium leading-[19.2px] text-[16px]'>
+                      <p className='text-blue font-Medium leading-[19.2px] text-[16px] md:text-xl max-w-[300px]'>
                         {item.title}
                       </p>
                       <div className='flex flex-col gap-[5.5px] pt-3'>
                         {item.titleArr.map((item, _) => (
                           <span
                             key={item.id}
-                            className='text-[12px] leading-[15.6px] gap-1 text-dark font-Regular flex items-start'
+                            className='text-[12px] leading-[15.6px] gap-1 text-dark font-Regular flex items-start md:text-base'
                           >
-                            <img src={Star.src} alt='icon' className='' />
+                            <img
+                              src={Star.src}
+                              alt='icon'
+                              className='md:pt-1'
+                            />
                             {item.title}
                           </span>
                         ))}
@@ -286,7 +297,12 @@ const Payments = () => {
                     </div>
                     <div className='flex flex-col gap-3 pt-[23px]'>
                       {item.spanArr.map((item, _) => (
-                        <p key={item.id}>{item.title}</p>
+                        <p
+                          key={item.id}
+                          className='text-base leading-[20.8px] text-dark font-Medium md:text-xl'
+                        >
+                          {item.title}
+                        </p>
                       ))}
                     </div>
                     <div className='flex flex-col items-center pt-[122px]'>

@@ -15,6 +15,14 @@ import { helpArr, helpArrBlock } from '@/Types/Arrays';
 import LineMain from '@/Images/Line.svg';
 
 const Help = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [animationKey, setAnimationKey] = useState(0); // Для сброса анимации
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    setAnimationKey((prevKey) => prevKey + 1); // Сброс анимации стрелки
+  };
+
   const [isVisible, setIsVisible] = useState(false);
   const headingRef = useRef<HTMLImageElement>(null);
 
@@ -47,7 +55,7 @@ const Help = () => {
         <div className='px-[10px]'>
           <div className='flex flex-col gap-[10px]'>
             <div className='xx:flex justify-center'>
-              <div className='border-b-[2px] border-white flex justify-center xx:pt-7 w-[1439px]'>
+              <div className='border-b-[2px] border-white flex justify-center xx:pt-7 xx:w-[1439px]'>
                 <img
                   src={NEXTBOT.src}
                   alt='nextbot'
@@ -225,7 +233,11 @@ const Help = () => {
           </div>
         </div>
         <div className='pt-10 relative'>
-          <img src={BG.src} alt='bg' className='absolute top-2 w-full z-0' />
+          <img
+            src={BG.src}
+            alt='bg'
+            className='absolute top-0 xx:top-40 w-full z-0 xx:min-w-[2383px] object-fit xx:h-[453px] left-0'
+          />
           <div className='pt-[82px] flex flex-col gap-[14px] items-center xx:pl-[220px] xx:pt-6 '>
             <h3 className='text-base leading-[20.8px] text-white  text-center font-Regular md:text-xl md:max-w-[721px] md:text-start xx:leading-[26px]'>
               Периодически читали переписки
@@ -333,12 +345,45 @@ const Help = () => {
               После внедрения ИИ-бота в 2024 году продажи на Avito и в розничных
               точках суммарно выросли на 80%
             </h2>
-            <button className='z-10 w-[234px] h-[50px] flex flex-row items-center gap-2 justify-end rounded-[40px] bg-lime md:w-[280px] mt-6'>
-              <p className='text-[14px] text-dark font-Medium md:text-[18px] mr-8'>
+            <button
+              className={`relative z-10  w-[280px] h-[50px] mt-4 xx:flex flex-row items-center justify-center gap-2 pr-7 rounded-[40px] bg-lime ${
+                isHovered ? 'button-hovered' : ''
+              }`}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              <p
+                className={`text-[18px] font-Medium ml-7 ${
+                  isHovered ? 'text-blue duration-300' : ' text-dark'
+                }`}
+              >
                 Создать ии-бота
               </p>
-              <div className='flex items-center justify-center size-7 rounded-full bg-dark mr-3'>
-                <img src={ArrowBtn.src} alt='ArrowBtn' />
+              <div
+                className={`flex items-center justify-center size-7 rounded-full  ${
+                  isHovered ? ' bg-blue duration-300' : 'bg-dark'
+                }`}
+              >
+                <img
+                  src={ArrowBtn.src}
+                  alt='ArrowBtn'
+                  className={`transition-opacity duration-500 ${
+                    isHovered ? 'arrow-out' : ''
+                  }`}
+                  key={animationKey}
+                />
+                {isHovered && (
+                  <img
+                    src={ArrowBtn.src}
+                    alt='ArrowBtn'
+                    className='arrow-in'
+                    style={{
+                      position: 'absolute',
+                      right: '59.5px',
+                      top: '20px',
+                    }}
+                  />
+                )}
               </div>
             </button>
           </div>
@@ -381,12 +426,45 @@ const Help = () => {
           </div>
         </div>
         <div className='flex justify-center xx:hidden'>
-          <button className='z-10 w-[234px] h-[50px] flex flex-row items-center gap-2 justify-end rounded-[40px] bg-lime md:w-[280px] mt-[22px]'>
-            <p className='text-[14px] text-dark font-Medium md:text-[18px] mr-8'>
+          <button
+            className={`relative z-10 xx:hidden w-[234px] h-[50px] mt-4 flex flex-row items-center justify-center gap-2 pr-7 rounded-[40px] bg-lime ${
+              isHovered ? 'button-hovered' : ''
+            }`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <p
+              className={`text-[14px] font-Medium ml-7 ${
+                isHovered ? 'text-blue duration-300' : ' text-dark'
+              }`}
+            >
               Создать ии-бота
             </p>
-            <div className='flex items-center justify-center size-7 rounded-full bg-dark mr-3'>
-              <img src={ArrowBtn.src} alt='ArrowBtn' />
+            <div
+              className={`flex items-center justify-center size-7 rounded-full  ${
+                isHovered ? ' bg-blue duration-300' : 'bg-dark'
+              }`}
+            >
+              <img
+                src={ArrowBtn.src}
+                alt='ArrowBtn'
+                className={`transition-opacity duration-500 ${
+                  isHovered ? 'arrow-out' : ''
+                }`}
+                key={animationKey}
+              />
+              {isHovered && (
+                <img
+                  src={ArrowBtn.src}
+                  alt='ArrowBtn'
+                  className='arrow-in'
+                  style={{
+                    position: 'absolute',
+                    right: '52.5px',
+                    top: '20px',
+                  }}
+                />
+              )}
             </div>
           </button>
         </div>

@@ -43,12 +43,15 @@ const Steps = () => {
             alt='img'
             className={`${
               isVisible ? 'fade-in-out' : ''
-            } absolute top-0 w-[310px] h-[235px] scale-125`}
+            } absolute top-0 w-[310px] h-[235px] md:top-5 scale-125 md:scale-[200%]`}
           />
         </div>
-        <div className='flex flex-wrap gap-5 pt-[148px] xx:hidden'>
+        <div className='flex flex-wrap gap-5 pt-[148px] md:justify-center xx:hidden md:pt-[240px]'>
           {stepsArr.map((item, _) => (
-            <div key={item.id} className='flex flex-col gap-[10px]'>
+            <div
+              key={item.id}
+              className='flex flex-col gap-[10px] md:max-w-[300px]'
+            >
               <div className='flex justify-center items-center bg-blue w-[72px] h-[45px] rounded-[10px] relative'>
                 <p className=' text-white font-Regular text-[40px] absolute top-0'>
                   {item.count}

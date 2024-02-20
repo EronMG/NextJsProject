@@ -32,7 +32,7 @@ const Course = () => {
       </div>
       <div className='pt-3 flex flex-col items-center mm:pt-6 xx:pt-12'>
         <div className='flex flex-wrap justify-end gap-2 ss:justify-center mm:flex-col mm:items-center'>
-          <p className='text-[14px] leading-[18.2px] text-dark font-Regular text-center mm:max-w-[500px] md:text-base xx:text-[22px] xx:leading-[28.6px] xx:max-w-[720px] xx:text-start '>
+          <p className='text-[14px] leading-[18.2px] text-dark font-Regular text-center mm:max-w-[500px] md:text-base md:text-[22px] md:leading-[28.6px] md:max-w-[720px] xx:text-start '>
             Вам не нужно программировать. Достаточно текстом ПРАВИЛЬНО описать,
             как должен действовать бот. Этому мы вас тоже научим
           </p>

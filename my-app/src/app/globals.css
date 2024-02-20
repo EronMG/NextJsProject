@@ -266,14 +266,13 @@
   animation: slideArrowIn 0.5s forwards;
 }
 
-/* styles.css */
 .scroll-container {
   overflow-x: scroll;
   whitespace: nowrap;
-  overflow-y: hidden; /* Предотвращает вертикальный скролл */
-  -ms-overflow-style: none; /* IE и Edge */
-  scrollbar-width: none; /* Firefox */
-  height: 87px; /* Задайте фактическую высоту контента */
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  height: 87px;
 }
 
 .icon {
@@ -324,7 +323,7 @@
 }
 
 .scroll-wrapper {
-  overflow: hidden; /* Скрывает скроллбар */
-  width: 100%; /* или конкретная ширина в зависимости от вашего дизайна */
-  height: 97px; /* Высота должна быть на несколько пикселей больше, чем высота scroll-container, чтобы скрыть скроллбар */
+  overflow: hidden;
+  width: 100%;
+  height: 97px;
 }

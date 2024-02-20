@@ -3,7 +3,7 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 
 const Header = () => {
   return (
-    <header className='md:mt-[31px] flex justify-center'>
+    <header className='md:mt-[31px] flex justify-center z-0'>
       <div className='hidden md:flex w-full max-w-[1576px] justify-between gap-3'>
         <div className='text-xl font-Regular text-dark border-[1px] border-dark rounded-[41px] min-w-[145px] h-[51px] flex justify-center items-center hover:bg-cloud cursor-pointer'>
           NEXT BOT

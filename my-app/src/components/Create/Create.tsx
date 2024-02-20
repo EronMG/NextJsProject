@@ -116,9 +116,10 @@ const Create: React.FC<BusinessItem> = () => {
   return (
     <section className='flex flex-col items-center px-[10px] pt-[78px] leading-[26.4px] xx:pt-[184px]'>
       <div className='md:flex flex-wrap justify-center items-center md:gap-6 xx:gap-20'>
-        <h2 className='text-[22px] font-Regular text-dark text-center w-[267px] ss:max-w-[472px] ss:w-fit xx:text-[36px] xx:leading-[43.2px] xx:max-w-[982px] xx:text-start'>
+        <h2 className='text-[22px] font-Regular text-dark text-center w-[267px] ss:max-w-[472px] ss:w-fit xx:text-[36px] xx:leading-[43.2px] xx:max-w-[982px] lg:max-w-[500px] xx:text-start lg:text-2xl lg:text-start'>
           Вы соберете ИИ-бота под задачи вашего бизнеса, который может заменить
           <span className='text-blue italic'>
+            {' '}
             консультанта, администратора, менеджера по продажам, помощника РОПа
           </span>
         </h2>
@@ -126,20 +127,24 @@ const Create: React.FC<BusinessItem> = () => {
           <img
             src={Settings.src}
             alt='icon'
-            className='rotate-icon w-[65px] h-[65px] xx:w-[83px] xx:h-[87px]'
+            className='rotate-icon w-[65px] h-[65px] lg:w-[83px] lg:h-[87px]'
           />
-          <h3 className='text-blue text-base font-Medium mm:text-lg  mm:w-[400px] leading-[20.8px] xx:text-[20px] xx:leading-[26px]'>
+          <h3 className='text-blue text-base font-Medium mm:text-lg  mm:w-[400px] leading-[20.8px] xx:leading-[26px] lg:text-[20px]'>
             Можете пройти бесплатное обучение и создать ИИ-бота самостоятельно
             или заказать разработку у нас
           </h3>
         </div>
       </div>
-      <div className='flex pt-8 md:items-center xx:hidden'>
-        <h4 className='text-[14px] text-dark font-Medium mm:max-w-[274px] mm:text-lg leading-[18.2px]'>
+      <div className='flex pt-8 md:items-center xx:hidden lg:gap-40'>
+        <h4 className='text-[14px] text-dark font-Medium mm:max-w-[274px] mm:text-lg leading-[18.2px] lg:text-2xl lg:max-w-[350px]'>
           Бот совершает столько касаний, чтобы к вам попадал максимально теплый
           лид
         </h4>
-        <img src={Diagramms.src} alt='icon' className='mm:w-[200px]' />
+        <img
+          src={Diagramms.src}
+          alt='icon'
+          className='mm:w-[200px] lg:w-[310px]'
+        />
       </div>
       <div className='hidden xx:flex xx:pt-20 gap-[107px]'>
         <div className='flex flex-col gap-[33px]'>

@@ -362,17 +362,50 @@ const Footer = () => {
                   просто за счет увеличения трафика и быстро обработанных заявок
                 </p>
               </div>
-              <button className='ml-[10px] z-10 h-[50px] flex flex-row items-center gap-2 justify-center rounded-[40px] bg-lime w-[280px] mb-2 sm:justify-between sm:pl-[47.5px]'>
-                <p className='text-[18px] text-dark font-Medium mr-1'>
+              <button
+                className={`relative z-10 xx:hidden w-[280px] h-[50px] mt-4 flex flex-row items-center justify-center gap-2 pr-7 rounded-[40px] bg-lime ${
+                  isHovered ? 'button-hovered' : ''
+                }`}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                <p
+                  className={`text-[18px] font-Medium ml-7 ${
+                    isHovered ? 'text-blue duration-300' : ' text-dark'
+                  }`}
+                >
                   Создать ии-бота
                 </p>
-                <div className='flex items-center justify-center size-7 rounded-full bg-dark mr-3'>
-                  <img src={ArrowBtn.src} alt='ArrowBtn' />
+                <div
+                  className={`flex items-center justify-center size-7 rounded-full  ${
+                    isHovered ? ' bg-blue duration-300' : 'bg-dark'
+                  }`}
+                >
+                  <img
+                    src={ArrowBtn.src}
+                    alt='ArrowBtn'
+                    className={`transition-opacity duration-500 ${
+                      isHovered ? 'arrow-out' : ''
+                    }`}
+                    key={animationKey}
+                  />
+                  {isHovered && (
+                    <img
+                      src={ArrowBtn.src}
+                      alt='ArrowBtn'
+                      className='arrow-in'
+                      style={{
+                        position: 'absolute',
+                        right: '60px',
+                        top: '20px',
+                      }}
+                    />
+                  )}
                 </div>
               </button>
             </div>
             <button
-              className={`relative z-10 w-[280px] h-[50px] mt-4 flex flex-row items-center justify-center gap-2 pr-7 rounded-[40px] bg-lime ${
+              className={`relative z-10 sm:hidden w-[280px] h-[50px] mt-4 flex flex-row items-center justify-center gap-2 pr-7 rounded-[40px] bg-lime ${
                 isHovered ? 'button-hovered' : ''
               }`}
               onMouseEnter={handleMouseEnter}
@@ -412,7 +445,6 @@ const Footer = () => {
                 )}
               </div>
             </button>
-
             <div className='hidden lg:flex lg:flex-col xx:h-[466px] xx:justify-start'>
               <h2 className='text-[22px] text-white leading-[26.4px] font-Medium text-left xm:w-[800px] xm:text-[32px] xm:leading-[30.4px] xx:text-[36px] xx:leading-[43.2px] xx:w-[917px]'>
                 Чем больше однотипных обращений вы получаете, тем больше
@@ -434,12 +466,45 @@ const Footer = () => {
                   </p>
                 </div>
 
-                <button className='ml-[10px] z-10 h-[50px] flex flex-row items-center gap-2 justify-center rounded-[40px] bg-lime w-[280px] mt-[20px] lg:justify-between lg:pl-[47.5px]'>
-                  <p className='text-[18px] text-dark font-Medium mr-1'>
+                <button
+                  className={`relative z-10 xx:hidden w-[280px] h-[50px] mt-4 flex flex-row items-center justify-center gap-2 pr-7 rounded-[40px] bg-lime ${
+                    isHovered ? 'button-hovered' : ''
+                  }`}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={() => setIsHovered(false)}
+                >
+                  <p
+                    className={`text-[18px] font-Medium ml-7 ${
+                      isHovered ? 'text-blue duration-300' : ' text-dark'
+                    }`}
+                  >
                     Создать ии-бота
                   </p>
-                  <div className='flex items-center justify-center size-7 rounded-full bg-dark mr-3'>
-                    <img src={ArrowBtn.src} alt='ArrowBtn' />
+                  <div
+                    className={`flex items-center justify-center size-7 rounded-full  ${
+                      isHovered ? ' bg-blue duration-300' : 'bg-dark'
+                    }`}
+                  >
+                    <img
+                      src={ArrowBtn.src}
+                      alt='ArrowBtn'
+                      className={`transition-opacity duration-500 ${
+                        isHovered ? 'arrow-out' : ''
+                      }`}
+                      key={animationKey}
+                    />
+                    {isHovered && (
+                      <img
+                        src={ArrowBtn.src}
+                        alt='ArrowBtn'
+                        className='arrow-in'
+                        style={{
+                          position: 'absolute',
+                          right: '60px',
+                          top: '20px',
+                        }}
+                      />
+                    )}
                   </div>
                 </button>
               </div>
