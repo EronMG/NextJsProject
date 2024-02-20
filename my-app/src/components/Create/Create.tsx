@@ -46,7 +46,11 @@ function Array() {
                 : ''
             }`}
           >
-            <img src={AI.src} alt='icon' className='w-[35px] mm:w-[50px]' />
+            <img
+              src={AI.src}
+              alt='icon'
+              className='w-[35px] mm:w-[50px] mt-1'
+            />
             <h4 className='text-white text-[12px] font-Regular mm:max-w-[210px] mm:text-base leading-[15.4px]'>
               <span className='text-lime'>{item.title.split(' ')[0]}</span>{' '}
               {item.title.slice(item.title.indexOf(' ') + 1)}
@@ -116,7 +120,7 @@ const Create: React.FC<BusinessItem> = () => {
   return (
     <section className='flex flex-col items-center px-[10px] pt-[78px] leading-[26.4px] xx:pt-[184px]'>
       <div className='md:flex flex-wrap justify-center items-center md:gap-6 xx:gap-20'>
-        <h2 className='text-[22px] font-Regular text-dark text-center w-[267px] ss:max-w-[472px] ss:w-fit xx:text-[36px] xx:leading-[43.2px] xx:max-w-[982px] lg:max-w-[500px] xx:text-start lg:text-2xl lg:text-start'>
+        <h2 className='text-[22px] font-Regular text-dark text-center w-[267px] ml-4 mm:ml-0 ss:max-w-[472px] ss:w-fit xx:text-[36px] xx:leading-[43.2px] xx:max-w-[982px] lg:max-w-[500px] xx:text-start lg:text-2xl lg:text-start'>
           Вы соберете ИИ-бота под задачи вашего бизнеса, который может заменить
           <span className='text-blue italic'>
             {' '}

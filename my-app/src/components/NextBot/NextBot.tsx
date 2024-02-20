@@ -34,7 +34,7 @@ const NextBot = () => {
           Посмотрите видео и за 5 минут сами убедитесь, что собрать ИИ-бота под{' '}
           <br className='ss:hidden' /> силу каждому
         </p>
-        <div className='bg-blue flex justify-center items-center rounded-[10px] h-[168px] mt-2 ss:w-[355px] w-[310px]  md:w-[558px] md:h-[306px]  xx:w-[778px] xx:h-[436px] xx:rounded-[20px]'>
+        <div className='bg-blue flex justify-center items-center rounded-[10px] h-[168px] mt-2 ss:w-[355px] w-[300px]  md:w-[558px] md:h-[306px]  xx:w-[778px] xx:h-[436px] xx:rounded-[20px]'>
           <div className='size-[67px] md:size-[113px] flex justify-center items-center bg-cloud rounded-full pl-2'>
             <div
               className='relative w-0 h-0 rotate-90 md:hidden'

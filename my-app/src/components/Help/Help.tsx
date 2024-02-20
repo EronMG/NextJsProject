@@ -427,7 +427,7 @@ const Help = () => {
         </div>
         <div className='flex justify-center xx:hidden'>
           <button
-            className={`relative z-10 xx:hidden w-[234px] h-[50px] mt-4 flex flex-row items-center justify-center gap-2 pr-7 rounded-[40px] bg-lime ${
+            className={`relative z-10 xx:hidden w-[234px] h-[50px] mt-[21px] flex flex-row items-center justify-center gap-2 pr-7 rounded-[40px] bg-lime ${
               isHovered ? 'button-hovered' : ''
             }`}
             onMouseEnter={handleMouseEnter}

@@ -239,7 +239,7 @@ const Payments = () => {
               </div>
             ))}
           </div>
-          <div className={`pt-10 xx:hidden`}>
+          <div className={`pt-[10px] xx:hidden`}>
             {active &&
               paymentsArr
                 .slice(
@@ -266,7 +266,7 @@ const Payments = () => {
                     }`}
                   >
                     {item.id === 2 && (
-                      <div className='bg-blue rounded-[10px] w-[326px] h-[45px] flex justify-center items-center absolute top-[-24px] pt-[6px] left-[17.8%]'>
+                      <div className='bg-blue hidden rounded-[10px] w-[326px] h-[45px] md:flex justify-center items-center absolute top-[-24px] pt-[6px] left-[17.8%]'>
                         <p className='  text-[22px] leading-[28.6px] text-white font-Regular'>
                           Самый популярный вариант
                         </p>
@@ -305,7 +305,7 @@ const Payments = () => {
                         </p>
                       ))}
                     </div>
-                    <div className='flex flex-col items-center pt-[122px]'>
+                    <div className='flex flex-col items-center pt-[136px]'>
                       <div className='flex gap-3 flex-row-reverse'>
                         <h3
                           className={`font-Regular text-[39px] leading-[47px] ${
