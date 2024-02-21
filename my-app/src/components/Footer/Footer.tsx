@@ -43,8 +43,8 @@ const Footer = () => {
     setAnimationKey((prevKey) => prevKey + 1);
   };
   return (
-    <div className='xx:flex justify-center'>
-      <section className='mx-[10px] bg-dark rounded-t-[40px] py-[33px] mt-10 lg:mx-[5%] lg:px-[60px] lg:pt-[93px] xm:px-[80px] xm:pt-[137px] xm:rounded-t-[60px] xx:pb-[65px] xx:mt-[188px] max-w-[1738px]'>
+    <div className='xb:flex justify-center'>
+      <section className='mx-[10px] bg-dark rounded-t-[40px] py-[33px] mt-10 lg:mx-[5%] lg:px-[60px] lg:pt-[93px] xm:px-[80px] xm:pt-[137px] xm:rounded-t-[60px] xb:pb-[65px] xb:mt-[188px] max-w-[1738px]'>
         <div className='relative flex flex-col items-center px-[10px] sm:flex-row  sm:justify-around lg:justify-start'>
           <div className='max-w-[279px] sm:max-w-[300px] sm:h-[169px]'>
             <h2 className='text-white text-[22px] leading-[26.4px] font-Regular text-center sm:text-left lg:text-[28px] lg:leading-[38.4px] lg:w-[600px] xm:text-[42px] xm:leading-[50.4px] xm:w-[827px]'>
@@ -73,7 +73,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className='hidden lg:flex xx:right-0 xx:top-[30.5%] xx:left-[48.8%]'>
+          <div className='hidden lg:flex xb:right-0 xb:top-[30.5%] xb:left-[48.8%]'>
             <animated.div
               style={{
                 ...styles,
@@ -86,10 +86,10 @@ const Footer = () => {
                 marginRight: '400px',
                 marginTop: '100px',
               }}
-              className={`hidden top-[20px] right-[80px] xm:right-[10px] xx:right-0 xx:top-[30.5%] xx:left-[48.8%]`}
+              className={`hidden top-[20px] right-[80px] xm:right-[10px] xb:right-0 xb:top-[30.5%] xb:left-[48.8%]`}
             >
-              <div className='relative pl-4 py-4 bg-blue rounded-[20px] w-[271px] h-[107px] xx:h-[147px]'>
-                <p className='text-[18px] leading-[22.4px] font-Regular text-white w-[225px] xx:text-[22px] xx:leading-[26.4px]'>
+              <div className='relative pl-4 py-4 bg-blue rounded-[20px] w-[271px] h-[107px] xb:h-[147px]'>
+                <p className='text-[18px] leading-[22.4px] font-Regular text-white w-[225px] xb:text-[22px] xb:leading-[26.4px]'>
                   С ИИ-ботом стоимость обработки одного сообщения в{' '}
                   <span className='font-Medium'>4 раза ниже</span>
                 </p>
@@ -98,7 +98,7 @@ const Footer = () => {
                   alt='icon'
                   className='absolute right-4 bottom-3'
                 />
-                <div className='absolute -right-[60px] -bottom-[60px] xx:-right-[130px] xx:-bottom-[55px]'>
+                <div className='absolute -right-[60px] -bottom-[60px] xb:-right-[130px] xb:-bottom-[55px]'>
                   <img src={Cursor.src} alt='cursor' className='' />
                   <div className='bg-white text-[20px] text-dark font-Regular w-[114px] h-[31px] pt-1 flex justify-center items-center rounded-[16px] ml-3'>
                     NEXTBOT
@@ -251,21 +251,21 @@ const Footer = () => {
           <table className='rounded-[10px] table-auto border border-separate border-spacing-[0] border-cloud'>
             <tbody className=''>
               <tr className=''>
-                <td className='bg-cloud rounded-tl-[10px] border border-cloud xx:w-[439px]'>
+                <td className='bg-cloud rounded-tl-[10px] border border-cloud xb:w-[439px]'>
                   &nbsp;
                 </td>
-                <td className='px-[10px] bg-darkCloud text-blue text-center font-Regular footer-table-ex-m border border-cloud xx:px-[15px]'>
+                <td className='px-[10px] bg-darkCloud text-blue text-center font-Regular footer-table-ex-m border border-cloud xb:px-[15px]'>
                   Заявок
                   <br /> пришло
                 </td>
-                <td className='px-[10px] bg-cloud text-blue text-center font-Regular footer-table-ex-m border border-cloud xx:px-[15px]'>
+                <td className='px-[10px] bg-cloud text-blue text-center font-Regular footer-table-ex-m border border-cloud xb:px-[15px]'>
                   Заявок
                   <br /> обработано
                 </td>
                 <td className='px-[10px] bg-darkCloud text-blue text-center font-Regular footer-table-ex-m border border-cloud'>
                   Потрачено ресурсов
                 </td>
-                <td className='px-[10px] max-w-[158px] bg-cloud text-blue text-center font-Regular footer-table-ex-m border border-cloud xx:px-[15px]'>
+                <td className='px-[10px] max-w-[158px] bg-cloud text-blue text-center font-Regular footer-table-ex-m border border-cloud xb:px-[15px]'>
                   Продано
                 </td>
                 <td className='bg-darkCloud text-blue text-center font-Regular footer-table-ex-m border border-cloud max-w-[295px]'>
@@ -276,7 +276,7 @@ const Footer = () => {
                 </td>
               </tr>
               <tr className='xm:h-[128px] align-top'>
-                <td className='text-white align-middle text-center font-Regular footer-table-ex-b border border-cloud px-[20px] xx:px-[50px]'>
+                <td className='text-white align-middle text-center font-Regular footer-table-ex-b border border-cloud px-[20px] xb:px-[50px]'>
                   Без ИИ-ассистента
                 </td>
                 <td className='pt-[15px] text-white text-center font-Regular footer-table-ex-m border border-cloud'>
@@ -312,7 +312,7 @@ const Footer = () => {
                 </td>
               </tr>
               <tr className='h-[110px] align-top'>
-                <td className='rounded-bl-[10px] text-lime align-middle text-center font-Regular footer-table-ex-b border border-cloud px-[20px] xx:px-[50px]'>
+                <td className='rounded-bl-[10px] text-lime align-middle text-center font-Regular footer-table-ex-b border border-cloud px-[20px] xb:px-[50px]'>
                   С ИИ-ассистентом
                 </td>
                 <td className='pt-[15px] text-white align-top text-center font-Regular footer-table-ex-m border border-cloud'>
@@ -375,14 +375,14 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className='flex flex-col items-center w-full pt-6 sm:flex sm:flex-row sm:justify-evenly lg:flex-row-reverse lg:justify-between xx:mt-[80px] '>
-            <div className='flex justify-center flex-col items-center xx:relative xx:justify-start xx:h-[466px] xx:mr-[42px] xx:-top-[2px]'>
+          <div className='flex flex-col items-center w-full pt-6 sm:flex sm:flex-row sm:justify-evenly lg:flex-row-reverse lg:justify-between xb:mt-[80px] '>
+            <div className='flex justify-center flex-col items-center xb:relative xb:justify-start xb:h-[466px] xb:mr-[42px] xb:-top-[2px]'>
               <img
                 src={Comp.src}
                 alt='computer'
-                className=' xx:w-[532px] xx:h-[383px]'
+                className=' xb:w-[532px] xb:h-[383px]'
               />
-              <div className='hidden xx:flex'>
+              <div className='hidden xb:flex'>
                 <animated.div
                   style={{
                     ...styles,
@@ -395,10 +395,10 @@ const Footer = () => {
                     marginRight: '340px',
                     marginTop: '200px',
                   }}
-                  className={`sm:hidden lg:flex xx:absolute xx:py-[25px] xx:w-[418px] xx:top-[203px] xx:-left-[240px]'`}
+                  className={`sm:hidden lg:flex xb:absolute xb:py-[25px] xb:w-[418px] xb:top-[203px] xb:-left-[240px]'`}
                 >
-                  <div className='w-[276px] xx:w-[416px] flex justify-center items-center border-[1px] border-lime bg-[#1E2121] rounded-[10px] py-3 px-1 '>
-                    <p className='text-white text-[14px] leading-[16.8px] text-center xx:text-[22px] xx:leading-[26.4px]'>
+                  <div className='w-[276px] xb:w-[416px] flex justify-center items-center border-[1px] border-lime bg-[#1E2121] rounded-[10px] py-3 px-1 '>
+                    <p className='text-white text-[14px] leading-[16.8px] text-center xb:text-[22px] xb:leading-[26.4px]'>
                       При одинаковой конверсии{' '}
                       <span className='text-lime font-Medium'>
                         ваша прибыль растет
@@ -409,7 +409,7 @@ const Footer = () => {
                   </div>
                 </animated.div>
               </div>
-              <div className='w-[276px] flex justify-center items-center border-[1px] xx:hidden sm:hidden lg:flex border-lime bg-[#1E2121] rounded-[10px] py-6 px-1'>
+              <div className='w-[276px] flex justify-center items-center border-[1px] xb:hidden sm:hidden lg:flex border-lime bg-[#1E2121] rounded-[10px] py-6 px-1'>
                 <p className='text-white text-[14px] leading-[16.8px] text-center'>
                   При одинаковой конверсии{' '}
                   <span className='text-lime font-Medium'>
@@ -430,7 +430,7 @@ const Footer = () => {
                 </p>
               </div>
               <button
-                className={`relative z-10 xx:hidden w-[280px] h-[50px] mt-4 flex flex-row items-center justify-center gap-2 pr-7 rounded-[40px] bg-lime ${
+                className={`relative z-10 xb:hidden w-[280px] h-[50px] mt-4 flex flex-row items-center justify-center gap-2 pr-7 rounded-[40px] bg-lime ${
                   isHovered ? 'button-hovered' : ''
                 }`}
                 onMouseEnter={handleMouseEnter}
@@ -512,29 +512,29 @@ const Footer = () => {
                 )}
               </div>
             </button>
-            <div className='hidden lg:flex lg:flex-col xx:h-[466px] xx:justify-start'>
-              <h2 className='text-[22px] text-white leading-[26.4px] font-Medium text-left xm:w-[800px] xm:text-[32px] xm:leading-[30.4px] xx:text-[36px] xx:leading-[43.2px] xx:w-[917px]'>
+            <div className='hidden lg:flex lg:flex-col xb:h-[466px] xb:justify-start'>
+              <h2 className='text-[22px] text-white leading-[26.4px] font-Medium text-left xm:w-[800px] xm:text-[32px] xm:leading-[30.4px] xb:text-[36px] xb:leading-[43.2px] xb:w-[917px]'>
                 Чем больше однотипных обращений вы получаете, тем больше
                 экономите с ИИ-ботом:
               </h2>
               <div className='flex flex-col items-start justify-center pt-[19px] gap-[13px]'>
                 <div className='flex justify-center gap-[7px] mt-[20px]'>
                   <div className='size-[9px] rounded-full bg-lime mt-[3px]' />
-                  <p className='text-[16px] text-white leading-[14.4px] font-Regular w-[426px]  text-left xl:text-[18px] xl:leading-[18.4px] xl:w-[600px] xx:text-[20px] xx:leading-[24px] xx:w-[612px]'>
+                  <p className='text-[16px] text-white leading-[14.4px] font-Regular w-[426px]  text-left xl:text-[18px] xl:leading-[18.4px] xl:w-[600px] xb:text-[20px] xb:leading-[24px] xb:w-[612px]'>
                     Для обработки 1000 обращений нужно 4-5 менеджеров (100-150
                     тысяч ₽) или 1 ИИ-бот (11 000 ₽ на работу сервиса)
                   </p>
                 </div>
                 <div className='flex justify-center gap-[7px] mt-[20px]'>
                   <div className='size-[9px] rounded-full bg-lime mt-[3px]' />
-                  <p className='text-[16px] text-white leading-[14.4px] font-Regular w-[426px] text-left xl:text-[18px] xl:leading-[18.4px] xl:w-[600px] xx:text-[20px] xx:leading-[24px] xx:w-[612px]'>
+                  <p className='text-[16px] text-white leading-[14.4px] font-Regular w-[426px] text-left xl:text-[18px] xl:leading-[18.4px] xl:w-[600px] xb:text-[20px] xb:leading-[24px] xb:w-[612px]'>
                     Для обработки 2000 обращений нужно 10 менеджеров (200-250
                     тысяч ₽) или все еще 1 ИИ-бот (11 000 ₽ на работу сервиса)
                   </p>
                 </div>
 
                 <button
-                  className={`relative z-10 xx:flex w-[280px] h-[50px] mt-4 flex flex-row items-center justify-center gap-2 pr-7 rounded-[40px] bg-lime ${
+                  className={`relative z-10 lg:flex w-[280px] h-[50px] mt-4 flex flex-row items-center justify-center gap-2 pr-7 rounded-[40px] bg-lime ${
                     isHovered ? 'button-hovered' : ''
                   }`}
                   onMouseEnter={handleMouseEnter}
@@ -579,16 +579,16 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='flex flex-col justify-between items-center px-7 gap-[67px] pt-20 pb-10 sm:pt-10 lg:flex-row lg:px-0 xx:mt-[61px] xx:h-[50px]'>
-          <div className='flex flex-col justify-between items-center gap-[13px] max-w-[550px] sm:flex-row lg:justify-normal lg:gap-0 xx:max-w-[600px]'>
-            <span className='text-white text-base leading-[19.2px] font-Regular text-center max-w-[286px] lg:text-left lg:max-w-[240px] xx:text-[20px] xx:leading-[24px] xx:max-w-[340px]'>
+        <div className='flex flex-col justify-between items-center px-7 gap-[67px] pt-20 pb-10 sm:pt-10 lg:flex-row lg:px-0 xb:mt-[61px] xb:h-[50px]'>
+          <div className='flex flex-col justify-between items-center gap-[13px] max-w-[550px] sm:flex-row lg:justify-normal lg:gap-0 xb:max-w-[600px]'>
+            <span className='text-white text-base leading-[19.2px] font-Regular text-center max-w-[286px] lg:text-left lg:max-w-[240px] xb:text-[20px] xb:leading-[24px] xb:max-w-[340px]'>
               Если у вас остались вопросы, свяжитесь с нами в WhatsApp
             </span>
             <button className='hover:bg-lime hover:text-dark duration-300 transition-all text-lime border-[1px] border-lime rounded-[40px] w-[242px] h-[51px] flex justify-center items-center text-[18px] font-Medium'>
               написать в WhatsApp
             </button>
           </div>
-          <p className='text-white text-[11.5px] leading-[14.4px] font-Regular text-left lg:text-right lg:mr-[14px] xx:text-[20px] xx:leading-[24px] xx:w-[221px]'>
+          <p className='text-white text-[11.5px] leading-[14.4px] font-Regular text-left lg:text-right lg:mr-[14px] xb:text-[20px] xb:leading-[24px] xb:w-[221px]'>
             Политика обработки персональных данных
           </p>
         </div>
