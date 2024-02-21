@@ -3,7 +3,7 @@ import React from 'react';
 const Base = () => {
   return (
     <div className='xx:flex justify-center'>
-      <section className='mx-[10px] px-[10px] bg-cloud md:pt-10 md:pl-5 rounded-[10px] flex flex-wrap justify-center gap-4 mt-[71px] pt-2 xx:mt-0px] xx:w-[1738px] xx:rounded-[20px] xx:pt-[76px] xx:gap-[70px]'>
+      <section className='mx-[10px] px-[10px] bg-cloud md:pt-10 md:pl-5 rounded-[10px] flex flex-wrap justify-center gap-4 mt-[71px] xx:mt-0 pt-2 xx:mt-0px] xx:w-[1738px] xx:rounded-[20px] xx:pt-[76px] xx:gap-[70px]'>
         {/* FIX MT-500PX */}
         <div className='flex flex-col gap-3 pb-2'>
           <h2 className='text-[22px] font-Regular leading-[26.4px] text-center text-dark md:text-[26px] xx:text-[36px] xx:leading-[43.2px] xx:text-start'>

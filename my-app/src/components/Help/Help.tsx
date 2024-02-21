@@ -238,7 +238,7 @@ const Help = () => {
             alt='bg'
             className='absolute top-0 xx:top-40 w-full z-0 xx:min-w-[2383px] object-fit xx:h-[453px] left-0'
           />
-          <div className='pt-[82px] flex flex-col gap-[14px] items-center xx:pl-[220px] xx:pt-6 '>
+          <div className='pt-[82px] flex flex-col gap-[14px] items-center xx:pl-[220px] xx:pt-6 relative'>
             <h3 className='text-base leading-[20.8px] text-white  text-center font-Regular md:text-xl md:max-w-[721px] md:text-start xx:leading-[26px]'>
               Периодически читали переписки
               <br className='md:hidden' /> ИИ-ассистента с клиентами и
@@ -328,7 +328,7 @@ const Help = () => {
               </p>
             </div>
           </div>
-          <div className='ll:flex flex-col justify-end'>
+          <div className='ll:flex flex-col gg:relative gg:top-[70px] md:static ll:relative ll:top-0 justify-end'>
             <p className='text-white text-[12px] leading-[15.6px] font-Regular w-[258px]'>
               Говорить, что это на 100% последствие внедрения ИИ-консультанта,
               мы не можем. Но это нововведение однозначно оказало влияние на
@@ -339,7 +339,7 @@ const Help = () => {
             </p>
           </div>
         </div>
-        <div className='hidden justify-start gap-5 xx:flex xx:pt-[147px] xx:pb-[92px]'>
+        <div className='hidden justify-start gap-5 xx:flex xx:pt-[147px] relative xx:pb-[92px]'>
           <div className='flex flex-col items-end gap-[363px] xx:pl-[201px]'>
             <h2 className='text-lime text-[22px] leading-[28.6px] font-Regular text-end w-[398px]'>
               После внедрения ИИ-бота в 2024 году продажи на Avito и в розничных
@@ -414,13 +414,13 @@ const Help = () => {
               </p>
             </div>
           </div>
-          <div className='flex flex-col items-end xx:absolute xx:right-0 bb:right-[208px] pt-[322px]'>
-            <p className='text-white text-[22px] leading-[28.6px] font-Regular text-start w-[476px]'>
+          <div className='flex flex-col items-end xx:absolute xx:right-0 bb:right-[108px] pt-[322px]'>
+            <p className='text-white text-[22px] leading-[28.6px] xx:text-[20px] font-Regular xx:w-[400px] text-start w-[476px] bb:w-[476px]'>
               Говорить, что это на 100% последствие внедрения ИИ-консультанта,
               мы не можем. Но это нововведение однозначно оказало влияние на
               увеличение прибыли.
             </p>
-            <p className='text-white text-[22px] leading-[28.6px] font-Regular text-start w-[476px] pt-7'>
+            <p className='text-white text-[22px] leading-[28.6px] xx:text-[20px] xx:w-[400px] font-Regular text-start w-[476px] bb:w-[476px] pt-7'>
               И мы можем предположить, что это было существенное влияние.
             </p>
           </div>

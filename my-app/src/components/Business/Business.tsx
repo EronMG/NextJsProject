@@ -4,7 +4,7 @@ import Person from '@/Images/Person.svg';
 import Message from '@/Images/Message.svg';
 
 const Business = () => {
-  const images = Array(16).fill(Message);
+  const images = Array(26).fill(Message);
   useEffect(() => {
     const handleScroll = () => {
       // Получаем все элементы с классом icon
@@ -32,14 +32,14 @@ const Business = () => {
         Идеально для бизнеса, где надо обрабатывать большой поток однотипных
         сообщений
       </h2>
-      <div className='pt-[17px] flex justify-center relative md:pt-6 xx:pt-5'>
+      <div className='pt-[17px] flex justify-center items-center relative md:pt-6 xx:pt-5 w-full max-w-[700px] xx:max-w-[1700px]'>
         <img
           src={Person.src}
           alt='icon'
           className='ss:scale-125 md:scale-150 xx:w-[342px] xx:h-[191px] xx:scale-100'
         />
-        <div className='scroll-wrapper'>
-          <div className='scroll-container top-[7px] left-1 absolute w-full xx:top-10 xx:w-[1259px] xx:left-[-460px]'>
+        <div className='scroll-wrapper h-[97px] xx:h-[130px] absolute xx:left-40 top-5 xx:top-0'>
+          <div className='scroll-container top-[7px] left-1 absolute w-full xx:top-10  xx:left-[-400px]'>
             <div className='flex justify-center xx:gap-6'>
               {images.map((image, index) => (
                 <img

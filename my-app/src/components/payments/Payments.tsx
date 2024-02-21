@@ -1,5 +1,5 @@
 'use client';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import Arrow from '@/Images/ArrowCloud.svg';
 import Hand from '@/Images/HandVector.svg';
 import Star from '@/Images/star.svg';
@@ -9,6 +9,48 @@ import ArrowBtn from '@/Images/ArrowBtn.svg';
 import Eye1 from '@/Images/Eye1.svg';
 
 const Payments = () => {
+  const [showCircle, setShowCircle] = useState(false);
+  const animationRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const element = animationRef.current;
+    if (element) {
+      const handleAnimationEnd = () => setShowCircle(true);
+      element.addEventListener('animationend', handleAnimationEnd);
+
+      return () => {
+        element.removeEventListener('animationend', handleAnimationEnd);
+      };
+    }
+  }, []);
+
+  const [isVisible, setIsVisible] = useState(false);
+  const headingRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    if (headingRef.current) {
+      observer.observe(headingRef.current);
+    }
+
+    return () => {
+      if (headingRef.current) {
+        observer.unobserve(headingRef.current);
+      }
+    };
+  }, []);
+
+  const pathLength = 1246;
   const [active, setActive] = useState('first');
 
   const handleNext = useCallback(() => {
@@ -88,16 +130,51 @@ const Payments = () => {
           Вы можете попробовать сервис <br className='hidden xx:flex' /> NextBot
           бесплатно
         </h2>
-        <div className='flex flex-col items-center pt-[10px]'>
-          <div className='border-b-[1px] rounded-[20px] border-blue pb-2 px-6 xx:pb-[19px] xx:px-[215px]'>
+        <div className='flex flex-col items-center pt-[10px] xx:relative'>
+          <div className='border-b-[1px] xx:border-b-0 rounded-[20px] border-blue pb-2 px-6 xx:pb-[19px] xx:px-[215px]'>
             <p className='font-Regular text-base leading-[19.2px] text-center text-dark xx:text-[22px] xx:leading-[26.4px] md:text-[18px]'>
               БЕСПЛАТНОЕ обучение, как ПРАВИЛЬНО делать ИИ-ботов
             </p>
+            <div
+              ref={headingRef}
+              className='absolute left-0 top-[35px] hidden xx:flex'
+            >
+              <svg
+                width='1047'
+                height='21'
+                viewBox='0 0 1047 21'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  d='M1046 1V1C1046 11.4934 1037.49 20 1027 20H20C9.50657 20 1 11.4934 1 1V1'
+                  stroke='#4F56D3'
+                  strokeLinecap='round'
+                  style={{
+                    strokeDasharray: `${pathLength}`,
+                    strokeDashoffset: `${pathLength}`,
+                  }}
+                  className={` ${isVisible && 'path-animation'}`}
+                />
+              </svg>
+            </div>
           </div>
-          <div className='w-[1px] h-[67px] bg-blue relative xx:h-[113px] mr-[1px]'>
+          <div className='w-[1px] h-[67px] bg-blue relative xx:h-[113px] mr-[1px] xx:hidden'>
             <div className='trans bottom-[-15px] absolute w-4 h-4 xx:size-[21px] flex justify-center items-center bg-cloud rounded-full'>
               <div className=' w-2 h-2 bg-blue rounded-full xx:size-[11px]' />
             </div>
+          </div>
+          <div
+            ref={animationRef}
+            className={`hidden xx:block w-[1px] bg-blue relative ${
+              isVisible && 'fill-height-animation'
+            }`}
+          >
+            {showCircle && (
+              <div className='outer-circle trans bottom-[-15px] absolute'>
+                <div className='inner-circle'></div>
+              </div>
+            )}
           </div>
         </div>
         <p className='font-Regular text-[14px] leading-[16.8px] text-center text-dark w-[218px] pt-[18px] xx:text-[22px] xx:leading-[26.4px] xx:w-fit md:text-[18px] md:w-[270px]'>

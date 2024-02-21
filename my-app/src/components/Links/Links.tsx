@@ -166,7 +166,7 @@ function Links() {
           />
         </div>
 
-        <div className='hidden sm:flex sm:flex-col sm:gap-[85px] sm:items-end order-2 z-50 xx:h-[605px] xx:justify-end bb:h-[797px] bb:mt-[208px] bb:mr-[100px] bb:gap-[114px] bb:justify-start'>
+        <div className='hidden sm:flex sm:flex-col sm:gap-[85px] sm:items-end order-2 z-50 xx:h-[605px] xx:justify-end bb:h-[769px] bb:mt-[208px] bb:mr-[100px] bb:gap-[114px] bb:justify-start'>
           <div className='flex items-end gap-[19px]'>
             <h2 className='text-[22px] leading-[26.4px] text-right font-Regular max-w-[349px] lg:text-[30px] lg:max-w-[500px] bb:text-[36px] bb:leading-[43.2px]'>
               Можно подключить ко всем популярным соцсетям, мессенджерам и
@@ -196,9 +196,9 @@ function Links() {
             </div>
             <div
               ref={divRef}
-              className={`hidden xl:flex xl:gap-[18px] absolute right-[167px] opacity-0 ${
+              className={`hidden xl:flex xl:gap-[18px] absolute right-[167px] opacity-50 ${
                 isVisibleDiv &&
-                ' translate-x-[-2000px] duration-1000 opacity-100'
+                'translate-x-[-3000px] duration-4000 opacity-100'
               }`}
             >
               <div className='triangle-l xx:triangle-m bb:triangle-b'></div>
