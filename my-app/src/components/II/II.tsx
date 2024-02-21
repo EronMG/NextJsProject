@@ -54,36 +54,37 @@ const II = () => {
     }
   }, [isVisible]);
 
+  const pathLength = 2400;
   return (
-    <section className='pt-[71px] px-[10px] xx:pt-[180px] xx:px-0 xx:relative xx:flex justify-center'>
-      <div className='xx:w-[1920px] xx:relative'>
-        <h2 className='text-[22px] leading-[26.4px] font-Regular text-center text-dark xx:text-[36px] xx:leading-[43.2px] max-w-[979px] xx:text-start xx:ml-[170px]'>
+    <section className='pt-[71px] px-[10px] bb:pt-[180px] bb:px-0 bb:relative bb:flex justify-center'>
+      <div className='bb:w-[1920px] bb:relative'>
+        <h2 className='text-[22px] leading-[26.4px] font-Regular text-center text-dark bb:text-[36px] bb:leading-[43.2px] max-w-[979px] bb:text-start bb:ml-[170px]'>
           ИИ-бот на 100% походит на человека и не придумывает ничего лишнего при{' '}
           <br className='md:hidden' />
           общении с клиентами
         </h2>
-        <div className='flex flex-wrap gap-5 justify-center pt-6 xx:gap-[200px] xx:pt-[62px] xx:pl-[1110px]'>
+        <div className='flex flex-wrap gap-5 justify-center pt-6 bb:gap-[200px] bb:pt-[62px] bb:pl-[1110px]'>
           {iiArr.map((item, _) => (
             <div
               key={item.id}
               className={`flex flex-col items-center max-w-[355px] xx:gap-[5px] xx:flex-col-reverse ${
-                item.id === 1 && 'xx:absolute left-[232px] bottom-[18px]'
-              } ${item.id === 2 && 'xx:absolute left-[778px] bottom-[-50px]'}`}
+                item.id === 1 && 'bb:absolute left-[232px] bottom-[18px]'
+              } ${item.id === 2 && 'bb:absolute left-[778px] bottom-[-50px]'}`}
             >
               <div
-                className={`size-[21px] bg-cloud rounded-full justify-center items-center flex xx:mt-4 ${
-                  item.id === 2 && 'xx:absolute bottom-[-50px] left-[178px]'
+                className={`size-[21px] bg-cloud rounded-full justify-center items-center flex bb:mt-4 ${
+                  item.id === 2 && 'bb:absolute bottom-[-50px] left-[178px]'
                 } ${
-                  item.id === 1 && 'xx:absolute bottom-[-42px] left-[168px]'
+                  item.id === 1 && 'bb:absolute bottom-[-42px] left-[168px]'
                 }`}
               >
                 <div className='size-[11px] bg-blue rounded-full' />
               </div>
               <p
-                className={`text-[13px] leading-[16.8px] text-center text-dark pt-1 xx:text-xl xx:leading-6 xx:pt-3 ${
-                  item.id === 1 && 'xx:w-[448px]'
-                } ${item.id === 2 && 'xx:w-[390px] '} ${
-                  item.id === 3 && 'xx:w-[396px]'
+                className={`text-[13px] leading-[16.8px] text-center text-dark pt-1 bb:text-xl bb:leading-6 bb:pt-3 ${
+                  item.id === 1 && 'bb:w-[448px]'
+                } ${item.id === 2 && 'bb:w-[390px] '} ${
+                  item.id === 3 && 'bb:w-[396px]'
                 }`}
               >
                 {item.title}
@@ -96,19 +97,30 @@ const II = () => {
             </div>
           ))}
         </div>
-        <img
-          src={Line.src}
-          alt='line'
-          // style={{
-          //   width: `${imageWidth}%`,
-          //   height: '308px', // Set the height explicitly
-          //   left: '50%', // Center the image
-          //   transform: 'translateX(-50%)', // Center the image
-          //   transition: 'width 2s ease', // Adjust the duration and easing function as needed
-          // }}
-          className='absolute bottom-[-260px] xx:flex hidden'
+
+        <div
           ref={imageRef}
-        />
+          className='absolute hidden bb:block bottom-[-260px]'
+        >
+          <svg
+            width='1920'
+            height='272'
+            viewBox='0 0 1920 272'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+          >
+            <path
+              d='M-327.5 121L410 27L967 103L1517 1.5L2446.5 271'
+              stroke='#4F56D3'
+              stroke-width='2'
+              style={{
+                strokeDasharray: `${pathLength}`,
+                strokeDashoffset: `${pathLength}`,
+              }}
+              className={` ${isVisible && 'path-animation'}`}
+            />
+          </svg>
+        </div>
       </div>
     </section>
   );
