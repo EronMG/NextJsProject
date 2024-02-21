@@ -27,7 +27,7 @@ const Business = () => {
   }, []); // Пустой массив зависимостей, чтобы эффект выполнялся один раз
 
   return (
-    <section className='flex flex-col items-center pt-[78px] xx:pt-[82px]'>
+    <section className='flex flex-col items-center pt-[78px] xx:pt-[82px] overflow-hidden'>
       <h2 className='text-[22px] font-Regular text-dark text-center w-[269px] ss:w-fit leading-[26.4px] xx:text-[36px] xx:w-[1039px] xx:leading-[43.2px]'>
         Идеально для бизнеса, где надо обрабатывать большой поток однотипных
         сообщений

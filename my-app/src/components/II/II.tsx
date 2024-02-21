@@ -99,14 +99,14 @@ const II = () => {
         <img
           src={Line.src}
           alt='line'
-          style={{
-            width: `${imageWidth}%`,
-            height: '308px', // Set the height explicitly
-            left: '50%', // Center the image
-            transform: 'translateX(-50%)', // Center the image
-            transition: 'width 2s ease', // Adjust the duration and easing function as needed
-          }}
-          className='absolute bottom-[-275px] xx:flex hidden'
+          // style={{
+          //   width: `${imageWidth}%`,
+          //   height: '308px', // Set the height explicitly
+          //   left: '50%', // Center the image
+          //   transform: 'translateX(-50%)', // Center the image
+          //   transition: 'width 2s ease', // Adjust the duration and easing function as needed
+          // }}
+          className='absolute bottom-[-260px] xx:flex hidden'
           ref={imageRef}
         />
       </div>
