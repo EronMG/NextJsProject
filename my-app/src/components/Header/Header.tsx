@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className='md:mt-[31px] flex justify-center z-50'>
       <div className='hidden md:flex w-full max-w-[1576px] justify-between gap-3'>
-        <div className='text-xl font-Regular text-dark border-[1px] border-dark rounded-[41px] min-w-[145px] h-[51px] flex justify-center items-center hover:bg-cloud cursor-pointer'>
+        <div className='text-xl font-Regular text-dark border-[1px] pt-1 border-dark rounded-[41px] min-w-[145px] h-[51px] flex justify-center items-center duration-500 hover:bg-cloud cursor-pointer'>
           NEXT BOT
         </div>
         <nav className='bg-cloud rounded-[41px] border-[1px] border-dark flex justify-between pl-7 pr-[29px] w-full max-w-[511px] items-center xl:ml-[140px]'>
@@ -34,10 +34,10 @@ const Header = () => {
           ))}
         </nav>
         <div className='flex gap-5'>
-          <button className='text-xl font-Regular text-dark border-[1px] border-dark rounded-[41px] w-[99px] h-[51px] flex justify-center items-center'>
+          <button className='text-xl font-Regular text-dark border-[1px] hover:bg-cloud cursor-pointer duration-500 border-dark rounded-[41px] w-[99px] h-[51px] flex justify-center items-center'>
             Вход
           </button>
-          <button className='text-xl font-Regular text-dark border-[1px] border-dark rounded-[41px] w-[167px] h-[51px] flex justify-center items-center'>
+          <button className='text-xl font-Regular text-dark border-[1px] hover:bg-cloud cursor-pointer duration-500 border-dark rounded-[41px] w-[167px] h-[51px] flex justify-center items-center'>
             Регистрация
           </button>
         </div>

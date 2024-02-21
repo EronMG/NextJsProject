@@ -50,7 +50,7 @@ const Help = () => {
   }, []);
 
   return (
-    <div className='xx:flex justify-center' id='case'>
+    <div className='xx:flex justify-center lg:relative' id='case'>
       <section className='bg-dark rounded-[40px] pt-[30px] pb-[33px] mx-[10px] xx:mr-[26px] xx:rounded-[60px] mt-[78.5px] overflow-hidden xx:mt-[175px] xx:w-[1738px]'>
         <div className='px-[10px]'>
           <div className='flex flex-col gap-[10px]'>
@@ -329,12 +329,12 @@ const Help = () => {
             </div>
           </div>
           <div className='ll:flex flex-col gg:relative gg:top-[70px] md:static ll:relative ll:top-0 justify-end'>
-            <p className='text-white text-[12px] leading-[15.6px] font-Regular w-[258px]'>
+            <p className='text-white text-[12px] leading-[15.6px] font-Regular w-[258px] lg:text-[14px] lg:w-[250px]'>
               Говорить, что это на 100% последствие внедрения ИИ-консультанта,
               мы не можем. Но это нововведение однозначно оказало влияние на
               увеличение прибыли.
             </p>
-            <p className='text-white text-[12px] leading-[15.6px] font-Regular w-[194px] pt-3'>
+            <p className='text-white text-[12px] leading-[15.6px] font-Regular w-[194px] pt-3 lg:text-[14px] lg:w-[220px]'>
               И мы можем предположить, что это было существенное влияние.
             </p>
           </div>
@@ -427,7 +427,7 @@ const Help = () => {
         </div>
         <div className='flex justify-center xx:hidden'>
           <button
-            className={`relative z-10 xx:hidden w-[234px] h-[50px] mt-[21px] flex flex-row items-center justify-center gap-2 pr-7 rounded-[40px] bg-lime ${
+            className={`relative z-10 xx:hidden w-[234px] h-[50px] mt-[21px] lg:absolute left-0 bottom-10 lg:left-[200px] flex flex-row items-center justify-center gap-2 pr-7 rounded-[40px] bg-lime ${
               isHovered ? 'button-hovered' : ''
             }`}
             onMouseEnter={handleMouseEnter}

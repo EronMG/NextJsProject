@@ -32,21 +32,21 @@ const Business = () => {
         Идеально для бизнеса, где надо обрабатывать большой поток однотипных
         сообщений
       </h2>
-      <div className='pt-[17px] flex justify-center items-center relative md:pt-6 xx:pt-5 w-full max-w-[700px] xx:max-w-[1700px]'>
+      <div className='pt-[17px] flex justify-center items-center relative md:pt-6 xx:pt-5 w-full max-w-[700px] lg:max-w-[1700px]'>
         <img
           src={Person.src}
           alt='icon'
-          className='ss:scale-125 md:scale-150 xx:w-[342px] xx:h-[191px] xx:scale-100'
+          className='ss:scale-125 md:scale-150 lg:w-[342px] lg:h-[191px] lg:scale-100'
         />
-        <div className='scroll-wrapper h-[97px] xx:h-[130px] absolute xx:left-40 top-5 xx:top-0'>
-          <div className='scroll-container top-[7px] left-1 absolute w-full xx:top-10  xx:left-[-400px]'>
+        <div className='scroll-wrapper h-[97px] lg:h-[130px] absolute lg:left-40 top-5 lg:top-0'>
+          <div className='scroll-container top-[7px] left-1 absolute w-full lg:top-10  lg:left-[-400px]'>
             <div className='flex justify-center xx:gap-6'>
               {images.map((image, index) => (
                 <img
                   key={index}
                   src={image.src}
                   alt={`Image ${index + 1}`}
-                  className={`icon mr-4  xx:w-[91px] xx:h-[87px] ${
+                  className={`icon mr-4  lg:w-[91px] lg:h-[87px] ${
                     index === images.length - 1 ? 'last-icon' : ''
                   }`}
                 />

@@ -52,7 +52,7 @@ const NextBot = () => {
           <span className='text-blue font-Bold'>
             {' '}
             легко и быстро,
-            <br className='ss:hidden xx:flex' /> без специальных знаний
+            <br className='ss:hidden lg:flex' /> без специальных знаний
           </span>{' '}
           создать ИИ-бота для бизнеса
         </h2>

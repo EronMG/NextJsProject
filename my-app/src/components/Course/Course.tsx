@@ -55,7 +55,7 @@ const Course = () => {
               className='p-3 rounded-[10px] bg-cloud min-w-[300px] md:w-[300px] md:h-[416px] xx:w-[440px] xx:h-[513px]'
             >
               <div className='flex flex-col gap-2'>
-                <div className='rounded-[5px] bg-blue text-white text-[14px] font-Regular w-[64px] h-6 flex justify-center items-center xx:text-xl xx:leading-[26px] xx:w-[94px] xx:h-[45px]'>
+                <div className='rounded-[5px] pt-1 bg-blue text-white text-[14px] font-Regular w-[64px] h-6 flex justify-center items-center xx:text-xl xx:leading-[26px] xx:w-[94px] xx:h-[45px]'>
                   День {item.id}
                 </div>
                 <h2 className='text-blue text-[14px] font-Medium leading-[18.2px] xx:text-xl xx:leading-[26px]'>

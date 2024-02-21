@@ -16,7 +16,7 @@ interface BusinessItem {
 
 function Array() {
   return (
-    <div className='flex flex-wrap gap-[10px] justify-center pt-[13px] xx:hidden'>
+    <div className='flex flex-wrap gap-[10px] justify-center pt-[13px] lg:hidden'>
       {bussinesArr.map((item, _) => (
         <div
           key={item.id}
@@ -118,7 +118,7 @@ const Create: React.FC<BusinessItem> = () => {
   };
 
   return (
-    <section className='flex flex-col items-center px-[10px] pt-[78px] leading-[26.4px] xx:pt-[184px]'>
+    <section className='flex flex-col items-center px-[10px] pt-[78px] leading-[26.4px] xx:pt-[184px] lg:mb-[150px] xx:mt-0'>
       <div className='md:flex flex-wrap justify-center items-center md:gap-6 xx:gap-20'>
         <h2 className='text-[22px] font-Regular text-dark text-center w-[267px] ml-4 mm:ml-0 ss:max-w-[472px] ss:w-fit xx:text-[36px] xx:leading-[43.2px] xx:max-w-[982px] lg:max-w-[500px] xx:text-start lg:text-2xl lg:text-start'>
           Вы соберете ИИ-бота под задачи вашего бизнеса, который может заменить
@@ -139,7 +139,7 @@ const Create: React.FC<BusinessItem> = () => {
           </h3>
         </div>
       </div>
-      <div className='flex pt-8 md:items-center xx:hidden lg:gap-40'>
+      <div className='flex pt-8 md:items-center lg:hidden lg:gap-40'>
         <h4 className='text-[14px] text-dark font-Medium mm:max-w-[274px] mm:text-lg leading-[18.2px] lg:text-2xl lg:max-w-[350px]'>
           Бот совершает столько касаний, чтобы к вам попадал максимально теплый
           лид
@@ -264,7 +264,121 @@ const Create: React.FC<BusinessItem> = () => {
           </div>
         </div>
       </div>
-      <FaArrowUp className='rotate-180 text-cloud text-[28px] mt-1 xx:hidden' />
+      <div className='hidden lg:flex lg:pt-20 gap-[57px] xx:hidden'>
+        <div className='flex flex-col gap-[15px]'>
+          <h4 className='text-[22px] text-dark font-Medium leading-[28.6px] max-w-[429px]'>
+            Бот совершает столько касаний, чтобы к вам попадал максимально
+            теплый лид
+          </h4>
+          <img
+            src={Diagramms.src}
+            alt='icon'
+            className='w-[381px] h-[215px] transform -scale-x-100'
+          />
+        </div>
+        <div className=''>
+          <div className='overflow-hidden pt-1'>
+            {bussinesArr.map((item, index) => (
+              <div
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
+                onMouseMove={handleMouseMove}
+                key={item.id}
+                className={`flex w-[654px] gap-[37px] items-center h-[93px]  ${
+                  item.id === bussinesArr.length
+                    ? 'border-b-[1px] border-t-[1px] border-blue'
+                    : 'border-t-[1px]  border-blue'
+                } hover-effect`}
+              >
+                <span className='text text-[20px] leading-[26px] font-Regular text-dark w-[421px]'>
+                  {item.title}
+                </span>
+                <img src={AI.src} alt='icon' className='w-[66px] h-[59px]' />
+              </div>
+            ))}
+            {isHovering && (
+              <div
+                className='bg-cloud rounded-[20px]'
+                style={{
+                  position: 'fixed',
+                  left: cursorPos.x,
+                  top: cursorPos.y,
+                  transform: 'translate(-50%, -50%)',
+                  // Стилизация блока
+                  width: '331px',
+                  height: '331px',
+                  color: '#FFF',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  pointerEvents: 'none', // Чтобы блок не мешал другим событиям мыши
+                }}
+              >
+                {/* Содержимое блока, которое следует за курсором */}
+                <img
+                  src={Mobile.src}
+                  alt='icon'
+                  className='w-[261px] h-[270px] object-cover'
+                />
+              </div>
+            )}
+          </div>
+          <div className='flex items-center pt-12 lg:absolute left-[100px]'>
+            <div className='size-[58px] bg-gray rounded-[10px] flex justify-center items-center mr-[12px]'>
+              <img src={Eye1.src} alt='icon' id='icon' />
+            </div>
+            <p className='w-[694px] text-gray leading-[20.8px] text-base'>
+              Возможности ИИ-бота не ограничены. Вам нужно только прописать в
+              инструкции,
+              <br /> что должен делать бот, что от него нужно. Но в первую
+              очередь, ИИ-ассистент закрывает рутинные операции, освобождает
+              время для развития бизнеса и решения важных задач
+            </p>
+            <button
+              className={`relative z-10 w-[234px] h-[50px] flex flex-row items-center gap-12 pr-4 justify-end rounded-[40px] bg-lime md:w-[280px] ${
+                isHovered ? 'button-hovered' : ''
+              }`}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={() => setIsHovered(false)}
+            >
+              <p
+                className={`text-[14px] font-Medium ml-7 md:text-[18px] ${
+                  isHovered ? 'text-blue duration-300' : ' text-dark'
+                }`}
+              >
+                Создать ии-бота
+              </p>
+              <div
+                className={`flex items-center justify-center size-7 rounded-full  ${
+                  isHovered ? ' bg-blue duration-300' : 'bg-dark'
+                }`}
+              >
+                <img
+                  src={ArrowBtn.src}
+                  alt='ArrowBtn'
+                  className={`transition-opacity duration-500 ${
+                    isHovered ? 'arrow-out' : ''
+                  }`}
+                  key={animationKey}
+                />
+                {isHovered && (
+                  <img
+                    src={ArrowBtn.src}
+                    alt='ArrowBtn'
+                    className='arrow-in'
+                    style={{
+                      position: 'absolute',
+                      right: '25px',
+                      top: '21px',
+                    }}
+                  />
+                )}
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+      <FaArrowUp className='rotate-180 text-cloud text-[28px] mt-1 lg:hidden' />
       {Array()}
     </section>
   );

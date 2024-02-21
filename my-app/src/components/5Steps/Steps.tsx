@@ -30,9 +30,9 @@ const Steps = () => {
   }, []);
 
   return (
-    <div className='xx:flex justify-center'>
-      <section className='pl-[10px] pt-[84px] xx:relative overflow-hidden xx:mt-[285px] xx:pt-0 xx:pl-[38px] xx:w-[1657px]'>
-        <div className='relative flex flex-col justify-center items-center xx:hidden'>
+    <div className='lg:flex justify-center'>
+      <section className='pl-[10px] pt-[84px] lg:relative overflow-hidden xx:mt-[285px] xx:pt-0 xx:pl-[38px] xx:w-[1657px] lg:max-w-[1280px]'>
+        <div className='relative flex flex-col justify-center items-center lg:hidden'>
           <h2 className='text-dark text-[22px] font-Regular text-center leading-[26.4px]'>
             <span className='text-blue font-Medium'>Всего 5 шагов</span> и у вас
             будет свой ИИ-бот для бизнеса
@@ -46,7 +46,7 @@ const Steps = () => {
             } absolute top-0 w-[310px] h-[235px] md:top-5 scale-125 md:scale-[200%]`}
           />
         </div>
-        <div className='flex flex-wrap gap-5 pt-[148px] md:justify-center xx:hidden md:pt-[240px]'>
+        <div className='flex flex-wrap gap-5 pt-[148px] md:justify-center lg:hidden md:pt-[240px]'>
           {stepsArr.map((item, _) => (
             <div
               key={item.id}
@@ -70,7 +70,7 @@ const Steps = () => {
             </div>
           ))}
         </div>
-        <h2 className='text-dark text-[36px] leading-[39.2px] hidden xx:block'>
+        <h2 className='text-dark text-[36px] leading-[39.2px] hidden lg:block'>
           <span className='text-blue font-Medium'>Всего 5 шагов</span> и у вас
           будет <br /> свой ИИ-бот для бизнеса
         </h2>
@@ -82,7 +82,7 @@ const Steps = () => {
                 className='flex flex-col gap-[5px] w-[329px] h-[175px]'
               >
                 <div className='flex justify-center items-center bg-blue w-[72px] min-h-[45px] rounded-[10px] relative'>
-                  <p className=' text-white font-Regular text-[40px] absolute top-0'>
+                  <p className=' text-white font-Regular text-[40px] absolute top-[-2px] left-[10px]'>
                     {item.count}
                   </p>
                 </div>
@@ -110,7 +110,61 @@ const Steps = () => {
                 } `}
               >
                 <div className='flex justify-center items-center bg-blue w-[72px] h-[45px] rounded-[10px] relative'>
-                  <p className=' text-white font-Regular text-[40px] absolute top-0'>
+                  <p className=' text-white font-Regular text-[40px] absolute top-[-2px] left-[10px]'>
+                    {item.count}
+                  </p>
+                </div>
+                <h3
+                  className={`font-Medium text-blue text-[22px] leading-[28.6px] pt-[4.5px] ${
+                    item.id === 4 && 'w-[295px]'
+                  }`}
+                >
+                  {item.name}
+                </h3>
+                <p className='text-[16px] leading-[19.2px] font-Regular pt-[2px]'>
+                  {item.title}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className='hidden lg:flex flex-col pt-[67px] pl-[1px]'>
+          <div className='flex gap-[70px]'>
+            {stepsArr.slice(0, 2).map((item, _) => (
+              <div
+                key={item.id}
+                className='flex flex-col gap-[5px] w-[329px] h-[175px]'
+              >
+                <div className='flex justify-center items-center bg-blue w-[72px] min-h-[45px] rounded-[10px] relative'>
+                  <p className=' text-white font-Regular text-[40px] absolute top-[-2px] left-[10px]'>
+                    {item.count}
+                  </p>
+                </div>
+                <h3
+                  className={`font-Medium text-blue text-[22px] leading-[28.6px] pt-[4.5px] ${
+                    item.id === 1 && ' w-[298px]'
+                  } ${item.id === 2 && ' w-[278px]'}`}
+                >
+                  {item.name}
+                </h3>
+                <p className='text-[16px] leading-[19.2px] font-Regular pt-[2px]'>
+                  {item.title}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className='flex justify-end pr-[56px] pt-[60px]'>
+            {stepsArr.slice(2, 5).map((item, _) => (
+              <div
+                key={item.id}
+                className={`flex flex-col gap-[5px] ${
+                  item.id === 3 && 'w-[346px] mr-[55px]'
+                }  ${item.id === 4 && 'w-[360px] mr-[41px]'}  ${
+                  item.id === 5 && 'w-[361px]'
+                } `}
+              >
+                <div className='flex justify-center items-center bg-blue w-[72px] h-[45px] rounded-[10px] relative'>
+                  <p className=' text-white font-Regular text-[40px] absolute top-[-2px] left-[10px]'>
                     {item.count}
                   </p>
                 </div>
@@ -134,7 +188,7 @@ const Steps = () => {
           alt='img'
           className={`${
             isVisible ? 'fade-in-out' : ''
-          } absolute top-[5px] w-[936px] right-[-37px] h-[330px] object-cover hidden xx:flex`}
+          } absolute xx:top-[5px] xx:w-[936px] xx:right-[-37px] xx:h-[330px] lg:w-[636px] lg:right-[-77px] lg:h-[230px] lg:top-[200px] object-cover hidden lg:flex`}
         />
       </section>
     </div>

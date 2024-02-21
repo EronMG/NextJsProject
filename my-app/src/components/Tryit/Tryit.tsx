@@ -37,7 +37,7 @@ function Tryit() {
             как человек. Клиенты не отличают его от настоящего консультанта
           </h2>
         </div>
-        <div className='flex flex-col items-center pt-5 xx:hidden'>
+        <div className='flex flex-col items-center pt-5 lg:hidden'>
           <p className='text-[16px] leading-[20.8px] text-center font-Regular pb-5 md:text-xl'>
             Без сложных настроек
           </p>
@@ -111,6 +111,49 @@ function Tryit() {
             src={TabContent[activeTab].imageSrc}
             alt='Tab Content'
             className='w-[780px] h-[534px] rounded-[10px] py-[29px] px-[42px] bg-cloud mt-[50px]'
+          />
+        </div>
+        <div className='hidden lg:flex xx:hidden justify-end items-start pt-10 w-fit gap-[44px] '>
+          <div>
+            <p className='text-[22px] leading-[28.6px] font-Regular text-dark'>
+              Без сложных настроек
+            </p>
+            <div className='flex flex-col gap-[10px] pt-5'>
+              {TabContent.map((item, index) => (
+                <div
+                  key={index}
+                  className={`max-w-[380px] h-[68px] border-[1px] border-blue rounded-[10px] flex justify-start font-Regular items-center transition-all duration-500 pl-[11px] pt-[10px] pb-[6px] cursor-pointer ${
+                    activeTab === index
+                      ? 'bg-blue text-white'
+                      : 'bg-white text-dark'
+                  }`}
+                  onClick={() => setActiveTab(index)}
+                >
+                  <p
+                    className={`text-xl leading-[26px] font-Regular ${
+                      index === 0 && 'max-w-[286px]'
+                    } ${index === 2 && 'max-w-[306px]'} ${
+                      index === 3 && 'max-w-[325px]'
+                    }`}
+                  >
+                    {item.title}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className='relative flex pt-[150px] pr-[24px] '>
+            <img
+              src={tabs.src}
+              alt='icon'
+              className='rotate-180 absolute top-[135px] right-[-3px]'
+            />
+            <img src={tabs.src} alt='icon' />
+          </div>
+          <img
+            src={TabContent[activeTab].imageSrc}
+            alt='Tab Content'
+            className='w-[680px] h-[534px] rounded-[10px] py-[29px] px-[42px] bg-cloud mt-[50px]'
           />
         </div>
       </section>
