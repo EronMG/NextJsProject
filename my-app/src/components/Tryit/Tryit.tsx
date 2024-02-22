@@ -31,7 +31,7 @@ function Tryit() {
     <>
       <section className='w-screen flex flex-col items-center mt-[80px] xx:mt-[189px]'>
         <div className='flex justify-center items-center pb-[11px] border-b-2 border-blue'>
-          <h2 className='max-w-[292px] text-[22px] leading-[26.4px] text-center font-Regular md:max-w-[600px] xx:mr-1 xx:w-[1576px] xx:max-w-[1576px] xx:text-start xx:text-[36px] xx:leading-[43.2px]'>
+          <h2 className='max-w-[292px] text-[22px] leading-[26.4px] text-center font-Regular md:max-w-[600px] xx:mr-1 xx:w-[1576px] lg:text-start lg:px-2 lg:max-w-[1576px] xx:text-start xx:text-[36px] xx:leading-[43.2px]'>
             В NextBot вы создадите бота с искусственным интеллектом. Он общается{' '}
             <br className='hidden xx:flex' />
             как человек. Клиенты не отличают его от настоящего консультанта
@@ -113,7 +113,7 @@ function Tryit() {
             className='w-[780px] h-[534px] rounded-[10px] py-[29px] px-[42px] bg-cloud mt-[50px]'
           />
         </div>
-        <div className='hidden lg:flex xx:hidden justify-end items-start pt-10 w-fit gap-[44px] '>
+        <div className='hidden mx-3 lg:flex xx:hidden justify-end items-start pt-10 w-fit gap-[20px] '>
           <div>
             <p className='text-[22px] leading-[28.6px] font-Regular text-dark'>
               Без сложных настроек
@@ -153,7 +153,7 @@ function Tryit() {
           <img
             src={TabContent[activeTab].imageSrc}
             alt='Tab Content'
-            className='w-[680px] h-[534px] rounded-[10px] py-[29px] px-[42px] bg-cloud mt-[50px]'
+            className='w-[580px] h-[434px] rounded-[10px] py-[29px] px-[42px] bg-cloud mt-[50px]'
           />
         </div>
       </section>

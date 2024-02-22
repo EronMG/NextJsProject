@@ -119,7 +119,7 @@ const Create: React.FC<BusinessItem> = () => {
 
   return (
     <section className='flex flex-col items-center px-[10px] pt-[78px] leading-[26.4px] xx:pt-[184px] lg:mb-[150px] xx:mt-0'>
-      <div className='md:flex flex-wrap justify-center items-center md:gap-6 xx:gap-20'>
+      <div className='md:flex flex-col lg:flex-row justify-center items-center md:gap-6 xx:gap-20'>
         <h2 className='text-[22px] font-Regular text-dark text-center w-[267px] ml-4 mm:ml-0 ss:max-w-[472px] ss:w-fit xx:text-[36px] xx:leading-[43.2px] xx:max-w-[982px] lg:max-w-[500px] xx:text-start lg:text-2xl lg:text-start'>
           Вы соберете ИИ-бота под задачи вашего бизнеса, который может заменить
           <span className='text-blue italic'>
@@ -298,7 +298,7 @@ const Create: React.FC<BusinessItem> = () => {
             ))}
             {isHovering && (
               <div
-                className='bg-cloud rounded-[20px]'
+                className='bg-cloud rounded-[20px] z-50'
                 style={{
                   position: 'fixed',
                   left: cursorPos.x,
@@ -323,11 +323,11 @@ const Create: React.FC<BusinessItem> = () => {
               </div>
             )}
           </div>
-          <div className='flex items-center pt-12 lg:absolute left-[100px]'>
-            <div className='size-[58px] bg-gray rounded-[10px] flex justify-center items-center mr-[12px]'>
+          <div className='flex items-center pt-12 lg:absolute left-[00px] lg:mx-2'>
+            <div className='size-[58px] bg-gray rounded-[10px] flex justify-center items-center mr-[12px] lg:mr-2'>
               <img src={Eye1.src} alt='icon' id='icon' />
             </div>
-            <p className='w-[694px] text-gray leading-[20.8px] text-base'>
+            <p className='w-[694px] text-gray leading-[20.8px] lg:w-[640px] text-base lg:text-[15px]'>
               Возможности ИИ-бота не ограничены. Вам нужно только прописать в
               инструкции,
               <br /> что должен делать бот, что от него нужно. Но в первую
@@ -335,7 +335,7 @@ const Create: React.FC<BusinessItem> = () => {
               время для развития бизнеса и решения важных задач
             </p>
             <button
-              className={`relative z-10 w-[234px] h-[50px] flex flex-row items-center gap-12 pr-4 justify-end rounded-[40px] bg-lime md:w-[280px] ${
+              className={`relative z-10 w-[234px] h-[50px] flex flex-row items-center gap-12 pr-4 lr:pr-0 justify-end rounded-[40px] bg-lime md:w-[280px] ${
                 isHovered ? 'button-hovered' : ''
               }`}
               onMouseEnter={handleMouseEnter}

@@ -17,8 +17,8 @@ const Course = () => {
   return (
     <section className='px-[10px] pt-[77px] xx:pt-[270px]'>
       <div className='xx:flex justify-center'>
-        <div className='flex flex-wrap xx:relative justify-center xx:justify-between items-center border-b-[2px] border-blue xx:w-[1576px]'>
-          <h2 className=' font-Regular text-dark text-[22px] leading-[26.4px] text-center max-w-[278px] xx:pb-[14px] ss:max-w-[450px] xx:text-[36px] xx:leading-[43.2px] xx:max-w-[1198px] xx:text-start'>
+        <div className='flex flex-col lg:items-end xx:relative justify-center xx:justify-between items-center border-b-[2px] border-blue  lg:flex-row xx:w-[1576px]'>
+          <h2 className=' font-Regular text-dark text-[22px] leading-[26.4px] text-center max-w-[278px] xx:pb-[14px] ss:max-w-[450px] xx:text-[36px] xx:leading-[43.2px] lg:max-w-[1198px] lg:text-start'>
             На бесплатном обучении вы получите пошаговую инструкцию,
             <br className='sm:hidden xx:flex' /> как собрать ИИ-бота, который
             поддерживает беседу и мотивирует клиента оставить заявку
@@ -32,7 +32,7 @@ const Course = () => {
       </div>
       <div className='pt-3 flex flex-col items-center mm:pt-6 xx:pt-12'>
         <div className='flex flex-wrap justify-end gap-2 ss:justify-center mm:flex-col mm:items-center'>
-          <p className='text-[14px] leading-[18.2px] text-dark font-Regular text-center mm:max-w-[500px] md:text-base md:text-[22px] md:leading-[28.6px] md:max-w-[720px] xx:text-start '>
+          <p className='text-[14px] leading-[18.2px] text-dark font-Regular text-center mm:max-w-[500px] md:text-base md:text-[22px] md:leading-[28.6px] md:max-w-[720px] lg:text-start '>
             Вам не нужно программировать. Достаточно текстом ПРАВИЛЬНО описать,
             как должен действовать бот. Этому мы вас тоже научим
           </p>
@@ -46,7 +46,7 @@ const Course = () => {
           </div>
         </div>
         <div
-          className='flex overflow-hidden pt-[25px] max-w-[300px] md:flex-wrap md:max-w-[1576px] xx:max-w-[1920px] md:justify-center md:gap-3 xx:gap-5 xx:pt-[34px]'
+          className='flex lg:max-w-[800px] lg:gap-10 overflow-hidden pt-[25px] max-w-[300px] md:flex-wrap md:max-w-[1576px] xx:max-w-[1920px] md:justify-center md:gap-3 xx:gap-5 xx:pt-[34px]'
           id='course'
         >
           {courseArr.map((item, _) => (

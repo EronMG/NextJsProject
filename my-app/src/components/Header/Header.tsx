@@ -6,7 +6,7 @@ import { Link as ScrollLink } from 'react-scroll';
 const Header = () => {
   return (
     <header className='md:mt-[31px] flex justify-center z-50'>
-      <div className='hidden md:flex w-full max-w-[1576px] justify-between gap-3'>
+      <div className='hidden md:flex w-full max-w-[1576px] justify-between gap-3 mx-2'>
         <div className='text-xl font-Regular text-dark border-[1px] pt-1 border-dark rounded-[41px] min-w-[145px] h-[51px] flex justify-center items-center duration-500 hover:bg-cloud cursor-pointer'>
           NEXT BOT
         </div>

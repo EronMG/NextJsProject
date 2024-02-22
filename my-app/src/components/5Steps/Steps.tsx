@@ -128,12 +128,12 @@ const Steps = () => {
             ))}
           </div>
         </div>
-        <div className='hidden lg:flex flex-col pt-[67px] pl-[1px]'>
-          <div className='flex gap-[70px]'>
+        <div className='hidden lg:flex flex-col xx:hidden pt-[67px] pl-[1px]'>
+          <div className='flex gap-[30px]'>
             {stepsArr.slice(0, 2).map((item, _) => (
               <div
                 key={item.id}
-                className='flex flex-col gap-[5px] w-[329px] h-[175px]'
+                className='flex flex-col gap-[5px] w-[309px] h-[175px]'
               >
                 <div className='flex justify-center items-center bg-blue w-[72px] min-h-[45px] rounded-[10px] relative'>
                   <p className=' text-white font-Regular text-[40px] absolute top-[-2px] left-[10px]'>
@@ -141,7 +141,7 @@ const Steps = () => {
                   </p>
                 </div>
                 <h3
-                  className={`font-Medium text-blue text-[22px] leading-[28.6px] pt-[4.5px] ${
+                  className={`font-Medium text-blue text-[20px] leading-[28.6px] pt-[4.5px] ${
                     item.id === 1 && ' w-[298px]'
                   } ${item.id === 2 && ' w-[278px]'}`}
                 >
@@ -153,7 +153,7 @@ const Steps = () => {
               </div>
             ))}
           </div>
-          <div className='flex justify-end pr-[56px] pt-[60px]'>
+          <div className='flex justify-end pr-[6px] pt-[60px]'>
             {stepsArr.slice(2, 5).map((item, _) => (
               <div
                 key={item.id}
@@ -169,7 +169,7 @@ const Steps = () => {
                   </p>
                 </div>
                 <h3
-                  className={`font-Medium text-blue text-[22px] leading-[28.6px] pt-[4.5px] ${
+                  className={`font-Medium text-blue text-[20px] leading-[28.6px] pt-[4.5px] ${
                     item.id === 4 && 'w-[295px]'
                   }`}
                 >
@@ -188,7 +188,7 @@ const Steps = () => {
           alt='img'
           className={`${
             isVisible ? 'fade-in-out' : ''
-          } absolute xx:top-[5px] xx:w-[936px] xx:right-[-37px] xx:h-[330px] lg:w-[636px] lg:right-[-77px] lg:h-[230px] lg:top-[200px] object-cover hidden lg:flex`}
+          } absolute xx:top-[5px] xx:w-[936px] xx:right-[-37px] xx:h-[330px] lg:w-[536px] lg:right-[-50px] lg:h-[200px] lg:top-[250px] object-cover hidden lg:flex`}
         />
       </section>
     </div>

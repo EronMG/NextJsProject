@@ -29,8 +29,8 @@ const Business = () => {
   return (
     <section className='flex flex-col items-center pt-[78px] xx:pt-[82px] overflow-hidden'>
       <h2 className='text-[22px] font-Regular text-dark text-center w-[269px] ss:w-fit leading-[26.4px] xx:text-[36px] xx:w-[1039px] xx:leading-[43.2px]'>
-        Идеально для бизнеса, где надо обрабатывать большой поток однотипных
-        сообщений
+        Идеально для бизнеса, где надо обрабатывать большой{' '}
+        <br className='lg:flex hidden' /> поток однотипных сообщений
       </h2>
       <div className='pt-[17px] flex justify-center items-center relative md:pt-6 xx:pt-5 w-full max-w-[700px] lg:max-w-[1700px]'>
         <img
