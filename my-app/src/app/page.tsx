@@ -15,21 +15,23 @@ import Payments from '@/components/payments/Payments';
 
 export default function Home() {
   return (
-    <div>
-      <Header />
-      <MainScreen />
-      <Business />
-      <Create id={0} title={''} />
-      <NextBot />
-      <Course />
-      <Help />
-      <Tryit />
-      <Links />
-      <Base />
-      <II />
-      <Steps />
-      <Payments />
-      <Footer />
+    <div className='xl:flex flex-col items-center '>
+      <div className='xl:max-w-[1280px] xl:overflow-hidden'>
+        <Header />
+        <MainScreen />
+        <Business />
+        <Create id={0} title={''} />
+        <NextBot />
+        <Course />
+        <Help />
+        <Tryit />
+        <Links />
+        <Base />
+        <II />
+        <Steps />
+        <Payments />
+        <Footer />
+      </div>
     </div>
   );
 }
