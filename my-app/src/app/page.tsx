@@ -16,7 +16,7 @@ import Payments from '@/components/payments/Payments';
 export default function Home() {
   return (
     <div className='xl:flex flex-col items-center '>
-      <div className='xl:max-w-[1280px] xl:overflow-hidden'>
+      <div className='xl:max-w-[1280px] xm:max-w-[1400px] xl:overflow-hidden'>
         <Header />
         <MainScreen />
         <Business />

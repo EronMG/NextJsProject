@@ -30,8 +30,8 @@ const Steps = () => {
   }, []);
 
   return (
-    <div className='lg:flex justify-center'>
-      <section className='pl-[10px] pt-[84px] lg:relative overflow-hidden xx:mt-[285px] xx:pt-0 xx:pl-[38px] xx:w-[1657px] lg:max-w-[1280px]'>
+    <div className='lg:flex justify-center xm:justify-start'>
+      <section className='pl-[10px] pt-[84px] lg:relative overflow-hidden xx:mt-[285px] xx:pt-0 xx:pl-[38px] xx:w-[1657px] xm:max-w-[1400px] lg:max-w-[1280px]'>
         <div className='relative flex flex-col justify-center items-center lg:hidden'>
           <h2 className='text-dark text-[22px] font-Regular text-center leading-[26.4px]'>
             <span className='text-blue font-Medium'>Всего 5 шагов</span> и у вас
@@ -147,13 +147,13 @@ const Steps = () => {
                 >
                   {item.name}
                 </h3>
-                <p className='text-[16px] leading-[19.2px] font-Regular pt-[2px]'>
+                <p className='text-[16px] leading-[19.2px] xm:text-[15px] font-Regular pt-[2px]'>
                   {item.title}
                 </p>
               </div>
             ))}
           </div>
-          <div className='flex justify-end pr-[6px] pt-[60px]'>
+          <div className='flex justify-end xm:ml-[340px] pr-[6px] pt-[60px]'>
             {stepsArr.slice(2, 5).map((item, _) => (
               <div
                 key={item.id}
@@ -175,7 +175,7 @@ const Steps = () => {
                 >
                   {item.name}
                 </h3>
-                <p className='text-[16px] leading-[19.2px] font-Regular pt-[2px]'>
+                <p className='text-[16px] leading-[19.2px] xm:text-[15px] font-Regular pt-[2px]'>
                   {item.title}
                 </p>
               </div>
@@ -188,7 +188,7 @@ const Steps = () => {
           alt='img'
           className={`${
             isVisible ? 'fade-in-out' : ''
-          } absolute xx:top-[5px] xx:w-[936px] xx:right-[-37px] xx:h-[330px] lg:w-[536px] lg:right-[-50px] lg:h-[200px] lg:top-[250px] object-cover hidden lg:flex`}
+          } absolute xx:top-[5px] xx:w-[936px] xx:right-[-37px] xm:left-[600px] xm:w-[750px] xm:top-[150px] xm:h-[300px] xx:h-[330px] lg:w-[536px] lg:right-[-50px] lg:h-[200px] lg:top-[250px] object-cover hidden lg:flex`}
         />
       </section>
     </div>

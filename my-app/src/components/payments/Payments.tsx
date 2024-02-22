@@ -177,7 +177,7 @@ const Payments = () => {
             )}
           </div>
         </div>
-        <p className='font-Regular text-[14px] leading-[16.8px] text-center text-dark w-[218px] pt-[18px] xx:text-[22px] xx:leading-[26.4px] xx:w-fit md:text-[18px] md:w-[270px]'>
+        <p className='font-Regular text-[14px] leading-[16.8px] text-center text-dark xm:w-[600px] w-[218px] pt-[18px] xx:text-[22px] xx:leading-[26.4px] xx:w-fit md:text-[18px] md:w-[270px]'>
           Можете выбрать любой тариф – от пробного до премиум
         </p>
       </div>
@@ -420,29 +420,29 @@ const Payments = () => {
                   item.id === 1 && 'mt-[52px]'
                 } ${
                   item.id === 3 && 'mt-[52px]'
-                } rounded-[20px] max-w-[320px] ${
+                } rounded-[20px] max-w-[320px] xm:max-w-[470px] ${
                   item.id === 2 && 'border-[2px] border-blue'
                 }`}
               >
                 {item.id === 2 && (
-                  <div className='bg-blue rounded-[10px] w-[196px] h-[45px] flex justify-center items-center absolute top-[-24px] pt-[6px] left-[17.8%]'>
-                    <p className='  text-[13px] leading-[28.6px] text-white font-Regular'>
+                  <div className='bg-blue rounded-[10px] xm:w-[250px] w-[196px] h-[45px] xm:left-[20%] xm:pt-0 flex justify-center items-center absolute top-[-24px] pt-[6px] left-[17.8%]'>
+                    <p className='  text-[13px] leading-[28.6px] text-white xm:text-[18px]  font-Regular'>
                       Самый популярный вариант
                     </p>
                   </div>
                 )}
                 <h2
-                  className={`text-[36px] ${
+                  className={`text-[36px] xm:text-[46px] ${
                     item.id !== 2 && ' pl-0'
                   } text-dark font-Regular leading-[67.2px] text-center pt-0 ${
-                    item.id === 2 && 'flex items-center justify-center pl-0px]'
+                    item.id === 2 && 'flex items-center justify-center xm:ml-2'
                   }`}
                 >
                   {item.id === 2 && (
                     <img
                       src={StarBlack.src}
                       alt='icon'
-                      className='pr-[11.6px] pb-[10px]'
+                      className='pr-[11.6px] xm:pr-2 pb-[10px]'
                     />
                   )}{' '}
                   {item.name}{' '}
@@ -450,19 +450,19 @@ const Payments = () => {
                     <img
                       src={StarBlack.src}
                       alt='icon'
-                      className='pb-[10px] pl-[19px]'
+                      className='pb-[10px] xm:pl-2 pl-[19px]'
                     />
                   )}
                 </h2>
                 <div className='pl-[7.5px] pt-[13px]'>
-                  <p className='text-blue font-Medium  text-[16px] w-[262px] leading-[26.4px]'>
+                  <p className='text-blue font-Medium xm:text-[22px] xm:w-[330px]  text-[16px] w-[262px] leading-[26.4px]'>
                     {item.title}
                   </p>
                   <div className='flex flex-col gap-[5px] pt-4'>
                     {item.titleArr.map((item, _) => (
                       <span
                         key={item.id}
-                        className='text-[16px] leading-[26px] text-dark font-Regular flex gap-1 items-start'
+                        className='text-[16px] xm:text-[18px]  leading-[26px] text-dark font-Regular flex gap-1 items-start'
                       >
                         <img src={Star.src} alt='icon' className='pt-1' />
                         {item.title}
@@ -474,7 +474,7 @@ const Payments = () => {
                   {item.spanArr.map((item, _) => (
                     <p
                       key={item.id}
-                      className='max-w-[350px] text-[20px] leading-[28.6px] text-dark font-Medium'
+                      className='max-w-[350px] xm:text-[22px]  text-[20px] leading-[28.6px] text-dark font-Medium'
                     >
                       {item.title}
                     </p>
@@ -484,23 +484,23 @@ const Payments = () => {
                   <div
                     className={`flex gap-2 flex-row-reverse items-center justify-center ${
                       item.id === 1 && 'pt-[164px] '
-                    } ${item.id === 3 && 'pt-[28px]'}
+                    } ${item.id === 3 && 'pt-[28px] xm:pt-[60px]'}
                     ${item.id === 2 && 'pt-[244px] '}`}
                   >
                     <h3
-                      className={`font-Regular text-[36px] leading-[67.2px] ${
+                      className={`font-Regular text-[36px] xm:text-[44px]  leading-[67.2px] ${
                         item.id !== 1 && 'text-blue'
                       }`}
                     >
                       {item.deleteCost} ₽
                     </h3>
                     {item.id === 2 && (
-                      <h3 className='font-Regular text-[36px] leading-[67.2px] text-dark line-through decoration-2 decoration-lime'>
+                      <h3 className='font-Regular text-[36px] xm:text-[44px] leading-[67.2px] text-dark line-through decoration-2 decoration-lime'>
                         {item.cost}
                       </h3>
                     )}
                     {item.id === 3 && (
-                      <h3 className='font-Regular text-[36px] leading-[67.2px] text-dark line-through decoration-2 decoration-lime'>
+                      <h3 className='font-Regular text-[36px] xm:text-[44px] leading-[67.2px] text-dark line-through decoration-2 decoration-lime'>
                         {item.cost}
                       </h3>
                     )}
@@ -523,27 +523,27 @@ const Payments = () => {
       </div>
       <div className='flex flex-col items-center pt-[59px] xx:pt-[71px]'>
         <div className='border-t-[1px] rounded-[20px] border-blue pt-6 px-6'>
-          <p className='font-Regular text-base leading-[19.2px] text-center text-dark xx:text-[22px] xx:leading-[26.4px] xx:px-[180px] xx:pt-[6px]'>
+          <p className='font-Regular text-base leading-[19.2px] text-center text-dark xx:text-[22px] xx:leading-[26.4px] xm:text-[20px] xx:px-[180px] xx:pt-[6px]'>
             Оплатить можно с любой карты РФ. Для работы не нужен VPN
           </p>
         </div>
         <div className='xx:hidden'>
-          <p className='font-Regular text-base leading-[19.2px] text-center text-dark pt-4'>
+          <p className='font-Regular text-base leading-[19.2px] text-center xm:text-[20px] text-dark pt-4'>
             У вас будет доступ к сервису NextBot в течение месяца, или пока не
             израсходуются все токены, предусмотренные тарифом.
           </p>
-          <p className='font-Regular text-base leading-[19.2px] text-center text-dark pt-4'>
+          <p className='font-Regular text-base leading-[19.2px] text-center xm:text-[20px] text-dark pt-4'>
             За это время вы можете собрать ИИ-ассистента не только для Telegran,
             но и виджет с ИИ-консультантом для сайта.
           </p>
         </div>
-        <p className='hidden xl:flex font-Regular text-center text-dark pt-5 xx:text-[22px] xx:leading-[26.4px] max-w-[948px]'>
+        <p className='hidden xl:flex font-Regular text-center text-dark pt-5 xx:text-[22px] xx:leading-[26.4px] xm:text-[20px] max-w-[948px]'>
           У вас будет доступ к сервису NextBot в течение месяца, или пока не
           израсходуются <br /> все токены, предусмотренные тарифом. За это время
           вы можете собрать ИИ-ассистента <br /> не только для Telegran, но и
           виджет с ИИ-консультантом для сайта.
         </p>
-        <p className='font-Regular text-base leading-[19.2px] text-center text-dark pt-4 xx:text-[22px] xx:leading-[26.4px] max-w-[754px]'>
+        <p className='font-Regular text-base leading-[19.2px] text-center text-dark pt-4 xx:text-[22px] xm:text-[20px] xx:leading-[26.4px] max-w-[754px]'>
           А если у вас будет доступ к подключению SaleBot, то ИИ-ассистента
           можно подключить к WhatsApp, Avito или Instagram*
         </p>
@@ -551,7 +551,7 @@ const Payments = () => {
           <div className='size-[58px] bg-gray rounded-[10px] flex justify-center items-center'>
             <img src={Eye1.src} alt='icon' id='icon' />
           </div>
-          <p className='font-Medium text-base leading-[20.8px] xx:pt-[14px] text-center text-gray pt-2 xx:text-[22px] xx:leading-[26.4px] max-w-[589px]'>
+          <p className='font-Medium text-base leading-[20.8px] xx:pt-[14px] text-center xm:text-[20px] text-gray pt-2 xx:text-[22px] xx:leading-[26.4px] max-w-[589px]'>
             В некоторых случаях ИИ-ассистент
             <br className='xx:hidden' /> от NextBot может полностью{' '}
             <br className='xx:hidden' />
