@@ -4,35 +4,35 @@
 
 @font-face {
   font-family: ALSthin;
-  src: url('../fonts/ALSHauss-Thin.woff');
+  src: url("../fonts/ALSHauss-Thin.woff");
 }
 @font-face {
   font-family: ALSregular;
-  src: url('../fonts/ALSHauss-Regular.woff');
+  src: url("../fonts/ALSHauss-Regular.woff");
 }
 @font-face {
   font-family: ALSmedium;
-  src: url('../fonts/ALSHauss-Medium.woff');
+  src: url("../fonts/ALSHauss-Medium.woff");
 }
 
 @font-face {
   font-family: ALSlight;
-  src: url('../fonts/ALSHauss-Light.woff');
+  src: url("../fonts/ALSHauss-Light.woff");
 }
 
 @font-face {
   font-family: ALSbook;
-  src: url('../fonts/ALSHauss-Book.woff');
+  src: url("../fonts/ALSHauss-Book.woff");
 }
 
 @font-face {
   font-family: ALSbold;
-  src: url('../fonts/ALSHauss-Bold.woff');
+  src: url("../fonts/ALSHauss-Bold.woff");
 }
 
 @font-face {
   font-family: ALSblack;
-  src: url('../fonts/ALSHauss-Black.woff');
+  src: url("../fonts/ALSHauss-Black.woff");
 }
 
 /* Create.css */
@@ -112,6 +112,15 @@
     border-width: 81px 102px 81px 0;
     border-color: transparent #d1d4ff transparent transparent;
     opacity: 56%;
+    transform: rotate(0deg);
+  }
+
+  .triangle-md {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 37.5px 47px 37.5px 0;
+    border-color: transparent #d1d4ff transparent transparent;
     transform: rotate(0deg);
   }
 
@@ -197,6 +206,14 @@
 
   .footer-table-ex-l {
     font-size: clamp(0.75rem, 0.4059rem + 0.5376vw, 1rem);
+  }
+
+  .footer-table-md-b {
+    font-size: clamp(1rem, -0.125rem + 2.3438vw, 1.375rem);
+  }
+
+  .footer-table-md-l {
+    font-size: clamp(0.625rem, -0.5rem + 2.3438vw, 1rem);
   }
 }
 
@@ -343,7 +360,7 @@
 
 .scroll-container::before,
 .scroll-container::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   width: 100px; /* Ширина эффекта прозрачности, настройте под ваш контент */
@@ -420,7 +437,7 @@
 }
 
 .outer-circle::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
