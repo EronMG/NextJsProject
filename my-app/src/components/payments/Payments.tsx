@@ -9,6 +9,14 @@ import ArrowBtn from '@/Images/ArrowBtn.svg';
 import Eye1 from '@/Images/Eye1.svg';
 
 const Payments = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [animationKey, setAnimationKey] = useState(0); // Для сброса анимации
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    setAnimationKey((prevKey) => prevKey + 1); // Сброс анимации стрелки
+  };
+
   const [showCircle, setShowCircle] = useState(false);
   const animationRef = useRef<HTMLDivElement>(null);
 
@@ -124,15 +132,15 @@ const Payments = () => {
     };
   }, []);
   return (
-    <section className='px-[10px] pt-20 xx:pt-[180px]'>
-      <div className='flex flex-col items-center'>
-        <h2 className='font-Regular text-[22px] leading-[26.4px] text-center text-dark xx:text-[36px] xx:leading-[43.2px] md:text-[26px]'>
-          Вы можете попробовать сервис <br className='hidden xx:flex' /> NextBot
+    <section className='px-[10px] pt-20 xx:pt-[180px] md:pt-[60px]'>
+      <div className='flex flex-col items-center md:mr-[38px]'>
+        <h2 className='font-Regular text-[22px] md:text-lg md:leading-[21.6px] leading-[26.4px] text-center text-dark xx:text-[36px] xx:leading-[43.2px] md:text-[26px]'>
+          Вы можете попробовать сервис <br className='hidden md:flex' /> NextBot
           бесплатно
         </h2>
-        <div className='flex flex-col items-center pt-[10px] xx:relative'>
-          <div className='border-b-[1px] xx:border-b-0 rounded-[20px] border-blue pb-2 px-6 xx:pb-[19px] xx:px-[215px]'>
-            <p className='font-Regular text-base leading-[19.2px] text-center text-dark xx:text-[22px] xx:leading-[26.4px] md:text-[18px]'>
+        <div className='flex flex-col items-center pt-[10px] xx:relative md:pt-[3px]'>
+          <div className='border-b-[1px] xx:border-b-0 rounded-[20px] border-blue pb-2 px-6 xx:pb-[19px] xx:px-[215px] md:px-11'>
+            <p className='font-Regular text-base leading-[19.2px] md:text-[12px] text-center text-dark xx:text-[22px] xx:leading-[26.4px] md:leading-[14.4px]'>
               БЕСПЛАТНОЕ обучение, как ПРАВИЛЬНО делать ИИ-ботов
             </p>
             <div
@@ -159,9 +167,9 @@ const Payments = () => {
               </svg>
             </div>
           </div>
-          <div className='w-[1px] h-[67px] bg-blue relative xx:h-[113px] mr-[1px] xx:hidden'>
-            <div className='trans bottom-[-15px] absolute w-4 h-4 xx:size-[21px] flex justify-center items-center bg-cloud rounded-full'>
-              <div className=' w-2 h-2 bg-blue rounded-full xx:size-[11px]' />
+          <div className='w-[1px] h-[67px] md:h-[43px] bg-blue relative xx:h-[113px] mr-[-1px] xx:hidden'>
+            <div className='trans bottom-[-15px] absolute w-4 h-4 md:size-2 xx:size-[21px] md:top-10 flex justify-center items-center bg-cloud rounded-full'>
+              <div className='w-2 h-2 bg-blue md:size-1 rounded-full xx:size-[11px]' />
             </div>
           </div>
           <div
@@ -177,12 +185,12 @@ const Payments = () => {
             )}
           </div>
         </div>
-        <p className='font-Regular text-[14px] leading-[16.8px] text-center text-dark xm:w-[600px] w-[218px] pt-[18px] xx:text-[22px] xx:leading-[26.4px] xx:w-fit md:text-[18px] md:w-[270px]'>
+        <p className='font-Regular text-[14px] md:pt-2 leading-[16.8px] text-center text-dark xm:w-[600px] w-[218px] pt-[18px] xx:text-[22px] xx:leading-[26.4px] xx:w-fit md:text-[12px] md:leading-[14.4px] md:w-[252px]'>
           Можете выбрать любой тариф – от пробного до премиум
         </p>
       </div>
-      <div className='pt-6 flex flex-col items-center justify-center'>
-        <div className='flex items-center gap-3 lg:hidden'>
+      <div className='pt-6 flex flex-col items-center justify-center md:pt-4'>
+        <div className='flex items-center gap-3 md:hidden'>
           <img
             src={Arrow.src}
             alt='icon'
@@ -197,7 +205,7 @@ const Payments = () => {
             className='rotate-180 cursor-pointer active:scale-110 duration-300 md:scale-125'
           />
         </div>
-        <div className='flex justify-center gap-[10px] pt-4 xx:hidden'>
+        <div className='flex justify-center gap-[10px] pt-4 md:hidden xx:hidden'>
           {paymentsArr.map((item, index) => (
             <div
               key={item.id}
@@ -316,7 +324,7 @@ const Payments = () => {
               </div>
             ))}
           </div>
-          <div className={`pt-[10px] xx:hidden lg:hidden`}>
+          <div className={`pt-[10px]  xx:hidden md:hidden`}>
             {active &&
               paymentsArr
                 .slice(
@@ -512,6 +520,159 @@ const Payments = () => {
                       </p>
                       <div className='flex items-center justify-center size-7 rounded-full bg-dark mr-3'>
                         <img src={ArrowBtn.src} alt='ArrowBtn' />
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className='hidden lg:hidden md:flex gap-[10px]'>
+            {paymentsArr.map((item, _) => (
+              <div
+                key={item.id}
+                className={`relative pt-[22px] ${
+                  item.id !== 2 ? 'h-[751px]' : 'h-[807px]'
+                } pl-[5px] pr-[10px] bg-cloud ${item.id === 1 && 'mt-[28px]'} ${
+                  item.id === 3 && 'mt-[28px]'
+                } rounded-[8px] max-w-[216px] ${
+                  item.id === 2 && 'border-[2px] border-blue'
+                }`}
+              >
+                {item.id === 2 && (
+                  <div className='bg-blue rounded-[4px] w-[175px] h-[21px] flex justify-center items-center absolute top-[-13px] pt-[6px] left-[7.8%]'>
+                    <p className='  text-[12px] leading-[15.6px] text-white font-Regular'>
+                      Самый популярный вариант
+                    </p>
+                  </div>
+                )}
+                <h2
+                  className={`text-[18px] ${
+                    item.id !== 2 && ' pl-0'
+                  } text-dark font-Regular leading-[21.6px] text-center pt-0 ${
+                    item.id === 2 &&
+                    'flex items-center justify-center mr-0 gap-[5px]'
+                  }`}
+                >
+                  {item.id === 2 && (
+                    <img
+                      src={StarBlack.src}
+                      alt='icon'
+                      className='w-[7px] mb-1'
+                    />
+                  )}{' '}
+                  {item.name}{' '}
+                  {item.id === 2 && (
+                    <img
+                      src={StarBlack.src}
+                      alt='icon'
+                      className='w-[7px] mb-1'
+                    />
+                  )}
+                </h2>
+                <div className='pl-[3px] pt-[10px]'>
+                  <p className='text-blue font-Medium text-[12px] leading-[14.4px]'>
+                    {item.title}
+                  </p>
+                  <div className='flex flex-col gap-[2.7px] pt-2'>
+                    {item.titleArr.map((item, _) => (
+                      <span
+                        key={item.id}
+                        className='text-[12px] leading-[15.6px] text-dark font-Regular flex gap-1 items-start'
+                      >
+                        <img src={Star.src} alt='icon' className='' />
+                        {item.title}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className='flex flex-col gap-2 pt-[20px] pl-1'>
+                  {item.spanArr.map((item, _) => (
+                    <p
+                      key={item.id}
+                      className='text-[12px] leading-[15.6px] text-dark font-Medium'
+                    >
+                      {item.title}
+                    </p>
+                  ))}
+                </div>
+                <div>
+                  <div
+                    className={`flex gap-2 flex-row-reverse items-center justify-center ${
+                      item.id === 1 && 'pt-[95px] '
+                    } ${item.id === 3 && 'pt-[40px]'}
+                    ${item.id === 2 && 'pt-[121px] '}`}
+                  >
+                    <h3
+                      className={`font-Regular text-[22px]  leading-[26.5px] ${
+                        item.id !== 1 && 'text-blue'
+                      }`}
+                    >
+                      {item.deleteCost} ₽
+                    </h3>
+                    {item.id === 2 && (
+                      <h3 className='font-Regular text-[22px]  leading-[26.5px] text-dark line-through decoration-2 decoration-lime'>
+                        {item.cost}
+                      </h3>
+                    )}
+                    {item.id === 3 && (
+                      <h3 className='font-Regular text-[22px]  leading-[26.5px] text-dark line-through decoration-2 decoration-lime'>
+                        {item.cost}
+                      </h3>
+                    )}
+                  </div>
+                  <div className='flex justify-center pl-0'>
+                    <button
+                      className={`relative z-10 xx:hidden md:w-[153px] md:h-[30px] w-[234px] h-[50px] mt-[6px] lg:absolute left-0 mr-[7px] lg:bottom-10 lg:left-[100px] flex flex-row items-center justify-center gap-2 pr-7 rounded-[40px] bg-lime ${
+                        isHovered ? 'button-hovered' : ''
+                      }`}
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={() => setIsHovered(false)}
+                    >
+                      <p
+                        className={`text-[14px] font-Medium ml-7 md:text-[10px] md:leading-[13px] md:ml-4 ${
+                          isHovered ? 'text-blue duration-300' : ' text-dark'
+                        }`}
+                      >
+                        Создать ии-бота
+                      </p>
+                      <div
+                        className={`flex items-center justify-center size-7 md:size-5 rounded-full  ${
+                          isHovered ? ' bg-blue duration-300' : 'bg-dark'
+                        }`}
+                      >
+                        <img
+                          src={ArrowBtn.src}
+                          alt='ArrowBtn'
+                          className={`transition-opacity duration-500 ${
+                            isHovered ? 'arrow-out' : ''
+                          }`}
+                          key={animationKey}
+                        />
+                        {isHovered && (
+                          <img
+                            src={ArrowBtn.src}
+                            alt='ArrowBtn'
+                            className='arrow-in md:hidden lg:flex'
+                            style={{
+                              position: 'absolute',
+                              right: '52.5px',
+                              top: '20px',
+                            }}
+                          />
+                        )}
+                        {isHovered && (
+                          <img
+                            src={ArrowBtn.src}
+                            alt='ArrowBtn'
+                            className='arrow-in md:flex hidden lg:hidden'
+                            style={{
+                              position: 'absolute',
+                              right: '34.5px',
+                              top: '10px',
+                            }}
+                          />
+                        )}
                       </div>
                     </button>
                   </div>

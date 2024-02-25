@@ -223,6 +223,27 @@
   transform: translateX(40px);
 }
 
+.hover-effect2 {
+  transition: all 1s ease; /* Перенесено сюда для обеспечения плавности и при возвращении */
+}
+
+.hover-effect2 .text2,
+.hover-effect2 img {
+  transition: transform 0.5s ease, color 0.5s ease; /* Указываем явно свойства для анимации */
+}
+
+.hover-effect2:hover {
+  background: #4f56d3;
+}
+
+.hover-effect2:hover .text2 {
+  transform: translateX(20px);
+  color: #d1d4ff;
+}
+
+.hover-effect2:hover img {
+  transform: translateX(20px);
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
