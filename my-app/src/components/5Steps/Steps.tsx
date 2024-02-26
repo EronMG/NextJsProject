@@ -135,7 +135,7 @@ const Steps = () => {
                 key={item.id}
                 className='flex flex-col gap-[5px] w-[309px] h-[175px]'
               >
-                <div className='flex justify-center items-center bg-blue w-[72px] min-h-[45px] rounded-[10px] relative'>
+                <div className='flex justify-center items-center bg-blue pt-2 w-[72px] min-h-[45px] rounded-[10px] relative'>
                   <p className=' text-white font-Regular text-[40px]'>
                     {item.count}
                   </p>
@@ -163,7 +163,7 @@ const Steps = () => {
                   item.id === 5 && 'w-[361px]'
                 } `}
               >
-                <div className='flex justify-center items-center bg-blue w-[72px] h-[45px] rounded-[10px] relative'>
+                <div className='flex justify-center items-center bg-blue pt-2 w-[72px] h-[45px] rounded-[10px] relative'>
                   <p className=' text-white font-Regular text-[40px]'>
                     {item.count}
                   </p>

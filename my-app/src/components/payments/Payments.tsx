@@ -134,13 +134,13 @@ const Payments = () => {
   return (
     <section className='px-[10px] pt-20 xx:pt-[180px] md:pt-[60px]'>
       <div className='flex flex-col items-center md:mr-[38px]'>
-        <h2 className='font-Regular text-[22px] md:text-lg md:leading-[21.6px] leading-[26.4px] text-center text-dark xx:text-[36px] xx:leading-[43.2px] md:text-[26px]'>
+        <h2 className='font-Regular text-[22px] md:text-lg md:leading-[21.6px] leading-[26.4px] text-center text-dark lg:text-[36px] lg:leading-[43.2px] md:text-[26px]'>
           Вы можете попробовать сервис <br className='hidden md:flex' /> NextBot
           бесплатно
         </h2>
-        <div className='flex flex-col items-center pt-[10px] xx:relative md:pt-[3px]'>
-          <div className='border-b-[1px] xx:border-b-0 rounded-[20px] border-blue pb-2 px-6 xx:pb-[19px] xx:px-[215px] md:px-11'>
-            <p className='font-Regular text-base leading-[19.2px] md:text-[12px] text-center text-dark xx:text-[22px] xx:leading-[26.4px] md:leading-[14.4px]'>
+        <div className='flex flex-col items-center pt-[10px] lg:relative md:pt-[3px] lg:pt-2'>
+          <div className='border-b-[1px] lg:border-b-0 rounded-[20px] border-blue pb-2 px-6 lg:pb-[19px] lg:px-[115px] md:px-11'>
+            <p className='font-Regular text-base leading-[19.2px] md:text-[12px] text-center text-dark lg:text-[22px] lg:leading-[26.4px] md:leading-[14.4px]'>
               БЕСПЛАТНОЕ обучение, как ПРАВИЛЬНО делать ИИ-ботов
             </p>
             <div
@@ -166,15 +166,38 @@ const Payments = () => {
                 />
               </svg>
             </div>
+            <div
+              ref={headingRef}
+              className='absolute left-0 top-[35px] lg:flex xx:hidden hidden'
+            >
+              <svg
+                width='847'
+                height='21'
+                viewBox='0 0 1047 21'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  d='M1046 1V1C1046 11.4934 1037.49 20 1027 20H20C9.50657 20 1 11.4934 1 1V1'
+                  stroke='#4F56D3'
+                  strokeLinecap='round'
+                  style={{
+                    strokeDasharray: `${pathLength}`,
+                    strokeDashoffset: `${pathLength}`,
+                  }}
+                  className={` ${isVisible && 'path-animation'}`}
+                />
+              </svg>
+            </div>
           </div>
-          <div className='w-[1px] h-[67px] md:h-[43px] bg-blue relative xx:h-[113px] mr-[-1px] xx:hidden'>
-            <div className='trans bottom-[-15px] absolute w-4 h-4 md:size-2 xx:size-[21px] md:top-10 flex justify-center items-center bg-cloud rounded-full'>
-              <div className='w-2 h-2 bg-blue md:size-1 rounded-full xx:size-[11px]' />
+          <div className='w-[1px] h-[67px] md:h-[43px] lg:h-[70px] bg-blue relative xx:h-[113px] mr-[-1px] lg:hidden'>
+            <div className='trans bottom-[-15px] absolute w-4 h-4 lg:size-4 md:size-2 xx:size-[21px] lg:top-16 md:top-10 flex justify-center items-center bg-cloud rounded-full'>
+              <div className='w-2 h-2 bg-blue md:size-1 rounded-full lg:size-2 xx:size-[11px]' />
             </div>
           </div>
           <div
             ref={animationRef}
-            className={`hidden xx:block w-[1px] bg-blue relative ${
+            className={`hidden lg:block w-[1px] bg-blue relative ${
               isVisible && 'fill-height-animation'
             }`}
           >
@@ -185,7 +208,7 @@ const Payments = () => {
             )}
           </div>
         </div>
-        <p className='font-Regular text-[14px] md:pt-2 leading-[16.8px] text-center text-dark xm:w-[600px] w-[218px] pt-[18px] xx:text-[22px] xx:leading-[26.4px] xx:w-fit md:text-[12px] md:leading-[14.4px] md:w-[252px]'>
+        <p className='font-Regular lg:pt-5 text-[14px] md:pt-2 leading-[16.8px] text-center text-dark xm:w-[600px] w-[218px] pt-[18px] lg:text-[18px] xx:text-[22px] xx:leading-[26.4px] lg:w-fit md:text-[12px] md:leading-[14.4px] md:w-[252px]'>
           Можете выбрать любой тариф – от пробного до премиум
         </p>
       </div>
@@ -418,7 +441,7 @@ const Payments = () => {
                   </div>
                 ))}
           </div>
-          <div className='hidden xx:hidden lg:flex  gap-5'>
+          <div className='hidden xx:hidden lg:flex pt-10  gap-5'>
             {paymentsArr.map((item, _) => (
               <div
                 key={item.id}

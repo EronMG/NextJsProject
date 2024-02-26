@@ -118,22 +118,22 @@ const Create: React.FC<BusinessItem> = () => {
   };
 
   return (
-    <section className='flex flex-col items-center px-[10px] pt-[78px] leading-[26.4px] xx:pt-[184px] lg:mb-[150px] xx:mt-0 md:mt-[555px] md:ites'>
-      <div className='md:flex md:ml-2 flex-col md:flex-row lg:flex-row justify-center items-center md:gap-10 xx:gap-20'>
-        <h2 className='text-[22px] font-Regular text-dark text-center w-[267px] md:text-[18px] md:w-[413px] md:text-start md:leading-[21.6px] ml-4 mm:ml-0 ss:max-w-[472px] ss:w-fit xx:text-[36px] xx:leading-[43.2px] xx:max-w-[982px] lg:max-w-[500px] xx:text-start lg:text-2xl lg:text-start'>
+    <section className='flex flex-col items-center px-[10px] pt-[78px] leading-[26.4px] xx:pt-[184px] lg:mb-[150px] xx:mt-0 md:mt-[55px] md:ites'>
+      <div className='md:flex md:ml-2 flex-col xl:max-w-[1260] xl:px-10  md:flex-row max-w-[1580px] lg:flex-row justify-center xl:justify-between lg:w-full items-center md:gap-10 xx:gap-20'>
+        <h2 className='text-[22px] font-Regular text-dark text-center xm:w-[982px] lg:w-[600px] w-[267px] md:text-[18px] md:w-[413px] md:text-start md:leading-[21.6px] ml-4 mm:ml-0 ss:max-w-[472px] ss:w-fit xx:text-[36px] xx:leading-[43.2px] xx:max-w-[982px] lg:max-w-[600px] xx:text-start lg:text-2xl lg:text-start'>
           Вы соберете ИИ-бота под задачи вашего бизнеса, который может заменить
           <span className='text-blue italic'>
             {' '}
             консультанта, администратора, менеджера по продажам, помощника РОПа
           </span>
         </h2>
-        <div className='flex border-b-[4px] pb-1 border-blue md:border-b-[2px] gap-3 md:gap-2 justify-between pt-7 md:pt-0 xx:gap-[31px]'>
+        <div className='flex border-b-[4px] pb-1 border-blue md:border-b-[2px] lg:items-center gap-3 md:gap-2 justify-between pt-7 md:pt-0 xx:gap-[31px]'>
           <img
             src={Settings.src}
             alt='icon'
-            className='rotate-icon w-[65px] h-[65px] md:w-[46px] md:h-[49px] lg:w-[83px] lg:h-[87px]'
+            className='rotate-icon w-[65px] h-[65px] md:w-[46px] md:h-[49px] lg:w-[73px] lg:h-[77px]'
           />
-          <h3 className='text-blue md:text-[12px] md:max-w-[173px] md:leading-[15.6px] text-base font-Medium mm:text-lg  mm:w-[400px] leading-[20.8px] xx:leading-[26px] lg:text-[20px]'>
+          <h3 className='text-blue md:text-[12px] md:max-w-[173px] md:leading-[15.6px] text-base lg:max-w-[300px] font-Medium mm:text-lg  mm:w-[400px] leading-[20.8px] xx:leading-[26px] lg:text-[20px]'>
             Можете пройти бесплатное обучение и создать ИИ-бота самостоятельно
             или заказать разработку у нас
           </h3>
@@ -264,9 +264,9 @@ const Create: React.FC<BusinessItem> = () => {
           </div>
         </div>
       </div>
-      <div className='hidden lg:flex lg:pt-20 lg:relative gap-[57px] xx:hidden'>
-        <div className='flex flex-col gap-[15px]'>
-          <h4 className='text-[22px] text-dark font-Medium leading-[28.6px] max-w-[429px]'>
+      <div className='hidden lg:flex lg:pt-20 lg:relative gap-[57px] xx:hidden px-10'>
+        <div className='flex flex-col gap-[5px]'>
+          <h4 className='text-[22px] text-dark font-Medium leading-[28.6px] w-[329px]'>
             Бот совершает столько касаний, чтобы к вам попадал максимально
             теплый лид
           </h4>
@@ -284,13 +284,13 @@ const Create: React.FC<BusinessItem> = () => {
                 onMouseLeave={() => setIsHovering(false)}
                 onMouseMove={handleMouseMove}
                 key={item.id}
-                className={`flex w-[654px] gap-[37px] items-center h-[93px]  ${
+                className={`flex w-[584px] gap-[37px] xl:w-[750px] items-center h-[93px]  ${
                   item.id === bussinesArr.length
                     ? 'border-b-[1px] border-t-[1px] border-blue'
                     : 'border-t-[1px]  border-blue'
                 } hover-effect`}
               >
-                <span className='text text-[20px] leading-[26px] font-Regular text-dark w-[421px]'>
+                <span className='text text-[20px] leading-[26px] font-Regular text-dark xl:w-[550px] w-[421px]'>
                   {item.title}
                 </span>
                 <img src={AI.src} alt='icon' className='w-[66px] h-[59px]' />
@@ -298,15 +298,15 @@ const Create: React.FC<BusinessItem> = () => {
             ))}
             {isHovering && (
               <div
-                className='bg-cloud rounded-[20px] z-50'
+                className='bg-cloud rounded-[10px] z-50'
                 style={{
                   position: 'fixed',
                   left: cursorPos.x,
                   top: cursorPos.y,
                   transform: 'translate(-50%, -50%)',
                   // Стилизация блока
-                  width: '331px',
-                  height: '331px',
+                  width: '271px',
+                  height: '271px',
                   color: '#FFF',
                   display: 'flex',
                   justifyContent: 'center',
@@ -318,12 +318,12 @@ const Create: React.FC<BusinessItem> = () => {
                 <img
                   src={Mobile.src}
                   alt='icon'
-                  className='w-[261px] h-[270px] object-cover'
+                  className='w-[231px] h-[230px] object-cover'
                 />
               </div>
             )}
           </div>
-          <div className='flex items-center pt-12 lg:absolute left-[00px] lg:mx-2'>
+          <div className='flex items-center pt-12 lg:absolute xl:left-[140px] left-[00px] lg:mx-2'>
             <div className='size-[58px] bg-gray rounded-[10px] flex justify-center items-center mr-[12px] lg:mr-2'>
               <img src={Eye1.src} alt='icon' id='icon' />
             </div>

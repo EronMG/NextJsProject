@@ -28,8 +28,8 @@ const Course = () => {
   return (
     <section className='px-[10px] pt-[77px] xx:pt-[270px] md:pt-[49px]'>
       <div className='md:flex justify-center'>
-        <div className='flex flex-col md:w-[668px] md:justify-between lg:items-end md:flex-row xx:relative justify-center xx:justify-between items-center border-b-[2px] md:border-b-[1px] border-blue  lg:flex-row lg:pb-[10px] xx:w-[1576px]'>
-          <h2 className=' font-Regular text-dark md:mt-4 md:text-[18px] md:leading-[21.6px] md:max-w-[509px] md:text-start text-[22px] leading-[26.4px] text-center max-w-[278px] xx:pb-[14px] ss:max-w-[450px] xx:text-[30px] xx:leading-[36.2px] lg:max-w-[1058px] lg:text-start bb:text-[36px] bb:leading-[41.6px] bb:max-w-[1198px]'>
+        <div className='flex flex-col xl:w-[1190px] md:w-[668px] md:justify-between lg:w-[1024px] lg:items-end md:flex-row xx:relative justify-center xx:justify-between items-center border-b-[2px] md:border-b-[1px] border-blue  lg:flex-row lg:pb-[10px] xx:w-[1576px]'>
+          <h2 className=' font-Regular text-dark md:mt-4 md:text-[18px] md:leading-[21.6px] md:max-w-[509px] md:text-start text-[22px] leading-[26.4px] text-center max-w-[278px] xx:pb-[14px] ss:max-w-[450px] lg:text-[30px] lg:leading-[36.2px] lg:max-w-[1024px] lg:text-start bb:text-[36px] bb:leading-[41.6px] bb:max-w-[1198px]'>
             На бесплатном обучении вы получите пошаговую инструкцию,
             <br className='sm:hidden xx:flex' /> как собрать ИИ-бота, который
             поддерживает беседу и мотивирует клиента оставить заявку
@@ -37,30 +37,28 @@ const Course = () => {
           <img
             src={Press.src}
             alt='icon'
-            className='mt-[11px] xx:w-[260px] xx:h-[233px] md:w-[104px] md:h-[89px] md:mr-[28px] xx:mr-20 xx:absolute right-[-4px]'
+            className='mt-[11px] lg:w-[260px] lg:h-[233px] md:w-[104px] md:h-[89px] md:mr-[28px] xx:mr-20 xx:absolute right-[-4px]'
           />
         </div>
       </div>
       <div className='pt-3 flex flex-col items-center mm:pt-6 xx:pt-12 md:pt-4'>
-        <div className='flex flex-wrap md:flex-row justify-end gap-2 md:gap-[56px] md:justify-end md:ml-[70px] ss:justify-center mm:flex-col mm:items-center'>
-          <p className='text-[14px] leading-[18.2px] md:text-xs md:text-start md:leading-[15.6px] text-dark font-Regular text-center mm:max-w-[500px] md:max-w-[402px] lg:text-start '>
+        <div className='flex flex-wrap md:flex-row justify-end gap-2 md:gap-[56px] lg:w-full lg:justify-start md:justify-end md:ml-[70px] ss:justify-center mm:flex-col mm:items-center'>
+          <p className='text-[14px] leading-[18.2px] md:text-xs md:text-start lg:text-[22px] lg:max-w-[700px] lg:leading-[28.6px] md:leading-[15.6px] text-dark font-Regular text-center mm:max-w-[500px] md:max-w-[402px] lg:text-start '>
             Вам не нужно программировать. Достаточно текстом ПРАВИЛЬНО описать,
             как должен действовать бот. Этому мы вас тоже научим
           </p>
-          <div className='flex gap-3 lg:hidden md:gap-1'>
+          <div className='flex gap-3 xx:hidden md:gap-1 lg:gap-4'>
             <button
+              onClick={handleBack}
               className={`size-[47px] ${
                 active === false ? 'bg-cloud' : 'bg-blue'
-              } md:size-[31px] rounded-full flex justify-center duration-300 transition-all active:scale-110 items-center`}
+              } md:size-[31px] lg:size-[50px] rounded-full flex justify-center duration-300 transition-all active:scale-110 items-center`}
             >
-              <FaArrowUp
-                onClick={handleBack}
-                className='-rotate-90 text-white'
-              />
+              <FaArrowUp className='-rotate-90 text-white' />
             </button>
             <button
               onClick={handleActive}
-              className={`size-[47px] md:size-[31px] flex duration-300 transition-all active:scale-110 rounded-full justify-center items-center ${
+              className={`size-[47px] md:size-[31px] lg:size-[50px]  flex duration-300 transition-all active:scale-110 rounded-full justify-center items-center ${
                 active === true ? 'bg-cloud' : 'bg-blue'
               }`}
             >
@@ -108,7 +106,7 @@ const Course = () => {
             </div>
           ))}
         </div>
-        <div className='hidden pt-5 md:flex xl:hidden overflow-hidden gap-[10px]'>
+        <div className='hidden pt-5 md:flex xm:hidden overflow-hidden gap-[10px]'>
           {active === false
             ? courseArr.slice(0, 2).map((item, _) => (
                 <div
@@ -191,7 +189,7 @@ const Course = () => {
         </div>
         <div className='flex justify-center items-center md:justify-start md:w-full xx:pt-12 pt-[34px] md:pt-[32px]'>
           <button
-            className={`relative z-10 w-[234px] h-[50px] flex flex-row items-center md:ml-10 gap-2 rounded-[40px] bg-lime md:w-[152px] md:h-[30px] ${
+            className={`relative z-10 w-[234px] h-[50px] flex flex-row items-center lg:hidden md:ml-10 gap-2 rounded-[40px] bg-lime md:w-[152px] md:h-[30px] ${
               isHovered ? 'button-hovered' : ''
             }`}
             onMouseEnter={handleMouseEnter}
@@ -226,6 +224,47 @@ const Course = () => {
                     position: 'absolute',
                     right: '9px',
                     top: '9px',
+                  }}
+                />
+              )}
+            </div>
+          </button>
+          <button
+            className={`relative z-10 w-[234px] hidden lg:flex h-[50px] ml-[170px] flex-row items-center gap-2 rounded-[40px] bg-lime  ${
+              isHovered ? 'button-hovered' : ''
+            }`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <p
+              className={`text-[14px] font-Medium ml-7 ${
+                isHovered ? 'text-blue duration-300' : ' text-dark'
+              }`}
+            >
+              Создать ии-ассистента
+            </p>
+            <div
+              className={`flex items-center justify-center size-7  rounded-full  ${
+                isHovered ? ' bg-blue duration-300' : 'bg-dark'
+              }`}
+            >
+              <img
+                src={ArrowBtn.src}
+                alt='ArrowBtn'
+                className={`transition-opacity duration-500 ${
+                  isHovered ? 'arrow-out' : ''
+                }`}
+                key={animationKey}
+              />
+              {isHovered && (
+                <img
+                  src={ArrowBtn.src}
+                  alt='ArrowBtn'
+                  className='arrow-in'
+                  style={{
+                    position: 'absolute',
+                    right: '22.5px',
+                    top: '20px',
                   }}
                 />
               )}

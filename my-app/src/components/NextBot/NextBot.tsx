@@ -45,9 +45,9 @@ const NextBot = () => {
 
   const pathLength = 1246;
   return (
-    <section className='px-[10px] pt-20 xx:pt-[171px] xx:flex flex-col items-center md:pt-[70px]'>
-      <div className='xx:flex justify-center'>
-        <h2 className='text-[22px] text-dark font-Regular text-center leading-[26.4px] xx:w-[1024px] xx:text-[36px] xx:leading-[43.2px] md:text-[18px] md:leading-[21.6px]'>
+    <section className='px-[10px] pt-20 lg:pt-[171px] xm:pt-20 lg:flex flex-col items-center md:pt-[70px]'>
+      <div className='lg:flex justify-center'>
+        <h2 className='text-[22px] text-dark font-Regular text-center leading-[26.4px] lg:w-[1024px] lg:text-[36px] lg:leading-[43.2px] md:text-[18px] md:leading-[21.6px]'>
           В сервисе NextBot каждый может
           <span className='text-blue font-Bold'>
             {' '}
@@ -57,18 +57,42 @@ const NextBot = () => {
           создать ИИ-бота для бизнеса
         </h2>
       </div>
-      <div className='flex flex-col items-center pt-[10px] md:pt-1 xx:pt-3 relative max-w-[1920px] xx:justify-center'>
-        <div className='pb-2 px-6 xx:flex justify-center xx:border-b-0  border-b-[1px] border-blue rounded-[20px] md:rounded-[10px]'>
-          <p className='text-base text-dark font-Regular text-center leading-[20.8px] w-[259px] mm:w-fit xx:text-[22px] xx:leading-[28.4px] xx:px-[150px] xx:pb-3 md:text-[12px] md:leading-[15.6px]'>
+      <div className='flex flex-col items-center pt-[10px] md:pt-1 lg:pt-3 relative max-w-[1920px] lg:justify-center'>
+        <div className='pb-2 px-6 lg:flex justify-center lg:border-b-0  border-b-[1px] border-blue rounded-[20px] md:rounded-[10px]'>
+          <p className='text-base text-dark font-Regular text-center leading-[20.8px] w-[259px] mm:w-fit lg:text-[22px] lg:leading-[28.4px] lg:px-[50px] lg:pb-[10px] md:text-[12px] md:leading-[15.6px]'>
             Мы бесплатно научим, как правильно выставить настройки
             <br className='ss:hidden' /> и{' '}
             <br className='hidden md:flex lg:hidden' /> какую{' '}
             <br className='lg:flex hidden' /> инструкцию написать для бота,
             чтобы он отвечал корректно
           </p>
+
           <div
             ref={headingRef}
-            className='absolute left-0 top-[68px] hidden xx:flex'
+            className='absolute left-0 top-[68px] hidden xx:hidden lg:flex'
+          >
+            <svg
+              width='847'
+              height='21'
+              viewBox='0 0 1047 21'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <path
+                d='M1046 1V1C1046 11.4934 1037.49 20 1027 20H20C9.50657 20 1 11.4934 1 1V1'
+                stroke='#4F56D3'
+                strokeLinecap='round'
+                style={{
+                  strokeDasharray: `${pathLength}`,
+                  strokeDashoffset: `${pathLength}`,
+                }}
+                className={` ${isVisible && 'path-animation'}`}
+              />
+            </svg>
+          </div>
+          <div
+            ref={headingRef}
+            className='absolute left-[-100px] top-[68px] hidden xx:flex'
           >
             <svg
               width='1047'
@@ -90,14 +114,14 @@ const NextBot = () => {
             </svg>
           </div>
         </div>
-        <div className='w-[1px] h-[43.2px] bg-blue relative'>
+        <div className='w-[1px] h-[43.2px] bg-blue relative hidden md:flex lg:hidden '>
           <div className='trans bottom-[-7px] absolute size-[8px] flex justify-center items-center bg-cloud rounded-full'>
-            <div className='size-[4px] bg-blue rounded-full xx:size-[11px]' />
+            <div className='size-[4px] bg-blue rounded-full lg:size-[11px]' />
           </div>
         </div>
         <div
           ref={animationRef}
-          className={`hidden xx:block w-[1px] bg-blue relative ${
+          className={`hidden lg:block w-[1px] bg-blue relative ${
             isVisible && 'fill-height-animation'
           }`}
         >
@@ -108,13 +132,13 @@ const NextBot = () => {
           )}
         </div>
       </div>
-      <div className='pt-[14px] flex flex-col items-center mm:pt-5 xx:pt-[28px] md:pt-[11px]'>
-        <p className=' text-[14px] text-dark font-Regular text-center leading-[18.2px] md:text-[10px] xx:leading-[26px] md:leading-[13px] md:w-[240px] xx:pr-[10px]'>
+      <div className='pt-[14px] flex flex-col items-center mm:pt-5 lg:pt-[28px] md:pt-[11px]'>
+        <p className='lg:text-[14px] text-dark font-Regular text-center  md:text-[10px] lg:leading-[26px] md:leading-[13px] lg:w-fit md:w-[240px] lg:pr-[10px]'>
           Посмотрите видео и за 5 минут сами убедитесь, что собрать ИИ-бота под{' '}
           <br className='ss:hidden' /> силу каждому
         </p>
-        <div className='bg-blue flex justify-center md:mt-[10px] items-center rounded-[10px] h-[168px] mt-2 ss:w-[355px] w-[300px]  md:w-[329px] md:h-[185px]  xx:w-[778px] xx:h-[436px] xx:rounded-[20px]'>
-          <div className='size-[67px] md:size-[73.5px] flex justify-center items-center bg-cloud rounded-full xx:size-[173px] pl-2'>
+        <div className='bg-blue flex justify-center md:mt-[10px] items-center rounded-[10px] h-[168px] mt-2 ss:w-[355px] w-[300px]  md:w-[329px] md:h-[185px]  lg:w-[778px] lg:h-[436px] lg:rounded-[20px]'>
+          <div className='size-[67px] md:size-[73.5px] flex justify-center items-center bg-cloud rounded-full lg:size-[173px] pl-2'>
             <div
               className='relative w-0 h-0 rotate-90 md:hidden'
               style={{
@@ -124,11 +148,19 @@ const NextBot = () => {
               }}
             ></div>
             <div
-              className='md:flex hidden relative w-0 h-0 rotate-90 ml-1'
+              className='md:flex lg:hidden hidden relative w-0 h-0 rotate-90 ml-1'
               style={{
                 borderLeft: '18px solid transparent',
                 borderRight: '18px solid transparent',
                 borderBottom: '31px solid #CDFF65',
+              }}
+            ></div>
+            <div
+              className='lg:flex hidden relative w-0 h-0 rotate-90 ml-4'
+              style={{
+                borderLeft: '50px solid transparent',
+                borderRight: '50px solid transparent',
+                borderBottom: '81px solid #CDFF65',
               }}
             ></div>
           </div>
