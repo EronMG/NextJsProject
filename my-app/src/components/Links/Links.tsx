@@ -70,7 +70,7 @@ function Links() {
           Можно подключить ко всем популярным соцсетям, мессенджерам и площадкам
         </h2>
 
-        <div className='absolute sm:order-1  md:left-[50px] bb:left-[95px] bb:top-[117px]'>
+        <div className='relative md:absolute sm:order-1  md:left-[50px] bb:left-[95px] bb:top-[117px]'>
           <div className=''>
             <div className='z-1 flex justify-center items-center size-[265px] rounded-full border-black border-[1px] border-dashed md:size-[305px] lg:size-[390px] xx:size-[585px] bb:size-[780px]'>
               <div className='flex justify-center items-center size-[204px] bg-cloud bg-opacity-20 rounded-full border-black border-[1px] border-dashed md:size-[235px] lg:size-[300px] xx:size-[450px] bb:size-[600px]'>
@@ -87,7 +87,7 @@ function Links() {
             </div>
           </div>
 
-          <div className='absolute'>
+          <div className='absolute '>
             {[
               InstagramICON.src,
               VkICON.src,
@@ -172,7 +172,7 @@ function Links() {
           <img
             src={HumanRobot.src}
             alt='HumanRobot'
-            className='z-50 absolute size-[130px] -bottom-[60px] left-[153px] md:hidden'
+            className='z-50 absolute size-[130px] top-[194px] left-[152px] md:hidden'
           />
         </div>
 

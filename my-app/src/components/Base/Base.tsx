@@ -47,7 +47,7 @@ const Base = () => {
           <img
             src='https://s3-alpha-sig.figma.com/img/5aff/49be/00e433109f358d9500d1e6d01886accc?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WuxHeh3jb8T5eKGLOaf5ECn8oICb5pZMBsSlZ6ZIvEwo9sHS2AyLa9tNViy43r8bTOlfKBiAcQwIyBuIodjUK2T~Iw4~Af5zs2OoNWSDSCYa8d4sAuPADBMb82T-WxoEanwxRK~kOU~ch~EZaHq9JVPG4fcdCPRUX9I5hQk9qO~GtAs41dEnFJ8WSP~EiDorUw~HaMvUNQU1a~hDesGIZEw7I4ABQSwvsZLh~~dPDPyU8~RqDAEpjFbPkDkqy2d8i1aPvfFQRHLSZQpFuqHzSSI9kU40kAWXXfqBGSUkiS-hGeTrjM3k4scMUCwD080FzWHAhpy9vK2v~zW7bK8MEw__'
             alt='icon'
-            className=' z-50 scale-100 w-[280px] h-[169px] md:w-[380px] md:h-[249px] xm:w-[800px] xm:h-[450px] lg:w-[520px] lg:h-[350px] rounded-t-[20px] xx:w-[913px] xx:h-[552px] xx:rounded-t-[20px]'
+            className=' z-50 scale-100 w-[280px] h-[169px] md:w-[380px] md:h-[249px] xm:w-[800px] xm:h-[450px] lg:w-[520px] lg:h-[350px] rounded-t-[10px] xx:w-[913px] xx:h-[552px] xb:rounded-t-[20px]'
           />
         </div>
       </section>
