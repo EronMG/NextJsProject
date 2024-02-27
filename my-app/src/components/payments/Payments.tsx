@@ -138,12 +138,12 @@ const Payments = () => {
           Вы можете попробовать сервис <br className='hidden md:flex' /> NextBot
           бесплатно
         </h2>
-        <div className='flex flex-col items-center pt-[10px] lg:relative md:pt-[3px] lg:pt-2'>
-          <div className='border-b-[1px] lg:border-b-0 rounded-[20px] border-blue pb-2 px-6 lg:pb-[19px] lg:px-[115px] md:px-11'>
+        <div className='flex flex-col items-center pt-[10px] md:relative md:pt-[3px] lg:pt-2'>
+          <div className='border-b-[1px] md:border-b-0 rounded-[20px] border-blue pb-2 px-6 lg:pb-[19px] lg:px-[115px] md:px-11'>
             <p className='font-Regular text-base leading-[19.2px] md:text-[12px] text-center text-dark lg:text-[22px] lg:leading-[26.4px] md:leading-[14.4px]'>
               БЕСПЛАТНОЕ обучение, как ПРАВИЛЬНО делать ИИ-ботов
             </p>
-            <div
+            {/* <div
               ref={headingRef}
               className='absolute left-0 top-[35px] hidden xx:flex'
             >
@@ -165,13 +165,13 @@ const Payments = () => {
                   className={` ${isVisible && 'path-animation'}`}
                 />
               </svg>
-            </div>
+            </div> */}
             <div
               ref={headingRef}
-              className='absolute left-0 top-[35px] lg:flex xx:hidden hidden'
+              className='absolute left-[0] top-[11px] hidden lg:hidden md:flex'
             >
               <svg
-                width='847'
+                width='425'
                 height='21'
                 viewBox='0 0 1047 21'
                 fill='none'
@@ -190,25 +190,25 @@ const Payments = () => {
               </svg>
             </div>
           </div>
-          <div className='w-[1px] h-[67px] md:h-[43px] lg:h-[70px] bg-blue relative xx:h-[113px] mr-[-1px] lg:hidden'>
+          <div className='w-[1px] h-[67px] md:h-[43px] lg:h-[70px] bg-blue relative xx:h-[113px] mr-[-1px] md:hidden'>
             <div className='trans bottom-[-15px] absolute w-4 h-4 lg:size-4 md:size-2 xx:size-[21px] lg:top-16 md:top-10 flex justify-center items-center bg-cloud rounded-full'>
               <div className='w-2 h-2 bg-blue md:size-1 rounded-full lg:size-2 xx:size-[11px]' />
             </div>
           </div>
           <div
             ref={animationRef}
-            className={`hidden lg:block w-[1px] bg-blue relative ${
+            className={`hidden md:block lg:hidden w-[1px] bg-blue relative ${
               isVisible && 'fill-height-animation'
             }`}
           >
             {showCircle && (
-              <div className='outer-circle trans bottom-[-15px] absolute'>
-                <div className='inner-circle'></div>
+              <div className='outer-circle2 trans bottom-[-15px] absolute'>
+                <div className='inner-circle2'></div>
               </div>
             )}
           </div>
         </div>
-        <p className='font-Regular lg:pt-5 text-[14px] md:pt-2 leading-[16.8px] text-center text-dark xm:w-[600px] w-[218px] pt-[18px] lg:text-[18px] xx:text-[22px] xx:leading-[26.4px] lg:w-fit md:text-[12px] md:leading-[14.4px] md:w-[252px]'>
+        <p className='font-Regular lg:pt-5 text-[14px] md:pt-5 leading-[16.8px] text-center text-dark xm:w-[600px] w-[218px] pt-[18px] lg:text-[18px] xx:text-[22px] xx:leading-[26.4px] lg:w-fit md:text-[12px] md:leading-[14.4px] md:w-[252px]'>
           Можете выбрать любой тариф – от пробного до премиум
         </p>
       </div>

@@ -29,8 +29,8 @@ function Tryit() {
   const [activeTab, setActiveTab] = useState(0);
   return (
     <>
-      <section className='flex flex-col xm:px-[10px] items-center md:items-start md:ml-[50px] lg:ml-0 lg:justify-center bb:max-w-[1920px] mt-[80px] xx:mt-[180px] md:mt-[60px]'>
-        <div className='flex items-end pb-[14px] border-b-2 border-blue xx:w-[1577px] md:w-[668px] md:pb-2'>
+      <section className='flex flex-col xm:px-[10px] items-center md:items-center md:px-[50px] lg:ml-0 lg:justify-center bb:max-w-[1920px] mt-[80px] xx:mt-[180px] md:mt-[60px]'>
+        <div className='flex items-center pb-[14px] border-b-2 border-blue md:w-full xx:w-[1577px] md:pb-2'>
           <h2 className='max-w-[292px] text-[22px] leading-[26.4px] text-center font-Regular md:max-w-[531px] md:leading-[21.6px] md:text-[18px] md:text-start xx:max-w-[1576px] lg:text-start lg:px-2 lg:max-w-[1576px] xx:text-start xx:text-[36px] xx:leading-[43.2px] xx:pl-[150px] bb:pl-[0]'>
             В NextBot вы создадите бота с искусственным интеллектом. Он общается{' '}
             <br className='hidden xx:flex' />
@@ -61,7 +61,7 @@ function Tryit() {
                 </div>
                 <div className='w-[300px] h-[218px] p-[17px] flex items-center justify-center bg-cloud rounded-[10px]'>
                   <img
-                    src='https://s3-alpha-sig.figma.com/img/34ed/a0e4/97db142bfac37284807115474f9d0027?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=K0AczAYtdLUuAHnn3YGcQgZtoFSv46wJ5CVSgPMZGp50CnLUooiHi-P50dXj12zvkFKtmmjOJ6qju5FfgrBPBpiHMLskV1U-sS2nfoOd3laO0jqPi~8QNyAvxtQxPNQ~UvTpzBEWCl8WWLg~DqfkAeJdUDnFoAN~uNjRrdUcX8WFTuJQZnjFEdjmf7A121CcB7NiRfd7C1Hk-lkZxIsQKAUrI1tSEGKbwsa91p19~JteuHr0B9ffAzuN4qan981ztMdvBgEtfga2GDOAHjQo9q--EZuMP2V-Qe4Zq3Ioj66KJiD3RnHVK4s7UFlUrdYX2B84QyYG5aR1ubK2eTvWPg__'
+                    src='https://s3-alpha-sig.figma.com/img/34ed/a0e4/97db142bfac37284807115474f9d0027?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YWOKsGjb2kEVKlJ8E6mqLhFnKWMyyljqaZ~QWjGd1uIStVaI2pEanrmNtGEdilS7hyGJadpLoJZe9M1vwCxtRb9t79v4Mt2wVTX892uSZ9nkQMlLxb2C~ZP4Mt6KXoh9JZt~3GPiv4lbR8NMdl2c~LJnEaJ6QMlRfb2Kfp1LiMCs0eD7hWHH88xoPGVVn2nguPrsHET235Wg1bVHFMX4jTGrHEKYlXwxr8M52wcqyjYRTFZZtndlzfowWf3iTPpPHrYoodo-Aby2TuSTlim3Fa4HK3TDhfiNu-WSIQT1gVMVoDai5moOuPZWmnnn6kbqmbdZ0-~Q0qGsUisoi4IIbA__'
                     alt='TryitExampleIMG'
                     className='rounded-[10px]'
                   />
@@ -130,7 +130,7 @@ function Tryit() {
                   onClick={() => setActiveTab(index)}
                 >
                   <p
-                    className={`text-xl leading-[26px] font-Regular ${
+                    className={`text-[18px] leading-[22px] font-Regular ${
                       index === 0 && 'max-w-[286px]'
                     } ${index === 2 && 'max-w-[306px]'} ${
                       index === 3 && 'max-w-[325px]'

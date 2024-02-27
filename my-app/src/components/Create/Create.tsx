@@ -119,7 +119,7 @@ const Create: React.FC<BusinessItem> = () => {
 
   return (
     <section className='flex flex-col items-center px-[10px] pt-[78px] leading-[26.4px] xx:pt-[184px] lg:mb-[150px] xx:mt-0 md:mt-[55px] md:ites'>
-      <div className='md:flex md:ml-2 flex-col xl:max-w-[1260] xl:px-10  md:flex-row max-w-[1580px] lg:flex-row justify-center xl:justify-between lg:w-full items-center md:gap-10 xx:gap-20'>
+      <div className='md:flex xx:ml-0 xx:pl-0 md:ml-2 flex-col xl:max-w-[1260] xl:px-10  md:flex-row max-w-[1580px] lg:flex-row justify-center xl:justify-between lg:w-full items-center md:gap-10 xx:justify-between'>
         <h2 className='text-[22px] font-Regular text-dark text-center xm:w-[982px] lg:w-[600px] w-[267px] md:text-[18px] md:w-[413px] md:text-start md:leading-[21.6px] ml-4 mm:ml-0 ss:max-w-[472px] ss:w-fit xx:text-[36px] xx:leading-[43.2px] xx:max-w-[982px] lg:max-w-[600px] xx:text-start lg:text-2xl lg:text-start'>
           Вы соберете ИИ-бота под задачи вашего бизнеса, который может заменить
           <span className='text-blue italic'>
@@ -127,13 +127,13 @@ const Create: React.FC<BusinessItem> = () => {
             консультанта, администратора, менеджера по продажам, помощника РОПа
           </span>
         </h2>
-        <div className='flex border-b-[4px] pb-1 border-blue md:border-b-[2px] lg:items-center gap-3 md:gap-2 justify-between pt-7 md:pt-0 xx:gap-[31px]'>
+        <div className='flex border-b-[4px] pb-1 border-blue md:border-b-[2px] lg:items-center gap-3 md:gap-2 justify-between pt-7 md:pt-0 xx:gap-[31px] xx:w-[512px]'>
           <img
             src={Settings.src}
             alt='icon'
             className='rotate-icon w-[65px] h-[65px] md:w-[46px] md:h-[49px] lg:w-[73px] lg:h-[77px]'
           />
-          <h3 className='text-blue md:text-[12px] md:max-w-[173px] md:leading-[15.6px] text-base lg:max-w-[300px] font-Medium mm:text-lg  mm:w-[400px] leading-[20.8px] xx:leading-[26px] lg:text-[20px]'>
+          <h3 className='text-blue md:text-[12px] md:max-w-[173px] md:leading-[15.6px] text-base xx:w-[365px] xx:max-w-[365px] lg:max-w-[300px] font-Medium mm:text-lg  mm:w-[400px] leading-[20.8px] xx:leading-[26px] lg:text-[20px]'>
             Можете пройти бесплатное обучение и создать ИИ-бота самостоятельно
             или заказать разработку у нас
           </h3>

@@ -70,7 +70,7 @@ function Links() {
           Можно подключить ко всем популярным соцсетям, мессенджерам и площадкам
         </h2>
 
-        <div className='absolute sm:order-1  md:left-[50px] bb:left-[172px] bb:top-[120px]'>
+        <div className='absolute sm:order-1  md:left-[50px] bb:left-[95px] bb:top-[117px]'>
           <div className=''>
             <div className='z-1 flex justify-center items-center size-[265px] rounded-full border-black border-[1px] border-dashed md:size-[305px] lg:size-[390px] xx:size-[585px] bb:size-[780px]'>
               <div className='flex justify-center items-center size-[204px] bg-cloud bg-opacity-20 rounded-full border-black border-[1px] border-dashed md:size-[235px] lg:size-[300px] xx:size-[450px] bb:size-[600px]'>
@@ -176,8 +176,8 @@ function Links() {
           />
         </div>
 
-        <div className='hidden sm:flex sm:flex-col sm:gap-[85px] sm:items-end order-2 z-50 md:mt-[65px] xx:h-[605px] xx:justify-start bb:h-[729px] bb:mt-[208px] bb:mr-[100px] bb:gap-[114px] bb:justify-start'>
-          <div className='flex items-end gap-[19px] md:gap-[9px] bb:mt-[20px] bb:gap-[19px]'>
+        <div className='hidden sm:flex sm:flex-col sm:gap-[85px] sm:items-end order-2 z-50 md:mt-[65px] xx:h-[605px] xx:justify-start bb:h-[729px] bb:mt-[208px] bb:mr-[24px] bb:gap-[114px] bb:justify-start'>
+          <div className='flex items-end gap-[19px] md:gap-[9px] md:mr-[23px] bb:mt-[15px] bb:gap-[19px]'>
             <h2 className='text-[22px] leading-[26.4px] text-right font-Regular max-w-[349px] md:pb-[10px] md:w-[289px] md:text-[18px] md:leading-[21.6px]  lg:text-[30px] lg:leading-[28.6px] lg:max-w-[500px] lg:pb-[30px] lg:w-[500px] bb:text-[36px] bb:leading-[43.2px] bb:pb-[0px]'>
               Можно подключить ко всем популярным соцсетям, мессенджерам и
               площадкам
@@ -190,7 +190,7 @@ function Links() {
           </div>
 
           <div className='z-50 flex flex-row relative'>
-            <div className='flex flex-col items-end md:items-start md:absolute md:right-[93px] md:-top-[45px] lg:right-[193px] xl:right-[400px] xl:-top-[45px] xx:top-[45px] xx:right-[300px] bb:top-[20px] bb:right-[420px]'>
+            <div className='flex flex-col items-end md:items-start md:absolute md:right-[115px] md:-top-[45px] lg:right-[193px] xl:right-[400px] xl:-top-[45px] xx:top-[45px] xx:right-[300px] bb:top-[20px] bb:right-[420px]'>
               <p className='w-[306px] h-[76px] text-[16px] leading-[19.2px] text-right text-dark font-Regular md:text-[14px] md:leading-[16.8px] md:text-left md:h-[51px] md:w-[350px] lg:text-[18px] lg:w-[440px] xl:text-left xx:text-[22px] xx:leading-[26.4px] xx:w-[624px]'>
                 ИИ-ассистента можно подключить к Telegram, Вконтакте, Avito,
                 WhatsApp, Instagram*, Facebook*, Online-chat, Viber, Email, Юла,
@@ -206,7 +206,7 @@ function Links() {
             </div>
             <div
               ref={divRef}
-              className={`hidden md:flex md:right-[0px] md:-top-[42px] md:gap-[10px] xl:gap-[18px] xx:top-[42px] bb:top-[0px] absolute opacity-50 ${
+              className={`hidden md:flex md:right-[23px] md:-top-[42px] md:gap-[10px] xl:gap-[18px] xx:top-[42px] bb:top-[0px] absolute opacity-50 ${
                 isVisibleDiv &&
                 'translate-x-[-3000px] duration-4000 opacity-100'
               }`}

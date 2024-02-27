@@ -16,7 +16,7 @@ import Payments from '@/components/payments/Payments';
 export default function Home() {
   return (
     <div className='flex flex-col items-center overflow-hidden'>
-      <div className=' xl:max-w-[1280px] xm:max-w-[1400px] md:max-w-[768px] xx:max-w-[1577px] xb:max-w-[1768px] lg:max-w-[1024px] bb:max-w-[1920px] '>
+      <div className=' xl:max-w-[1280px] xm:max-w-[1400px] xx:max-w-[1577px] xb:max-w-[1768px] lg:max-w-[1024px] overflow-hidden '>
         <Header />
         <MainScreen />
         <Create id={0} title={''} />

@@ -46,7 +46,7 @@ const Footer = () => {
   return (
     <div className='xb:flex justify-center'>
       <section className='mx-[10px] bg-dark rounded-t-[40px] md:rounded-t-[26px] lg:rounded-t-[60px] py-[33px] md:py-0 md:pt-[26px] mt-10 md:mx-[36px] md:px-[14px] lg:px-[60px] lg:pt-[93px] xm:px-[80px] xm:pt-[137px] xm:rounded-t-[60px] xb:pb-[65px] xb:mt-[188px] xb:w-[1738px]'>
-        <div className='relative flex flex-col items-center sm:flex-row  sm:justify-around md:justify-normal lg:mb-[40px] xb:mb-[215px]'>
+        <div className='relative flex flex-col items-center sm:flex-row  sm:justify-around md:justify-normal lg:mb-[40px] xx:mb-[215px]'>
           <div className='max-w-[279px] sm:max-w-[300px] sm:h-[169px]'>
             <h2 className='text-white text-[22px] leading-[26.4px] font-Regular text-center sm:text-left lg:text-[28px] md:text-[18px] md:leading-[21.6px] md:w-[350px] lg:leading-[38.4px] lg:w-[600px] xm:text-[42px] xm:leading-[50.4px] xm:w-[827px]'>
               Сделайте ИИ-бота и больше{' '}
@@ -89,23 +89,23 @@ const Footer = () => {
               }}
               className={`hidden top-[20px] right-[80px] xm:right-[10px] xb:right-0 xb:top-[30.5%] xb:left-[48.8%] bb:left-[0]`}
             >
-              <div className='relative pl-4 py-4 bg-blue rounded-[20px] w-[271px] h-[107px] md:w-[142px] md:h-[69px] md:p-0 md:pt-[9px] md:pl-[9px] md:rounded-[8px] xb:h-[147px] xb:w-[271px] xb:rounded-[20px] xb:pt-[23px] xb:pl-[21px]'>
-                <p className='text-[18px] leading-[22.4px] font-Regular text-white w-[225px] md:w-[129px] md:text-[12px] md:leading-[14.4px] xb:text-[22px] xb:leading-[26.4px] xb:w-[225px]'>
+              <div className='relative pl-4 py-4 bg-blue rounded-[20px] w-[271px] h-[107px] md:w-[142px] md:h-[69px] md:p-0 md:pt-[9px] md:pl-[9px] md:rounded-[8px] xx:h-[147px] xx:w-[271px] xx:rounded-[20px] xx:pt-[23px] xx:pl-[21px]'>
+                <p className='text-[18px] leading-[22.4px] font-Regular text-white w-[225px] md:w-[129px] md:text-[12px] md:leading-[14.4px] xx:text-[22px] xx:leading-[26.4px] xx:w-[225px]'>
                   С ИИ-ботом стоимость обработки одного сообщения в{' '}
                   <span className='font-Medium'>4 раза ниже</span>
                 </p>
                 <img
                   src={Star.src}
                   alt='icon'
-                  className='absolute right-4 bottom-3 md:size-[6.48px] md:bottom-[8px] md:right-[8px] xb:size-[16.18px] xb:right-4 xb:bottom-3'
+                  className='absolute right-4 bottom-3 md:size-[6.48px] md:bottom-[8px] md:right-[8px] xx:size-[16.18px] xx:right-4 xb:bottom-3'
                 />
-                <div className='absolute -right-[60px] -bottom-[60px] md:-right-[90px] md:-bottom-[30px] xb:-right-[130px] xb:-bottom-[55px]'>
+                <div className='absolute -right-[60px] -bottom-[60px] md:-right-[90px] md:-bottom-[30px] xx:-right-[130px] xx:-bottom-[55px]'>
                   <img
                     src={Cursor.src}
                     alt='cursor'
-                    className='md:size-[7.61px] xb:size-[19px]'
+                    className='md:size-[7.61px] xx:size-[19px]'
                   />
-                  <div className='bg-white text-[20px] text-dark font-Regular w-[114px] h-[31px] pt-1 flex justify-center items-center rounded-[16px] ml-3 md:w-[75px] md:h-[20px] md:text-[12px] md:leading-[15.6px] xb:w-[114px] xb:h-[31px] xb:text-[20px]'>
+                  <div className='bg-white text-[20px] text-dark font-Regular w-[114px] h-[31px] pt-1 flex justify-center items-center rounded-[16px] ml-3 md:w-[75px] md:h-[20px] md:text-[12px] md:leading-[15.6px] xx:w-[114px] xx:h-[31px] xx:text-[20px]'>
                     NEXTBOT
                   </div>
                 </div>
@@ -391,7 +391,7 @@ const Footer = () => {
                 alt='computer'
                 className='md:w-[212px] md:h-[153px]  lg:w-[532px] lg:h-[383px]'
               />
-              <div className='hidden md:flex md:absolute md:-top-[120px] md:-right-[239px] lg:top-[200px] xb:-top-[22px] xb:right-[15px]'>
+              <div className='hidden md:flex md:absolute md:-top-[120px] md:-right-[239px] lg:top-[15px] xl:-right-[100px] xl:top-[35px] xb:-top-[22px] xb:right-[15px]'>
                 <animated.div
                   style={{
                     ...styles,
@@ -406,8 +406,8 @@ const Footer = () => {
                   }}
                   className={`sm:hidden md:flex md:absolute xb:py-[25px] xb:w-[418px] xb:top-[203px] xb:-left-[240px]'`}
                 >
-                  <div className='md:w-[208px] lg:w-[276px] xb:w-[416px] xb:h-[154px] xb:rounded-[20px] flex justify-center items-center border-[1px] border-lime bg-[#1E2121] md:rounded-[8px] lg:rounded-[10px] py-3 px-1 md:py-[10px] '>
-                    <p className='text-white md:text-[12px] md:leading-[14.4px] lg:text-[14px] lg:leading-[16.8px] text-center xb:text-[22px] xb:leading-[26.4px]'>
+                  <div className='md:w-[208px] lg:w-[276px] xx:w-[416px] xx:h-[154px] xb:rounded-[20px] flex justify-center items-center border-[1px] border-lime bg-[#1E2121] md:rounded-[8px] lg:rounded-[10px] py-3 px-1 md:py-[10px] '>
+                    <p className='text-white md:text-[12px] md:leading-[14.4px] lg:text-[14px] lg:leading-[16.8px] text-center xx:text-[22px] xx:leading-[26.4px]'>
                       При одинаковой конверсии{' '}
                       <span className='text-lime font-Medium'>
                         ваша прибыль растет

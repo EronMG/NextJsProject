@@ -30,8 +30,8 @@ const Steps = () => {
   }, []);
 
   return (
-    <div className='lg:flex justify-center xm:justify-start bb:justify-center md:mt-[350px]'>
-      <section className='pl-[10px] pt-[84px] lg:relative overflow-hidden xx:mt-[285px] xx:pt-0 xx:pl-[38px] xx:w-[1657px] xm:max-w-[1400px] lg:max-w-[1280px]'>
+    <div className='lg:flex justify-center xm:justify-start xb:justify-center md:justify-center md:flex bb:justify-center md:mt-[350px]'>
+      <section className='pl-[10px] pt-[84px] md:w-[815px] xx:pl-0 lg:w-fit lg:relative overflow-hidden xx:mt-[285px] xx:pt-0 xx:w-[1657px] xx:max-w-[1657px] xm:max-w-[1400px] lg:max-w-[1280px]'>
         <div className='relative flex flex-col justify-center md:items-start md:pl-10 items-center lg:hidden'>
           <h2 className='text-dark text-[22px] font-Regular text-center md:text-start md:text-[18px] md:leading-[21.6px] leading-[26.4px]'>
             <span className='text-blue font-Medium'>Всего 5 шагов</span> и у вас
@@ -39,11 +39,11 @@ const Steps = () => {
           </h2>
           <img
             ref={headingRef}
-            src='https://s3-alpha-sig.figma.com/img/2152/4b79/e4763653a5f4a7733547354e7fe3c1a9?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Hd7rtRYYWvKle166qShVpjUu0Kf4n2MxmAqMW0NFKhujcW0xxLOm3uWU239NOrQAAvu~IeISFr~mNqL9oRk3GJ27ZQSubEjbjhAvmR467SuA~jhN3U~VhqvVx31P8avUUoGqA6PSJNnRSicapAc4vkHhSaFnpxCQk8-OhO5s3X1GGhVgJRLxc07kI9hnZYbfodx8pFHNZQ5JDnLePuuCdYuqQoXmwIXUWxTui8TOaSSQB9Pay6vtY0REHsGu4etAoLhsMZRyuSRYuzpqZvoWwqpl5MlAG8YTx5~QzkUQdOjuPjz-G15A8VrlZ1YT6aJayv8qJMOVEfncdcIvgsAQbQ__'
+            src='https://s3-alpha-sig.figma.com/img/2152/4b79/e4763653a5f4a7733547354e7fe3c1a9?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TEIOZP0Z7zqyq~QAnmj8sDzCimcgDcHRQd56TUidedaPpgNlCmAfyy5CN18LwiVH8~eRIHIG~-a1Mo8Vcw1KZd4oi4yT~cFXTHnw3DeljexqvMzYF6D-Yo1qCkSL73vBtJuvQkYs-TuPGtitNJjPPCgJH45AlBL7oypGy7IiuWmAUMu5PPNCl0edc0OOGtVMZ7w-7Z~oN6G473zKqf3xx8JaEeg7BVuM64jJgBuntB-j12rPY9zvSYWe6m5AfhpleVcMqPXaSJIsrSCEDGNay1g6lgnLaVP9G2KqLzrJLMrJ1QztrrgKfqN237zcsnqts5JSDclUIl0BElk3TnkV3g__'
             alt='img'
             className={`${
               isVisible ? 'fade-in-out' : ''
-            } absolute top-0 w-[310px] h-[235px] md:top-[-10px] scale-125 md:w-[411px] md:h-[144px] md:scale-100 md:object-cover md:left-[344px]`}
+            } absolute top-0 w-[310px] h-[235px] md:top-[20px] scale-125 md:w-[411px] md:h-[144px] md:scale-100 md:object-cover md:left-[344px]`}
           />
         </div>
         <div className='flex flex-wrap gap-5 pt-[148px] md:justify-center md:hidden md:pt-[240px]'>
@@ -53,7 +53,7 @@ const Steps = () => {
               className='flex flex-col gap-[10px] md:max-w-[300px]'
             >
               <div className='flex justify-center items-center bg-blue w-[72px] h-[45px] rounded-[10px] relative'>
-                <p className=' text-white font-Regular text-[40px]'>
+                <p className=' text-white font-Regular text-[40px] pt-2'>
                   {item.count}
                 </p>
               </div>
@@ -81,8 +81,8 @@ const Steps = () => {
                 key={item.id}
                 className='flex flex-col gap-[5px] w-[329px] h-[175px]'
               >
-                <div className='flex justify-center items-center bg-blue w-[72px] min-h-[45px] rounded-[10px] relative'>
-                  <p className=' text-white font-Regular text-[40px]'>
+                <div className='flex justify-center items-center bg-blue w-[72px] h-[45px] rounded-[10px] relative'>
+                  <p className=' text-white font-Regular text-[40px] absolute top-[-3px] left-[10px]'>
                     {item.count}
                   </p>
                 </div>
@@ -99,7 +99,7 @@ const Steps = () => {
               </div>
             ))}
           </div>
-          <div className='flex justify-end pr-[56px] pt-[60px]'>
+          <div className='flex justify-end pr-[10px] xb:pr-[90px] pt-[60px]'>
             {stepsArr.slice(2, 5).map((item, _) => (
               <div
                 key={item.id}
@@ -110,7 +110,7 @@ const Steps = () => {
                 } `}
               >
                 <div className='flex justify-center items-center bg-blue w-[72px] h-[45px] rounded-[10px] relative'>
-                  <p className=' text-white font-Regular text-[40px] absolute top-[-2px] left-[10px]'>
+                  <p className=' text-white font-Regular text-[40px] absolute top-[-3px] left-[10px]'>
                     {item.count}
                   </p>
                 </div>
@@ -207,7 +207,7 @@ const Steps = () => {
               </div>
             ))}
           </div>
-          <div className='flex justify-end  pr-[33px] gap-[6px] pt-[21px]'>
+          <div className='flex justify-end  pr-[78px] gap-[6px] pt-[21px]'>
             {stepsArr.slice(2, 5).map((item, _) => (
               <div
                 key={item.id}
@@ -240,11 +240,11 @@ const Steps = () => {
         </div>
         <img
           ref={headingRef}
-          src='https://s3-alpha-sig.figma.com/img/2152/4b79/e4763653a5f4a7733547354e7fe3c1a9?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Hd7rtRYYWvKle166qShVpjUu0Kf4n2MxmAqMW0NFKhujcW0xxLOm3uWU239NOrQAAvu~IeISFr~mNqL9oRk3GJ27ZQSubEjbjhAvmR467SuA~jhN3U~VhqvVx31P8avUUoGqA6PSJNnRSicapAc4vkHhSaFnpxCQk8-OhO5s3X1GGhVgJRLxc07kI9hnZYbfodx8pFHNZQ5JDnLePuuCdYuqQoXmwIXUWxTui8TOaSSQB9Pay6vtY0REHsGu4etAoLhsMZRyuSRYuzpqZvoWwqpl5MlAG8YTx5~QzkUQdOjuPjz-G15A8VrlZ1YT6aJayv8qJMOVEfncdcIvgsAQbQ__'
+          src='https://s3-alpha-sig.figma.com/img/2152/4b79/e4763653a5f4a7733547354e7fe3c1a9?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TEIOZP0Z7zqyq~QAnmj8sDzCimcgDcHRQd56TUidedaPpgNlCmAfyy5CN18LwiVH8~eRIHIG~-a1Mo8Vcw1KZd4oi4yT~cFXTHnw3DeljexqvMzYF6D-Yo1qCkSL73vBtJuvQkYs-TuPGtitNJjPPCgJH45AlBL7oypGy7IiuWmAUMu5PPNCl0edc0OOGtVMZ7w-7Z~oN6G473zKqf3xx8JaEeg7BVuM64jJgBuntB-j12rPY9zvSYWe6m5AfhpleVcMqPXaSJIsrSCEDGNay1g6lgnLaVP9G2KqLzrJLMrJ1QztrrgKfqN237zcsnqts5JSDclUIl0BElk3TnkV3g__'
           alt='img'
           className={`${
             isVisible ? 'fade-in-out' : ''
-          } absolute xx:top-[5px] xx:w-[936px] xx:right-[-37px]  xm:left-[600px] xm:w-[750px] xm:top-[150px] xm:h-[300px] xx:h-[330px] lg:w-[536px] lg:right-[-50px] lg:h-[200px] lg:top-[250px] object-cover hidden lg:flex`}
+          } absolute xx:top-[5px] xx:w-[936px] xx:left-[700px]  xm:left-[600px] xm:w-[750px] xm:top-[150px] xm:h-[300px] xx:h-[330px] lg:w-[636px] lg:right-[-75px] lg:h-[240px] lg:top-[220px] object-cover hidden lg:flex`}
         />
       </section>
     </div>

@@ -93,14 +93,14 @@ const Help = () => {
               </div>
             </div>
           </div>
-          <div className='xx:pt-[118px] lg:pt-[20px]'>
+          <div className='xx:pt-[88px] lg:pt-[20px]'>
             <div className='hidden md:flex pt-20 md:pt-[53px] relative max-w-[728px] xx:max-w-[1575px] mx-auto'>
               <img
                 src={LineMain.src}
                 alt='line'
-                className='scale-[92%] absolute md:scale-[82.5%] md:top-[59px] xx:max-w-[1440px] lg:max-w-[900px] lg:left-[-90px] lg:scale-[100%] xx:left-[74px] xx:top-[142px]'
+                className='scale-[92%] absolute md:scale-[82.5%] md:top-[59px] xx:max-w-[1440px] lg:max-w-[900px] lg:left-[-90px] lg:scale-[100%] xx:left-[34px] xx:top-[82px]'
               />
-              <p className='text-white font-Regular md:text-[18px] md:leading-[21.6px] md:max-w-[198px] leading-[19.2px] text-[16px] md:text-center md:top-[-3px] md:left-11 lg:left-[-120px] lg:top-[-20px] absolute left-8 top-11 xx:leading-[43.2px] lg:text-[28px] xx:text-[36px] lg:max-w-[330px] xx:max-w-[495px] xx:text-center'>
+              <p className='text-white font-Regular md:text-[18px] md:leading-[21.6px] xx:ml-[140px] md:max-w-[198px] leading-[19.2px] text-[16px] md:text-center md:top-[-3px] md:left-11 lg:left-[-120px] lg:top-[-20px] absolute left-8 top-11 xx:leading-[43.2px] lg:text-[28px] xx:text-[36px] lg:max-w-[330px] xx:max-w-[495px] xx:text-center'>
                 ИИ-консультант обработал{' '}
                 <span className='text-lime italic'>
                   <br className='md:hidden' />
@@ -110,19 +110,19 @@ const Help = () => {
               </p>
               <img
                 ref={headingRef}
-                src='https://s3-alpha-sig.figma.com/img/4be6/c15e/79d43dd925d1f844dce8930a03e43f91?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=q8nUcuxgLUUdb4qbSLhaFINh4JQhbKrAaNa~BASSG8B3do16DDs7KC~EL00mzdoRM43Br~x5t4V066n-qd5TItrEY7fhDyHbsqQ5bSO2yGsAgEh7ltLoNCPjEZ6iHaaWCfEjjPuVqYUyEA0u9g4JaLQqe9RuCyL9ywCCC20LoP-cTna7m054ZS3aYEgIbM0jUoYNUpXgwQ0sp3qDWQlDzbwC-j3BiVPXmz2A7LVC7q8chVB9YEW-s08JDZFYnjKUdJadMQeDK7IsQWsRdGxR3~W0Le6v~Nnaj4-guhiao8tUC6G-2-hb-PmD5Ht2v1qh9VnrHMtMyasmWyJ-hxQDJw__'
+                src='https://s3-alpha-sig.figma.com/img/4be6/c15e/79d43dd925d1f844dce8930a03e43f91?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lxciqoWcFJEMrn-wl-XQIfXpdf3Pt3sUvh6XjXdZLRJgT0NNXMUtbIM~L4quH4Du6zWT6wRjsjEZQM0NYqUp1MuVhzK-VUGYClqUgNRFWEeFgBgVGA-3YtfGq1iTkZCpx6l5PH1SsGMdy2eBQpUFnEa76~wX1ZHlryTZ3QvTVXIKmI1YDodQAUADeutrPY7ltYMOfi-6o6MzZt03vhGgUJMX~yE0BMU6Sdg966OXwb6KZoMDIVNAmukjs60MkC3kMnQApkf6ie-jCwxAv21ry7u9rV~~VqWIxtaqPeQImU-yGp1bA7RxsNYTjlDVjhNiSuNfxcXPbLQmuh8jfZ1HSg__'
                 alt='icon'
-                className={`w-[280px] absolute left-[230px] lg:w-[340px] lg:left-[200px] lg:top-[-62px] md:w-[229px] md:left-[255px] md:top-[-23px] xx:w-[574px] xx:left-[522px] xx:top-[-90px] rotate-12 top-[-25px] ${
+                className={`w-[280px] absolute left-[230px] lg:w-[340px] lg:left-[200px] lg:top-[-62px] md:w-[229px] md:left-[255px] md:top-[-23px] xx:w-[574px] xx:left-[482px] xx:top-[-140px] rotate-12 top-[-25px] ${
                   isVisible ? 'fade-in-out3' : ''
                 }`}
               />
-              <p className='text-white md:mr-[46px] font-Regular lg:text-[28px] lg:max-w-[220px] lg:right-[-100px] lg:absolute xx:right-[122px] xx:top-[85px] md:max-w-[145px] md:text-center md:text-[18px] md:leading-[21.6px] leading-[19.2px] w-[125px] text-end text-[16px] xx:leading-[43.2px] xx:text-[36px] xx:max-w-[289px] xx:w-[289px] xx:text-center md:w-[205px] absolute right-[25px] bottom-[-27px]'>
+              <p className='text-white md:mr-[46px] font-Regular lg:text-[28px] lg:max-w-[220px] lg:right-[-100px] lg:absolute xx:right-[122px] xx:top-[35px] md:max-w-[145px] md:text-center md:text-[18px] md:leading-[21.6px] leading-[19.2px] w-[125px] text-end text-[16px] xx:leading-[43.2px] xx:text-[36px] xx:max-w-[289px] xx:w-[289px] xx:text-center md:w-[205px] absolute right-[25px] bottom-[-27px]'>
                 сэкономил почти <span className='text-lime'>50 000 ₽</span>
               </p>
             </div>
           </div>
           <div className='xx:flex justify-center xx:w-[1706px] lg:pt-10 lg:relative lg:mr-40'>
-            <div className='flex flex-col gap-[10px] pt-7 md:gap-[11px] md:pt-[150px] md:items-center xx:items-center md:max-w-[728px] md:mx-auto xx:pt-[400px] xx:max-w-[100%] xx:mx-0 xx:w-[1706px]'>
+            <div className='flex flex-col gap-[10px] pt-7 md:gap-[11px] md:pt-[150px] md:items-center xx:items-center md:max-w-[728px] md:mx-auto xx:pt-[300px] xx:max-w-[100%] xx:mx-0 xx:w-[1706px]'>
               <p
                 className='text-white text-sm md:text-[10px] md:leading-[13px] md:mr-[135px] md:py-2 md:pl-[11px] bg-[#1E2121] rounded-[10px] xx:mr-[259px] xx:mt-[10px] xx:pl-7 xx:py-[18px] font-Regular
                 leading-[18.2px] pt-3 pl-[13px] pb-[9px] pr-2 md:max-w-[307px] lg:mr-0 lg:text-[24px] lg:max-w-[700px] lg:leading-[28px] xx:max-w-[762px] xx:text-[22px] xx:leading-[28.6px]'
@@ -133,7 +133,7 @@ const Help = () => {
                 <br className='hidden xx:flex' />
                 со всей России, круглосуточно.
               </p>
-              <div className='md:flex justify-end lg:absolute right-[-100px] lg:top-[310px]'>
+              <div className='md:flex justify-end lg:absolute xx:right-[320px] xx:top-[490px] right-[-100px] lg:top-[310px]'>
                 <p
                   className='text-white text-sm md:text-[10px] md:ml-[230px] lg:ml-0 lg:py-2 md:h-[38px] lg:h-fit md:p-0 md:pr-2 md:flex md:justify-center md:items-center md:text-end md:leading-[13px] bg-[#1E2121] rounded-[10px]  font-Regular xx:ml-[356px] xx:py-[18px] xx:pr-[22px]
                   xx:mt-[17px] leading-[18.2px] pt-3 pl-[13px] pb-[9px] pr-2 md:max-w-[329px] lg:max-w-[700px] lg:text-[24px] lg:leading-[28px] xx:text-end xx:max-w-[716px] xx:text-[22px] xx:leading-[28.6px] '
@@ -145,7 +145,7 @@ const Help = () => {
               </div>
             </div>
           </div>
-          <div className='pt-[45.5px] xx:pt-[88px] md:pt-[44px] lg:pt-40'>
+          <div className='pt-[45.5px] xx:pt-[178px] md:pt-[44px] lg:pt-40'>
             <div className='flex flex-col md:flex-row-reverse items-center md:justify-center xx:justify-start xx:mr-[49px]'>
               <div className='flex flex-col gap-7 '>
                 <div className='flex flex-col items-end md:items-start justify-end'>
@@ -193,7 +193,7 @@ const Help = () => {
               </div>
               <div className='md:relative md:w-[500px] md:ml-4 md:justify-end lg:mr-10 md:flex xx:mr-11 xx:pt-[30px]'>
                 <img
-                  src='https://s3-alpha-sig.figma.com/img/cba6/7c30/673c2f4819285845035110e2f532ff98?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VjrwpkZYEANX8-H9-uFxjHm~bcpwK9AHbZ1-nGFbC8Xktdd9v1K54CyNWNCE-TJXyeZl98Be34hPZJM5nUgJ8CsHr2Ws6CeTvwXdUacceBcqfAbnaOKgKrDB-Jg3-4c7AkdgbnKeCgxka-5x9HoMZ0I0J-0ic-aVA95xjiBwjthw6r1o6aYR6eOTZOnmp7ebRar8fzduuKrVeAIX9CQKMgCjDhUCzPc7Fr5sDWlsIReROpWBtUyPfZzpjjQ6DSxmrBrZ~QudZsX5WLIkzAhHobIviWkJluaaoNdb0ghfzs4VjB8o-1YGK5olcvXRL6XcCgKZ9Z3tS18Y~8BvBFdHKQ__'
+                  src='https://s3-alpha-sig.figma.com/img/cba6/7c30/673c2f4819285845035110e2f532ff98?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WT50wzVtDSimutVhApMh5FUvus3TB0YNqY3QAkFGipJVK7psnM7rpJpSp3lEl5S-KQtd68fHHsvAd7MgkUhdb0EdsuMzZi5Y1LhzkQBtVZ~ZhkMDrMDW8F0KaeCBGCVU3z4Msp7zDoMSlTUr8mQq-r57P-3ZjKDOmDDsoFC2wejWswlQndU8kq37XcyUZYQCOhK9XS~cVPdQxGYQ13ZDmxCmRNFGUDDDET87HCwo4eqEH7tIUoOSoK7S88ke8pLkiff5Mm2TmZV0jVsXv8-MeTxM8tIXT~DuShPDzV~gYlCDsD0ypu5TAnV9Av0ctPgObZdjrZRcRxMGT3bR70eqQg__'
                   alt='image'
                   className='rounded-[10px] w-[280px] lg:w-[400px] lg:h-[230px] h-[183px] md:w-[253px] md:ml-[18px] md:top-8 md:h-[165px] absolute opacity-70 left-0 hidden md:flex xx:min-w-[632px] xx:min-h-[414px] xx:left-[-542px] xx:top-[93px] xx:rounded-[20px]'
                 />
@@ -252,14 +252,14 @@ const Help = () => {
               </span>
             </h3>
             <img
-              src='https://s3-alpha-sig.figma.com/img/cba6/7c30/673c2f4819285845035110e2f532ff98?Expires=1708905600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VjrwpkZYEANX8-H9-uFxjHm~bcpwK9AHbZ1-nGFbC8Xktdd9v1K54CyNWNCE-TJXyeZl98Be34hPZJM5nUgJ8CsHr2Ws6CeTvwXdUacceBcqfAbnaOKgKrDB-Jg3-4c7AkdgbnKeCgxka-5x9HoMZ0I0J-0ic-aVA95xjiBwjthw6r1o6aYR6eOTZOnmp7ebRar8fzduuKrVeAIX9CQKMgCjDhUCzPc7Fr5sDWlsIReROpWBtUyPfZzpjjQ6DSxmrBrZ~QudZsX5WLIkzAhHobIviWkJluaaoNdb0ghfzs4VjB8o-1YGK5olcvXRL6XcCgKZ9Z3tS18Y~8BvBFdHKQ__'
+              src='https://s3-alpha-sig.figma.com/img/cba6/7c30/673c2f4819285845035110e2f532ff98?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WT50wzVtDSimutVhApMh5FUvus3TB0YNqY3QAkFGipJVK7psnM7rpJpSp3lEl5S-KQtd68fHHsvAd7MgkUhdb0EdsuMzZi5Y1LhzkQBtVZ~ZhkMDrMDW8F0KaeCBGCVU3z4Msp7zDoMSlTUr8mQq-r57P-3ZjKDOmDDsoFC2wejWswlQndU8kq37XcyUZYQCOhK9XS~cVPdQxGYQ13ZDmxCmRNFGUDDDET87HCwo4eqEH7tIUoOSoK7S88ke8pLkiff5Mm2TmZV0jVsXv8-MeTxM8tIXT~DuShPDzV~gYlCDsD0ypu5TAnV9Av0ctPgObZdjrZRcRxMGT3bR70eqQg__'
               alt='image'
               className='rounded-[10px] max-w-[280px] lg:w-[580px] lg:max-h-[350px] lg:max-w-[580px] max-h-[183px] md:max-w-[385px] md:max-h-[252px] md:mr-10 xx:rounded-[20px]'
             />
           </div>
         </div>
         <div className='px-[10px] pt-[32px] xx:pl-[86px] xx:pt-[147px] md:pt-[100px] md:ml-[14px]'>
-          <h2 className='text-white font-Regular text-base leading-[20.8px] lg:max-w-[700px] md:text-[18px] md:leading-[23.4px] md:max-w-[499px] md:text-start text-center xx:text-[36px] xx:leading-[46.8px] xx:text-start'>
+          <h2 className='text-white font-Regular text-base leading-[20.8px] lg:max-w-[700px] xx:max-w-[1390px] md:text-[18px] md:leading-[23.4px] md:max-w-[499px] md:text-start text-center xx:text-[36px] xx:leading-[46.8px] xx:text-start'>
             ИИ-ассистент за месяц обработал{' '}
             <span className='text-lime font-Bold'>
               440 обращений, отправил 2640 сообщений.
@@ -338,7 +338,7 @@ const Help = () => {
             ))}
           </div>
         </div>
-        <div className='px-[10px] flex flex-wrap md:relative md:pb-3  justify-start ss:justify-center md:justify-start md:pl-6 md:pt-[72px] md:gap-[10px] gap-[14px] pt-12 xx:hidden'>
+        <div className='px-[10px] flex flex-wrap md:relative md:pb-3  justify-start ss:justify-center md:justify-start md:pl-6 md:pt-[72px] xl:mx-20 md:gap-[10px] gap-[14px] pt-12 xx:hidden'>
           <h2 className='text-lime text-base leading-[20.8px] lg:text-base lg:max-w-[300px] md:text-[12px] md:leading-[15.6px] font-Regular text-center md:max-w-[216px] md:text-end h-fit'>
             После внедрения ИИ-бота в 2024 году продажи на Avito и в розничных
             точках суммарно выросли на 80%
@@ -396,7 +396,7 @@ const Help = () => {
           </div>
         </div>
         <div className='hidden justify-start gap-5 xx:flex xx:pt-[147px] relative xx:pb-[92px]'>
-          <div className='flex flex-col items-end gap-[363px] xx:pl-[201px]'>
+          <div className='flex flex-col items-end gap-[363px] xx:pl-[101px]'>
             <h2 className='text-lime text-[22px] leading-[28.6px] font-Regular text-end w-[398px]'>
               После внедрения ИИ-бота в 2024 году продажи на Avito и в розничных
               точках суммарно выросли на 80%
@@ -457,8 +457,8 @@ const Help = () => {
                 className='w-[244px] min-h-[218px] absolute top-[140px] left-[137px]'
               />
             </div>
-            <div className='flex flex-col absolute top-[71px] ll:right-6 right-[-112px]'>
-              <div className='size-[13px] bg-cloud rounded-full flex justify-center items-center absolute top-[29px] left-[-5px]'>
+            <div className='flex flex-col absolute top-[71px] ll:right-6 right-[-112px] xx:right-[-112px]'>
+              <div className='size-[13px] bg-cloud rounded-full flex justify-center items-center absolute top-[69px] left-[-5px]'>
                 <div className='bg-blue size-[7px] rounded-full' />
               </div>
               <p className='text-lime text-[100px] font-Bold uppercase absolute right-[-8px] top-[-112px]'>
@@ -470,7 +470,7 @@ const Help = () => {
               </p>
             </div>
           </div>
-          <div className='flex flex-col items-end xx:absolute xx:right-0 bb:right-[108px] pt-[322px]'>
+          <div className='flex flex-col items-end xx:absolute xx:right-20 bb:right-[108px] pt-[322px]'>
             <p className='text-white text-[22px] leading-[28.6px] xx:text-[20px] font-Regular xx:w-[400px] text-start w-[476px] bb:w-[476px]'>
               Говорить, что это на 100% последствие внедрения ИИ-консультанта,
               мы не можем. Но это нововведение однозначно оказало влияние на
@@ -483,7 +483,7 @@ const Help = () => {
         </div>
         <div className='flex justify-center md:absolute md:left-[67px] md:bottom-[50px] lg:static xx:hidden'>
           <button
-            className={`relative z-10 xx:hidden md:w-[153px] md:h-[30px] lg:w-[234px] lg:h-[50px] mt-[21px] lg:absolute left-0 lg:bottom-10 lg:left-[100px] flex flex-row items-center justify-center gap-2 pr-7 rounded-[40px] bg-lime ${
+            className={`relative z-10 xx:hidden md:w-[153px] md:h-[30px] lg:w-[234px] lg:h-[50px] xl:ml-6 mt-[21px] lg:absolute left-0 lg:bottom-10 lg:left-[100px] flex flex-row items-center justify-center gap-2 pr-7 rounded-[40px] bg-lime ${
               isHovered ? 'button-hovered' : ''
             }`}
             onMouseEnter={handleMouseEnter}

@@ -58,7 +58,7 @@ const NextBot = () => {
         </h2>
       </div>
       <div className='flex flex-col items-center pt-[10px] md:pt-1 lg:pt-3 relative max-w-[1920px] lg:justify-center'>
-        <div className='pb-2 px-6 lg:flex justify-center lg:border-b-0  border-b-[1px] border-blue rounded-[20px] md:rounded-[10px]'>
+        <div className='pb-2 px-6 lg:flex justify-center md:border-b-0 relative border-b-[1px] border-blue rounded-[20px] md:rounded-[10px]'>
           <p className='text-base text-dark font-Regular text-center leading-[20.8px] w-[259px] mm:w-fit lg:text-[22px] lg:leading-[28.4px] lg:px-[50px] lg:pb-[10px] md:text-[12px] md:leading-[15.6px]'>
             Мы бесплатно научим, как правильно выставить настройки
             <br className='ss:hidden' /> и{' '}
@@ -69,10 +69,10 @@ const NextBot = () => {
 
           <div
             ref={headingRef}
-            className='absolute left-0 top-[68px] hidden xx:hidden lg:flex'
+            className='absolute left-[0] top-[25px] hidden xx:hidden md:flex'
           >
             <svg
-              width='847'
+              width='425'
               height='21'
               viewBox='0 0 1047 21'
               fill='none'
@@ -90,7 +90,7 @@ const NextBot = () => {
               />
             </svg>
           </div>
-          <div
+          {/* <div
             ref={headingRef}
             className='absolute left-[-100px] top-[68px] hidden xx:flex'
           >
@@ -112,22 +112,22 @@ const NextBot = () => {
                 className={` ${isVisible && 'path-animation'}`}
               />
             </svg>
-          </div>
+          </div> */}
         </div>
-        <div className='w-[1px] h-[43.2px] bg-blue relative hidden md:flex lg:hidden '>
+        <div className='w-[1px] h-[43.2px] bg-blue relative hidden md:hidden '>
           <div className='trans bottom-[-7px] absolute size-[8px] flex justify-center items-center bg-cloud rounded-full'>
             <div className='size-[4px] bg-blue rounded-full lg:size-[11px]' />
           </div>
         </div>
         <div
           ref={animationRef}
-          className={`hidden lg:block w-[1px] bg-blue relative ${
+          className={`hidden md:block w-[1px] bg-blue relative ${
             isVisible && 'fill-height-animation'
           }`}
         >
           {showCircle && (
-            <div className='outer-circle trans bottom-[-15px] absolute'>
-              <div className='inner-circle'></div>
+            <div className='outer-circle2 trans bottom-[-15px] absolute'>
+              <div className='inner-circle2'></div>
             </div>
           )}
         </div>
