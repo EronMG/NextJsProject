@@ -22,7 +22,7 @@ const MainScreen = () => {
 
   return (
     <>
-      <section className="relative flex flex-col items-center overflow-hidden md:overflow-visible md:pt-[35px] xl:pt-[71px] xx:pt-[84px] xx:mb-2">
+      <section className="relative flex flex-col items-center overflow-hidden md:overflow-visible md:pt-[20px] xl:pt-[71px] xx:pt-[78px] xx:mb-2">
         <div className="z-10 flex flex-col items-center gap-3 md:gap-[2px] mt-[15px] lg:gap-[4px] xx:gap-2 xx:mt-[8px]">
           <AnimatedHeading text={""} size={"normal"} />
           <p className="max-w-[300px] text-base text-center text-[16px] leading-[20.8px] font-Regular text-dark xl:max-w-[522px] mm:min-w-[300px] md:max-w-[488px] md:text-[14px] md:leading-[18.2px] lg:text-[18px] lg:leading-[22px] xl:text-[20px] xl:leading-[26px] xx:max-w-[722px]">

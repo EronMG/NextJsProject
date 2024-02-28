@@ -38,7 +38,7 @@ const AnimatedHeading: React.FC<AnimatedHeadingProps> = () => {
       ref={headingRef}
       className={`${
         isVisible ? "fade-in-out" : ""
-      } max-w-[290px] text-[22px] leading-[26.4px] text-center font-Bold text-dark mm:max-w-[543px] md:text-[22px] md:leading-[26.4px] lg:text-[36px] lg:leading-[40.4px] lg:max-w-[800px] xl:max-w-[1000px] xl:text-[42px] xl:leading-[50.4px]`}
+      } max-w-[270px] text-[22px] leading-[26.4px] text-center font-Bold text-dark mm:max-w-[543px] md:text-[22px] md:leading-[26.4px] lg:text-[36px] lg:leading-[40.4px] lg:max-w-[800px] xl:max-w-[1000px] xl:text-[42px] xl:leading-[50.4px]`}
     >
       <em className="text-blue not-italic underline underline-offset-4 decoration-[1.5px] xl:underline-offset-[8px]">
         Создай ИИ-ассистента
