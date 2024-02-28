@@ -51,8 +51,8 @@ const Help = () => {
   }, []);
 
   return (
-    <div className='xx:flex justify-center lg:relative' id='case'>
-      <section className='bg-dark  md:mt-[60px] md:relative lg:static md:rounded-[24px] rounded-[40px] pt-[30px] pb-[33px] mx-[10px] xx:mr-[26px] xx:rounded-[60px] mt-[78.5px] overflow-hidden xx:mt-[175px] xx:w-[1738px]'>
+    <div className='lg:flex justify-center lg:relative' id='case'>
+      <section className='bg-dark md:mx-auto lg:mx-0 md:w-[728px] lg:w-full  md:mt-[60px] md:relative lg:static md:rounded-[24px] rounded-[40px] pt-[30px] pb-[33px] mx-[10px] xx:mr-[26px] xx:rounded-[60px] mt-[78.5px] overflow-hidden xx:mt-[175px] xx:w-[1738px]'>
         <div className='px-[10px]'>
           <div className='flex flex-col gap-[10px]'>
             <div className='xx:flex justify-center'>

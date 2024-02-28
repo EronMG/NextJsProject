@@ -26,7 +26,7 @@ export default function Home() {
         <Tryit />
         <Links />
         <Base />
-        <div className='hidden'>
+        <div className=''>
           <II />
         </div>
         <Steps />

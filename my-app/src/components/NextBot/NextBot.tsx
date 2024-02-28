@@ -69,7 +69,7 @@ const NextBot = () => {
 
           <div
             ref={headingRef}
-            className='absolute left-[0] top-[25px] hidden xx:hidden md:flex'
+            className='absolute left-[0] top-[25px] hidden lg:hidden md:flex'
           >
             <svg
               width='425'
@@ -90,6 +90,7 @@ const NextBot = () => {
               />
             </svg>
           </div>
+
           {/* <div
             ref={headingRef}
             className='absolute left-[-100px] top-[68px] hidden xx:flex'
@@ -121,7 +122,7 @@ const NextBot = () => {
         </div>
         <div
           ref={animationRef}
-          className={`hidden md:block w-[1px] bg-blue relative ${
+          className={`hidden md:block lg:hidden w-[1px] bg-blue relative ${
             isVisible && 'fill-height-animation'
           }`}
         >

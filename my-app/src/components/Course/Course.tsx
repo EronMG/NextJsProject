@@ -5,6 +5,7 @@ import Star from '@/Images/star.svg';
 import { FaArrowUp } from 'react-icons/fa6';
 import { courseArr } from '@/Types/Arrays';
 import ArrowBtn from '@/Images/ArrowBtn.svg';
+import { useSwipeable } from 'react-swipeable';
 
 const Course = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -27,14 +28,19 @@ const Course = () => {
 
   const [currentIndex, setCurrentIndex] = useState(1);
 
+  const handlers = useSwipeable({
+    onSwipedLeft: () => handleNext(),
+    onSwipedRight: () => handleBack2(),
+    ...{ preventDefaultTouchmoveEvent: true },
+    trackMouse: true,
+  });
+
   const handleNext = () => {
     setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, 4));
   };
 
   const handleBack2 = () => {
-    setCurrentIndex((prevIndex) =>
-      Math.max(prevIndex === 1 ? 1 : prevIndex - 1, 1)
-    );
+    setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 1));
   };
 
   return (
@@ -53,6 +59,7 @@ const Course = () => {
           />
         </div>
       </div>
+
       <div className='pt-3 flex flex-col items-center mm:pt-6 xx:pt-12 md:pt-4'>
         <div className='flex flex-wrap md:flex-row justify-end xm:justify-center gap-2 md:gap-[56px] lg:w-[1004px] lg:ml-0 xm:w-[1400px] lg:justify-between xl:w-[1190px] md:justify-end md:ml-[70px] ss:justify-center mm:flex-col mm:items-center'>
           <p className='text-[14px] leading-[18.2px] md:text-xs md:text-start lg:text-[22px] lg:max-w-[700px] lg:leading-[28.6px] md:leading-[15.6px] text-dark font-Regular text-center mm:max-w-[500px] md:max-w-[402px] lg:text-start '>
@@ -96,13 +103,12 @@ const Course = () => {
             </button>
           </div>
         </div>
-        <div className='md:hidden flex pt-4'>
-          {courseArr.map((item, _) => (
+        <div {...handlers} className='md:hidden flex pt-4'>
+          {courseArr.map((item, index) => (
             <div
               key={item.id}
-              className={`p-3 rounded-[10px] bg-cloud min-w-[300px] w-[320px] xl:w-[400px] h-[339px] xl:h-[400px] ${
-                item.id === currentIndex ? 'block' : 'hidden'
-              }`}
+              style={{ display: index + 1 === currentIndex ? 'block' : 'none' }}
+              className={`p-3 rounded-[10px] bg-cloud min-w-[300px] w-[320px] xl:w-[400px] h-[339px] xl:h-[400px]`}
             >
               <div className='flex flex-col gap-2'>
                 <div className='rounded-[5px] pt-1 bg-blue text-white text-[14px] leading-[18.2px] font-Regular w-[56px] h-[26px] xl:text-[18px] xl:w-[70px] xl:h-[32px] flex justify-center items-center'>
