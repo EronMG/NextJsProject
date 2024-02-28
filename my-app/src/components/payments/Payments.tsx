@@ -133,13 +133,13 @@ const Payments = () => {
   }, []);
   return (
     <section className="px-[10px] pt-20 xx:pt-[180px] md:pt-[60px]">
-      <div className="flex flex-col items-center md:mr-[38px]">
+      <div className="flex flex-col items-center ">
         <h2 className="font-Regular text-[22px] md:text-lg md:leading-[21.6px] leading-[26.4px] text-center text-dark lg:text-[36px] lg:leading-[43.2px] md:text-[26px]">
           Вы можете попробовать сервис <br className="hidden md:flex" /> NextBot
           бесплатно
         </h2>
         <div className="flex flex-col items-center pt-[10px] md:relative md:pt-[3px] lg:pt-2">
-          <div className="border-b-[1px] md:border-b-0 rounded-[20px] border-blue pb-2 px-6 md:pb-[2px] lg:pb-[20px] xl:pb-[23px] lg:px-[115px] md:px-11">
+          <div className="border-b-[1px] md:border-b-0 rounded-[20px] border-blue pb-2 px-6 md:pb-[11px] lg:pb-[20px] xl:pb-[23px] lg:px-[115px] md:px-11">
             <p className="font-Regular text-base leading-[19.2px] md:text-[12px] text-center text-dark lg:text-[22px] lg:leading-[26.4px] md:leading-[14.4px]">
               БЕСПЛАТНОЕ обучение, как ПРАВИЛЬНО делать ИИ-ботов
             </p>
@@ -168,7 +168,7 @@ const Payments = () => {
             </div> */}
             <div
               ref={headingRef}
-              className="absolute left-[0] top-[11px] hidden md:flex lg:top-[38px] lg:-left-[80px] xl:-left-[132px]"
+              className="absolute left-[0] top-[20px] hidden md:flex lg:top-[38px] lg:-left-[80px] xl:-left-[132px]"
             >
               <svg
                 width="425"
@@ -182,6 +182,7 @@ const Payments = () => {
                   d="M1046 1V1C1046 11.4934 1037.49 20 1027 20H20C9.50657 20 1 11.4934 1 1V1"
                   stroke="#4F56D3"
                   strokeLinecap="round"
+                  stroke-width="3"
                   style={{
                     strokeDasharray: `${pathLength}`,
                     strokeDashoffset: `${pathLength}`,
@@ -198,7 +199,7 @@ const Payments = () => {
           </div>
           <div
             ref={animationRef}
-            className={`hidden md:block  w-[1px] bg-blue relative ${
+            className={`hidden md:block w-[1px] bg-blue relative ${
               isVisible && "fill-height-animation"
             }`}
           >
@@ -209,7 +210,7 @@ const Payments = () => {
             )}
           </div>
         </div>
-        <p className="font-Regular lg:pt-5 text-[14px] md:pt-[2px] leading-[16.8px] text-center text-dark xm:w-[600px] w-[218px] pt-[18px] lg:text-[18px] xx:text-[22px] xx:leading-[26.4px] lg:w-fit md:text-[12px] md:leading-[14.4px] md:w-[252px]">
+        <p className="font-Regular lg:pt-5 text-[14px] md:pt-[10px] leading-[16.8px] text-center text-dark xm:w-[600px] w-[218px] pt-[18px] lg:text-[18px] xx:text-[22px] xx:leading-[26.4px] lg:w-fit md:text-[12px] md:leading-[14.4px] md:w-[252px]">
           Можете выбрать любой тариф – от пробного до премиум
         </p>
       </div>
@@ -707,12 +708,12 @@ const Payments = () => {
         </div>
       </div>
       <div className="flex flex-col items-center pt-[59px] md:pt-[30px] xx:pt-[71px]">
-        <div className="border-t-[1px] rounded-[20px] border-blue pt-6 md:pt-[10px] px-6">
-          <p className="font-Regular text-base leading-[19.2px] text-center max-w-[220px] md:max-w-[374px] md:text-[12px] md:leading-[14.4px] text-dark xx:text-[22px] xx:leading-[26.4px] xm:text-[20px] xx:px-[180px] xx:pt-[6px]">
+        <div className="border-t-[1px] rounded-[20px] border-blue pt-6 md:pt-[10px] xm:pt-[15px] px-6 flex justify-center xm:w-[1045px]">
+          <p className="font-Regular text-base leading-[19.2px] text-center max-w-[220px] md:max-w-[374px] md:text-[12px] md:leading-[14.4px] text-dark xx:text-[22px] xx:leading-[26.4px] xm:text-[20px] xm:leading-[24.4px] xm:max-w-[674px] xx:pt-[6px]">
             Оплатить можно с любой карты РФ. Для работы не нужен VPN
           </p>
         </div>
-        <div className="xx:hidden flex flex-col items-center mt-[5px] gap-[5px] md:gap-[0px]">
+        <div className="xm:hidden flex flex-col items-center mt-[5px] gap-[5px] md:gap-[0px]">
           <p className="font-Regular text-base leading-[19.2px] text-center max-w-[271px] md:max-w-[380px] md:text-[12px] md:leading-[14.4px]  xm:text-[20px] text-dark">
             У вас будет доступ к сервису NextBot в течение месяца, или пока не
             израсходуются все токены, предусмотренные тарифом.
@@ -722,26 +723,26 @@ const Payments = () => {
             но и виджет с ИИ-консультантом для сайта.
           </p>
         </div>
-        <p className="hidden xl:flex font-Regular text-center text-dark pt-5 xx:text-[22px] xx:leading-[26.4px] xm:text-[20px] max-w-[948px]">
+        <p className="hidden xl:flex font-Regular text-center text-dark pt-5 xx:text-[22px] xx:leading-[26.4px] xm:text-[20px] xm:leading-[24.4px] max-w-[948px]">
           У вас будет доступ к сервису NextBot в течение месяца, или пока не
           израсходуются <br /> все токены, предусмотренные тарифом. За это время
           вы можете собрать ИИ-ассистента <br /> не только для Telegran, но и
           виджет с ИИ-консультантом для сайта.
         </p>
-        <p className="font-Regular text-base leading-[19.2px] text-center md:text-[12px] md:max-w-[301px] md:leading-[14.4px] text-dark md:mt-[5px] mt-[14px] xx:text-[22px] xm:text-[20px] xx:leading-[26.4px] max-w-[754px]">
+        <p className="font-Regular text-base leading-[19.2px] text-center md:text-[12px] md:max-w-[301px] xm:max-w-[754px] md:leading-[14.4px] text-dark md:mt-[5px] mt-[14px] xm:mt-[20px] xx:text-[22px] xm:text-[20px] xm:leading-[24.4px] xx:leading-[26.4px] max-w-[754px]">
           А если у вас будет доступ к подключению SaleBot, то ИИ-ассистента
           можно подключить к WhatsApp, Avito или Instagram*
         </p>
-        <div className="flex justify-center items-center flex-col mt-[46px] md:mt-[43px] xx:pt-[53px]">
-          <div className="size-[58px] bg-gray rounded-[10px] md:size-[47px] md:rounded-[4px] flex justify-center items-center">
+        <div className="flex justify-center items-center flex-col mt-[46px] md:mt-[43px] xx:pt-[53px] xm:mt-[2px]">
+          <div className="size-[58px] bg-gray rounded-[10px] xm:rounded-[10px] xm:size-[58px] md:size-[47px] md:rounded-[4px] flex justify-center items-center">
             <img
               src={Eye1.src}
               alt="icon"
               id="icon"
-              className="md:w-[32px] md:h-[23px]"
+              className="md:w-[32px] md:h-[23px] xm:w-[38px] xm:h-[27px]"
             />
           </div>
-          <p className="font-Medium text-base leading-[20.8px] xx:pt-[14px] text-center md:max-w-[314px] md:text-[12px] md:leading-[14.4px] xm:text-[20px] text-gray pt-2 xx:text-[22px] xx:leading-[26.4px] max-w-[589px]">
+          <p className="font-Medium text-base leading-[20.8px] xx:pt-[14px] text-center md:max-w-[314px] md:text-[12px] md:leading-[14.4px] xm:text-[20px] xm:leading-[24.4px] text-gray pt-2 xx:text-[22px] xx:leading-[26.4px] xm:max-w-[589px]">
             В некоторых случаях ИИ-ассистент
             <br className="md:hidden xx:hidden" /> от NextBot может полностью{" "}
             <br className="md:hidden xx:hidden" />
