@@ -51,7 +51,7 @@ const Help = () => {
   }, []);
 
   return (
-    <div className='lg:flex justify-center lg:relative' id='case'>
+    <div className='xx:flex justify-center lg:relative' id='case'>
       <section className='bg-dark md:mx-auto lg:mx-0 md:w-[728px] lg:w-full  md:mt-[60px] md:relative lg:static md:rounded-[24px] rounded-[40px] pt-[30px] pb-[33px] mx-[10px] xx:mr-[26px] xx:rounded-[60px] mt-[78.5px] overflow-hidden xx:mt-[175px] xx:w-[1738px]'>
         <div className='px-[10px]'>
           <div className='flex flex-col gap-[10px]'>
@@ -443,7 +443,7 @@ const Help = () => {
               </div>
             </button>
           </div>
-          <div className='relative  xx:mr-[110px] w-[800px]'>
+          <div className='relative xx:mr-[110px] w-[800px]'>
             <div>
               <img
                 src={Circle1.src}
@@ -483,28 +483,28 @@ const Help = () => {
         </div>
         <div className='flex justify-center md:absolute md:left-[67px] md:bottom-[50px] lg:static xx:hidden'>
           <button
-            className={`relative z-10 xx:hidden md:w-[153px] md:h-[30px] lg:w-[234px] lg:h-[50px] xl:ml-6 mt-[21px] lg:absolute left-0 lg:bottom-10 lg:left-[100px] flex flex-row items-center justify-center gap-2 pr-7 rounded-[40px] bg-lime ${
+            className={`relative z-10 xx:hidden w-[234px] h-[51px] md:gap-2 md:justify-end md:w-[153px] md:h-[30px] lg:w-[234px] lg:h-[50px] xl:ml-6 mt-[21px] lg:absolute left-0 lg:bottom-10 lg:left-[100px] flex flex-row items-center rounded-[40px] bg-lime ${
               isHovered ? 'button-hovered' : ''
             }`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={() => setIsHovered(false)}
           >
             <p
-              className={`lg:text-[14px] font-Medium ml-7 md:text-[10px] md:leading-[13px] md:ml-4 ${
+              className={`lg:text-[14px] font-Medium ml-[31px] md:text-[10px] md:leading-[13px] md:ml-0 ${
                 isHovered ? 'text-blue duration-300' : ' text-dark'
               }`}
             >
               Создать ии-бота
             </p>
             <div
-              className={`flex items-center justify-center lg:size-7 md:size-5 rounded-full  ${
+              className={`flex items-center justify-center ml-[41px] md:ml-0 lg:mr-12 md:mr-7 size-[28px] lg:size-7 md:size-5 rounded-full  ${
                 isHovered ? ' bg-blue duration-300' : 'bg-dark'
               }`}
             >
               <img
                 src={ArrowBtn.src}
                 alt='ArrowBtn'
-                className={`transition-opacity duration-500 ${
+                className={`size-[8px] transition-opacity duration-500 ${
                   isHovered ? 'arrow-out' : ''
                 }`}
                 key={animationKey}
@@ -513,7 +513,7 @@ const Help = () => {
                 <img
                   src={ArrowBtn.src}
                   alt='ArrowBtn'
-                  className='arrow-in md:hidden lg:flex'
+                  className='size-[8px] arrow-in md:hidden lg:flex'
                   style={{
                     position: 'absolute',
                     right: '58.5px',

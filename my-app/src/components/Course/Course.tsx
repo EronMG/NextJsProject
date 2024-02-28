@@ -45,8 +45,8 @@ const Course = () => {
 
   return (
     <section className='px-[10px] pt-[77px] xx:pt-[270px] md:pt-[49px] xm:px-0'>
-      <div className='md:flex justify-center'>
-        <div className='flex flex-col xl:w-[1190px] xm:w-[1440px] md:w-[668px] md:justify-between lg:w-[1024px] lg:items-end md:flex-row xx:relative justify-center xx:justify-between items-center border-b-[2px] md:border-b-[1px] border-blue  lg:flex-row lg:pb-[10px] xx:w-[1576px]'>
+      <div className='md:flex flex justify-center'>
+        <div className='flex flex-col w-[300px] xl:w-[1190px] xm:w-[1440px] md:w-[668px] md:justify-between lg:w-[1024px] lg:items-end md:flex-row xx:relative justify-center xx:justify-between items-center border-b-[2px] md:border-b-[1px] border-blue  lg:flex-row lg:pb-[10px] xx:w-[1576px]'>
           <h2 className=' font-Regular text-dark md:mt-4 md:text-[18px] md:leading-[21.6px] md:max-w-[509px] md:text-start text-[22px] leading-[26.4px] text-center max-w-[278px] xx:pb-[14px] ss:max-w-[450px] lg:text-[30px] lg:leading-[36.2px] lg:max-w-[1024px] lg:text-start bb:text-[36px] bb:leading-[41.6px] bb:max-w-[1198px]'>
             На бесплатном обучении вы получите пошаговую инструкцию,
             <br className='sm:hidden xx:flex' /> как собрать ИИ-бота, который
@@ -59,9 +59,8 @@ const Course = () => {
           />
         </div>
       </div>
-
       <div className='pt-3 flex flex-col items-center mm:pt-6 xx:pt-12 md:pt-4'>
-        <div className='flex flex-wrap md:flex-row justify-end xm:justify-center gap-2 md:gap-[56px] lg:w-[1004px] lg:ml-0 xm:w-[1400px] lg:justify-between xl:w-[1190px] md:justify-end md:ml-[70px] ss:justify-center mm:flex-col mm:items-center'>
+        <div className='flex flex-wrap md:flex-row justify-end xm:justify-center mb-[10px] gap-2 md:gap-[56px] lg:w-[1004px] lg:ml-0 xm:w-[1400px] lg:justify-between xl:w-[1190px] md:justify-end md:ml-[70px] ss:justify-center mm:flex-col mm:items-center'>
           <p className='text-[14px] leading-[18.2px] md:text-xs md:text-start lg:text-[22px] lg:max-w-[700px] lg:leading-[28.6px] md:leading-[15.6px] text-dark font-Regular text-center mm:max-w-[500px] md:max-w-[402px] lg:text-start '>
             Вам не нужно программировать. Достаточно текстом ПРАВИЛЬНО описать,
             как должен действовать бот. Этому мы вас тоже научим
@@ -84,7 +83,7 @@ const Course = () => {
               <FaArrowUp className='rotate-90 text-white' />
             </button>
           </div>
-          <div className='flex gap-3 md:hidden justify-end w-full'>
+          <div className='flex gap-3 md:hidden justify-end w-full pr-[4px] pt-[2px]'>
             <button
               onClick={handleBack2}
               className={`size-[47px] ${
@@ -101,14 +100,14 @@ const Course = () => {
             >
               <FaArrowUp className='rotate-90 text-white' />
             </button>
-          </div>
+          </div>{' '}
         </div>
         <div {...handlers} className='md:hidden flex pt-4'>
           {courseArr.map((item, index) => (
             <div
-              key={item.id}
               style={{ display: index + 1 === currentIndex ? 'block' : 'none' }}
-              className={`p-3 rounded-[10px] bg-cloud min-w-[300px] w-[320px] xl:w-[400px] h-[339px] xl:h-[400px]`}
+              key={item.id}
+              className={`p-3 rounded-[10px] bg-cloud w-[300px] xl:w-[400px] h-[339px] xl:h-[400px]`}
             >
               <div className='flex flex-col gap-2'>
                 <div className='rounded-[5px] pt-1 bg-blue text-white text-[14px] leading-[18.2px] font-Regular w-[56px] h-[26px] xl:text-[18px] xl:w-[70px] xl:h-[32px] flex justify-center items-center'>
@@ -141,7 +140,7 @@ const Course = () => {
             </div>
           ))}
         </div>
-        <div className='hidden pt-5 md:flex xm:hidden  overflow-hidden gap-[10px] xl:gap-6'>
+        <div className='hidden md:flex xm:hidden  overflow-hidden gap-[10px] xl:gap-6 md:mt-[10px]'>
           {active === false
             ? courseArr.slice(0, 2).map((item, _) => (
                 <div

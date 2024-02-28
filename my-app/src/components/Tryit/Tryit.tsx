@@ -29,7 +29,7 @@ function Tryit() {
   const [activeTab, setActiveTab] = useState(0);
   return (
     <>
-      <section className='flex flex-col xm:px-[10px] items-center md:items-center md:px-[50px] lg:ml-0 lg:justify-center bb:max-w-[1920px] mt-[80px] xx:mt-[180px] md:mt-[60px]'>
+      <section className='flex flex-col xm:px-[10px] lg:px-0 items-center md:items-center md:px-[96px] lg:ml-0 lg:justify-center bb:max-w-[1920px] mt-[80px] xx:mt-[180px] md:mt-[60px]'>
         <div className='flex items-center pb-[14px] border-b-2 border-blue md:w-full xx:w-[1577px] md:pb-2'>
           <h2 className='max-w-[292px] text-[22px] leading-[26.4px] text-center font-Regular md:max-w-[531px] md:leading-[21.6px] md:text-[18px] md:text-start xx:max-w-[1576px] lg:text-start lg:px-2 lg:max-w-[1576px] xx:text-start xx:text-[36px] xx:leading-[43.2px] xx:pl-[150px] bb:pl-[0]'>
             В NextBot вы создадите бота с искусственным интеллектом. Он общается{' '}

@@ -138,7 +138,7 @@ const II = () => {
         <img
           src={Line.src}
           alt='icon'
-          className='absolute left-[0] top-[245px] w-[815px] h-[115px] lg:scale-[139%] lg:left-24 lg:top-[470px]'
+          className='absolute hidden md:flex lg:hidden left-[0] top-[245px] w-[815px] h-[115px] lg:scale-[139%] lg:left-24 lg:top-[470px]'
         />
       </div>
     </section>
