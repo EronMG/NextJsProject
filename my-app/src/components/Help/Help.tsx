@@ -504,7 +504,7 @@ const Help = () => {
               <img
                 src={ArrowBtn.src}
                 alt='ArrowBtn'
-                className={`size-[8px] transition-opacity duration-500 ${
+                className={`size-[10px] transition-opacity duration-500 ${
                   isHovered ? 'arrow-out' : ''
                 }`}
                 key={animationKey}
@@ -513,10 +513,10 @@ const Help = () => {
                 <img
                   src={ArrowBtn.src}
                   alt='ArrowBtn'
-                  className='size-[8px] arrow-in md:hidden lg:flex'
+                  className='size-[10px] arrow-in md:hidden lg:flex'
                   style={{
                     position: 'absolute',
-                    right: '58.5px',
+                    right: '57px',
                     top: '20px',
                   }}
                 />

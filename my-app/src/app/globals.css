@@ -2,37 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background: #f9fafe;
+}
 @font-face {
   font-family: ALSthin;
-  src: url("../fonts/ALSHauss-Thin.woff");
+  src: url('../fonts/ALSHauss-Thin.woff');
 }
 @font-face {
   font-family: ALSregular;
-  src: url("../fonts/ALSHauss-Regular.woff");
+  src: url('../fonts/ALSHauss-Regular.woff');
 }
 @font-face {
   font-family: ALSmedium;
-  src: url("../fonts/ALSHauss-Medium.woff");
+  src: url('../fonts/ALSHauss-Medium.woff');
 }
 
 @font-face {
   font-family: ALSlight;
-  src: url("../fonts/ALSHauss-Light.woff");
+  src: url('../fonts/ALSHauss-Light.woff');
 }
 
 @font-face {
   font-family: ALSbook;
-  src: url("../fonts/ALSHauss-Book.woff");
+  src: url('../fonts/ALSHauss-Book.woff');
 }
 
 @font-face {
   font-family: ALSbold;
-  src: url("../fonts/ALSHauss-Bold.woff");
+  src: url('../fonts/ALSHauss-Bold.woff');
 }
 
 @font-face {
   font-family: ALSblack;
-  src: url("../fonts/ALSHauss-Black.woff");
+  src: url('../fonts/ALSHauss-Black.woff');
 }
 
 /* Create.css */
@@ -360,7 +363,7 @@
 
 .scroll-container::before,
 .scroll-container::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   width: 100px; /* Ширина эффекта прозрачности, настройте под ваш контент */
@@ -437,7 +440,7 @@
 }
 
 .outer-circle::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -458,7 +461,7 @@
 }
 
 .outer-circle2::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -479,7 +482,7 @@
 }
 
 .outer-circle3::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
