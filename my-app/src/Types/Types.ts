@@ -36,3 +36,9 @@ export interface PaymentsBlock {
   cost: number;
   deleteCost: number;
 }
+
+export interface ExampleItem {
+  id: number;
+  title: string;
+  subtitle: string;
+}
