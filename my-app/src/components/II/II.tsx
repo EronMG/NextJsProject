@@ -57,20 +57,28 @@ const II = () => {
   const pathLength = 1000;
   return (
     <section className='pt-[71px] px-[10px] bb:pt-[180px] bb:px-0 md:relative md:flex justify-center lg:mb-[100px] bb:mb-0'>
-      <div className='bb:w-[1920px] md:relative md:w-[795px] lg:w-[1024px]'>
+      <div className='bb:w-[1920px] md:relative md:w-[795px] lg:w-[1024px] xl:w-[1280px] xm:w-[1440px]'>
         <h2 className='text-[22px] leading-[26.4px] lg:ml-0 md:max-w-[491px] lg:max-w-[979px] md:text-start md:ml-[59px] font-Regular md:text-[18px] md:leading-[21.6px] text-center text-dark bb:text-[36px] lg:text-[26px] bb:leading-[43.2px] max-w-[979px] lg:text-start bb:ml-[170px]'>
           ИИ-бот на 100% походит на человека и не придумывает ничего лишнего при{' '}
           <br className='md:hidden' />
           общении с клиентами
         </h2>
-        <div className='lg:flex hidden lg:relative flex-row gap-[30px] justify-center pt-20'>
+        <div className='lg:flex hidden lg:relative xm:hidden flex-row gap-[30px] justify-center pt-20'>
           {iiArr.map((item, _) => (
             <div
               key={item.id}
               className={`flex flex-col-reverse items-center justify-between max-w-[355px] ${
-                item.id === 1 ? 'absolute left-[81px] top-[90px]' : ''
-              } ${item.id === 3 ? 'absolute right-[75px] top-[75px]' : ''} ${
-                item.id === 2 ? 'mt-[55px] ml-[11px]' : ''
+                item.id === 1
+                  ? 'absolute left-[81px] xl:left-[60px] xm:left-[170px] xl:top-[68px] top-[90px]'
+                  : ''
+              } ${
+                item.id === 3
+                  ? 'absolute right-[75px] top-[75px] xl:right-[119px] xl:top-[47px]'
+                  : ''
+              } ${
+                item.id === 2
+                  ? 'mt-[55px] ml-[11px] xl:ml-[-54px] xl:mt-[47px]'
+                  : ''
               }`}
             >
               <p
@@ -91,6 +99,50 @@ const II = () => {
               >
                 <div className='size-2 bg-blue rounded-full' />
               </div>
+              <img
+                src={Mobile.src}
+                alt='icon'
+                className='w-[197px] h-[308px]'
+              />
+            </div>
+          ))}
+        </div>
+        <div className='xm:flex hidden xm:relative flex-row gap-[30px] justify-center pt-20'>
+          {iiArr.map((item, _) => (
+            <div
+              key={item.id}
+              className={`flex flex-col-reverse items-center justify-between max-w-[355px] ${
+                item.id === 1
+                  ? 'absolute left-[81px] xl:left-[60px] xm:left-[95px] xl:top-[68px] top-[90px]'
+                  : ''
+              } ${
+                item.id === 3
+                  ? 'absolute right-[75px] top-[75px] xl:right-[89px] xl:top-[47px]'
+                  : ''
+              } ${
+                item.id === 2
+                  ? 'mt-[55px] ml-[11px] xl:ml-[12px] xl:mt-[44px]'
+                  : ''
+              }`}
+            >
+              <div
+                className={`size-4 bg-cloud rounded-full mt-[14.5px] justify-center items-center flex ${
+                  item.id === 2 && 'bb:absolute bottom-[-50px] left-[178px]'
+                } ${
+                  item.id === 1 && 'bb:absolute bottom-[-42px] left-[168px]'
+                }`}
+              >
+                <div className='size-2 bg-blue rounded-full' />
+              </div>
+              <p
+                className={`text-[18px] leading-[18.4px] pt-2 h-[84px]  text-center text-dark ${
+                  item.id === 1 && 'w-[443px] left-[0px] top-[350px]'
+                } ${item.id === 2 && 'w-[350px] top-[480px] '} ${
+                  item.id === 3 && 'w-[402px] right-[-20px] top-[370px]'
+                }`}
+              >
+                {item.title}
+              </p>
               <img
                 src={Mobile.src}
                 alt='icon'
@@ -138,7 +190,7 @@ const II = () => {
         <img
           src={Line.src}
           alt='icon'
-          className='absolute hidden md:flex lg:hidden left-[0] top-[245px] w-[815px] h-[115px] lg:scale-[139%] lg:left-24 lg:top-[470px]'
+          className='absolute hidden md:flex lg:flex xl:scale-[189%] xm:top-[550px] xl:left-[190px] xm:scale-[180%] xm:w-[1000px]  left-[0] top-[245px] w-[815px] h-[115px] lg:scale-[139%] lg:left-24 lg:top-[470px]'
         />
       </div>
     </section>

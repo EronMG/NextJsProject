@@ -200,7 +200,6 @@ const Create: React.FC<BusinessItem> = () => {
                   pointerEvents: 'none', // Чтобы блок не мешал другим событиям мыши
                 }}
               >
-                {/* Содержимое блока, которое следует за курсором */}
                 <img
                   src={Mobile.src}
                   alt='icon'

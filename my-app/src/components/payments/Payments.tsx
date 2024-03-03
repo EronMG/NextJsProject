@@ -312,25 +312,25 @@ const Payments = () => {
                 </div>
                 <div>
                   <div
-                    className={`flex gap-6 flex-row-reverse justify-center ${
+                    className={`flex gap-6 flex-row-reverse items-center justify-center ${
                       item.id === 1 && 'pt-[164px] pl-[34px]'
                     } ${item.id === 3 && 'pt-[58px] pl-[27px]'}
                     ${item.id === 2 && 'pt-[214px] pl-[27px]'}`}
                   >
                     <h3
-                      className={`font-Regular text-[56px] leading-[67.2px] ${
-                        item.id !== 1 && 'text-blue'
+                      className={` text-[56px] leading-[67.2px] ${
+                        item.id !== 1 ? 'text-blue font-bold' : 'font-Regular'
                       }`}
                     >
                       {item.deleteCost} ₽
                     </h3>
                     {item.id === 2 && (
-                      <h3 className='font-Regular text-[56px] leading-[67.2px] text-dark line-through decoration-2 decoration-lime'>
+                      <h3 className='font-Regular text-[56px] pt-4 flex items-center leading-[67.2px] text-dark line-through decoration-2 decoration-lime'>
                         {item.cost}
                       </h3>
                     )}
                     {item.id === 3 && (
-                      <h3 className='font-Regular text-[56px] leading-[67.2px] text-dark line-through decoration-2 decoration-lime'>
+                      <h3 className='font-Regular text-[56px] pt-4 leading-[67.2px] text-dark line-through decoration-2 decoration-lime'>
                         {item.cost}
                       </h3>
                     )}
@@ -420,12 +420,21 @@ const Payments = () => {
                       <div className='flex gap-3 flex-row-reverse'>
                         <h3
                           className={`font-Regular text-[39px] leading-[47px] ${
-                            active === 'second' ? 'text-blue' : 'text-dark'
+                            active === 'second' ? 'text-blue' : ''
+                          } ${active === 'third' ? 'text-blue' : ''} ${
+                            item.id !== 1
+                              ? 'text-blue font-bold'
+                              : 'font-Regular'
                           }`}
                         >
                           {item.cost} ₽
                         </h3>
                         {active === 'second' && (
+                          <h3 className='font-Regular text-[39px] leading-[47px] text-dark line-through decoration-2 decoration-lime'>
+                            {item.deleteCost}
+                          </h3>
+                        )}
+                        {active === 'third' && (
                           <h3 className='font-Regular text-[39px] leading-[47px] text-dark line-through decoration-2 decoration-lime'>
                             {item.deleteCost}
                           </h3>
@@ -521,8 +530,8 @@ const Payments = () => {
                     ${item.id === 2 && 'pt-[244px] '}`}
                   >
                     <h3
-                      className={`font-Regular text-[36px] xm:text-[44px]  leading-[67.2px] ${
-                        item.id !== 1 && 'text-blue'
+                      className={` text-[36px] xm:text-[44px]  leading-[67.2px] ${
+                        item.id !== 1 ? 'text-blue font-Bold' : 'font-Regular'
                       }`}
                     >
                       {item.deleteCost} ₽
@@ -662,8 +671,8 @@ const Payments = () => {
                     ${item.id === 2 && 'pt-[121px] '}`}
                   >
                     <h3
-                      className={`font-Regular text-[22px]  leading-[26.5px] ${
-                        item.id !== 1 && 'text-blue'
+                      className={` text-[22px]  leading-[26.5px] ${
+                        item.id !== 1 ? 'text-blue font-Bold' : 'font-Regular'
                       }`}
                     >
                       {item.deleteCost} ₽
