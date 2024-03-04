@@ -41,4 +41,5 @@ export interface ExampleItem {
   id: number;
   title: string;
   subtitle: string;
+  img: string;
 }

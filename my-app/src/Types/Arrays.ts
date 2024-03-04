@@ -7,6 +7,15 @@ import {
   StepsItem,
 } from "./Types";
 
+import exampleImg1 from "@/Images/exampleImg1.png";
+import exampleImg2 from "@/Images/exampleImg2.png";
+import exampleImg3 from "@/Images/exampleImg3.png";
+import exampleImg4 from "@/Images/exampleImg4.png";
+import exampleImg5 from "@/Images/exampleImg5.png";
+import exampleImg6 from "@/Images/exampleImg6.png";
+import exampleImg7 from "@/Images/exampleImg7.png";
+import exampleImg8 from "@/Images/exampleImg8.png";
+
 export const bussinesArr: BusinessItem[] = [
   { id: 1, title: "Обрабатывает заявки клиентов быстро и без ошибок" },
   { id: 2, title: "Записывает на процедуру" },
@@ -570,47 +579,55 @@ export const exampleArr: ExampleItem[] = [
     title: "Нейро-консультант",
     subtitle:
       "Отвечает на вопросы клиентов о продуктах и услугах вашей компании в течение 10-15 сек",
+    img: exampleImg1.src,
   },
   {
     id: 2,
     title: "Нейро-техподдержка",
     subtitle:
       "Помогает вашим клиентам решить проблемы, связанные с ПО, сервисом или другим продуктом",
+    img: exampleImg2.src,
   },
   {
     id: 3,
     title: "Нейро-администратор",
     subtitle:
       "Отвечает на вопросы клиентов, может записать на процедуры, забронировать товар и пр.",
+    img: exampleImg3.src,
   },
   {
     id: 4,
     title: "Нейро-секретарь",
     subtitle:
       "Помогает руководителю обрабатывать входящую информацию, анализировать и составлять отчеты",
+    img: exampleImg4.src,
   },
   {
     id: 5,
     title: "Нейро-ассистент",
     subtitle:
       "Освобождает руководителей от рутинной работы: отвечает на вопросы клиентов, собирает отзывы, проводит опросы и пр.",
+    img: exampleImg5.src,
   },
   {
     id: 6,
     title: "Нейро-куратор",
     subtitle:
       "Заменяет или разгружает живого куратора в онлайн-школах. Оперативно отвечает на вопросы учеников 24/7",
+    img: exampleImg6.src,
   },
   {
     id: 7,
     title: "Нейро-контроль",
     subtitle:
       "Анализирует звонки отдела продаж и дает рекомендации, какие изменения внести, чтобы менеджеры закрывали больше сделок",
+    img: exampleImg7.src,
   },
   {
     id: 8,
     title: "Нейро-продажник",
     subtitle:
       "Поддерживает и вовлекает клиента в разговор, «прогревает» его, мотивирует оставить заявку",
+    img: exampleImg8.src,
   },
 ];
