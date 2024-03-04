@@ -1,12 +1,4 @@
 import { exampleArr } from "@/Types/Arrays";
-import exampleImg1 from "@/Images/exampleImg1.png";
-import exampleImg2 from "@/Images/exampleImg2.png";
-import exampleImg3 from "@/Images/exampleImg3.png";
-import exampleImg4 from "@/Images/exampleImg4.png";
-import exampleImg5 from "@/Images/exampleImg5.png";
-import exampleImg6 from "@/Images/exampleImg6.png";
-import exampleImg7 from "@/Images/exampleImg7.png";
-import exampleImg8 from "@/Images/exampleImg8.png";
 
 function Example() {
   return (
