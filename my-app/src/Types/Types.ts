@@ -43,3 +43,9 @@ export interface ExampleItem {
   subtitle: string;
   img: string;
 }
+
+export interface ExampleTickerItem {
+  id: number;
+  title: string;
+  img: string;
+}

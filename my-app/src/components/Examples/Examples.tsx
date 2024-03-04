@@ -1,4 +1,8 @@
-import { exampleArr } from "@/Types/Arrays";
+"use client";
+import React from "react";
+
+import { exampleArr, exampleTickerArr } from "@/Types/Arrays";
+import Instagram from "@/Images/instagram_icon.svg";
 
 function Example() {
   return (
@@ -87,7 +91,21 @@ function Example() {
           Нейросотрудник может общаться с клиентом практически во всех
           мессенджерах
         </h2>
-        <div className="mt-[20px] w-full h-[85px] bg-white xl:mt-[24.6px] xl:h-[106.6px] xm:mt-[28px] xm:h-[120px] xx:mt-[30px] xx:h-[131px] xb:mt-[37px] xb:h-[160px]"></div>
+        <div className="overflow-hidden flex justify-between items-center mt-[20px] w-full h-[85px] bg-white xl:mt-[24.6px] xl:h-[106.6px] xm:mt-[28px] xm:h-[120px] xx:mt-[30px] xx:h-[131px] xb:mt-[37px] xb:h-[160px]">
+          {exampleTickerArr.map((item, _) => (
+            <div
+              key={item.id}
+              className="border-[2px] border-blue rounded-[62px]"
+            >
+              <div className="flex items-center my-[18px] ml-[18px] mr-[24px] gap-[16px]">
+                <img src={item.img} alt="" className="size-[56px]" />
+                <p className="font-Medium text-dark text-[36px] leading-[46.8px]">
+                  {item.title}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

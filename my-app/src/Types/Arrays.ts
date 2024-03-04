@@ -1,6 +1,7 @@
 import {
   BusinessItem,
   ExampleItem,
+  ExampleTickerItem,
   HelpBlock,
   HelpItem,
   PaymentsBlock,
@@ -15,6 +16,18 @@ import exampleImg5 from "@/Images/exampleImg5.png";
 import exampleImg6 from "@/Images/exampleImg6.png";
 import exampleImg7 from "@/Images/exampleImg7.png";
 import exampleImg8 from "@/Images/exampleImg8.png";
+
+import InstagramICON from "@/Images/instagram_icon.svg";
+import VkICON from "@/Images/vk_icon.svg";
+import TelegramICON from "@/Images/telegram_icon.svg";
+import ViberICON from "@/Images/viber_icon.svg";
+import FacebookICON from "@/Images/facebook_icon.svg";
+import WhatsappICON from "@/Images/whatsapp_icon.svg";
+import YoulaICON from "@/Images/youla_icon.svg";
+import AvitoICON from "@/Images/avito_icon.svg";
+import BiatrixICON from "@/Images/biatrix_icon.svg";
+
+import { text } from "node:stream/consumers";
 
 export const bussinesArr: BusinessItem[] = [
   { id: 1, title: "Обрабатывает заявки клиентов быстро и без ошибок" },
@@ -629,5 +642,53 @@ export const exampleArr: ExampleItem[] = [
     subtitle:
       "Поддерживает и вовлекает клиента в разговор, «прогревает» его, мотивирует оставить заявку",
     img: exampleImg8.src,
+  },
+];
+
+export const exampleTickerArr: ExampleTickerItem[] = [
+  {
+    id: 1,
+    title: "Telegram",
+    img: TelegramICON.src,
+  },
+  {
+    id: 2,
+    title: "Вконтакте",
+    img: VkICON.src,
+  },
+  {
+    id: 3,
+    title: "Avito",
+    img: AvitoICON.src,
+  },
+  {
+    id: 4,
+    title: "WhatsApp",
+    img: WhatsappICON.src,
+  },
+  {
+    id: 5,
+    title: "Биатрикс24",
+    img: BiatrixICON.src,
+  },
+  {
+    id: 6,
+    title: "Instagram",
+    img: InstagramICON.src,
+  },
+  {
+    id: 7,
+    title: "Юла",
+    img: YoulaICON.src,
+  },
+  {
+    id: 8,
+    title: "Viber",
+    img: ViberICON.src,
+  },
+  {
+    id: 9,
+    title: "Facebook",
+    img: FacebookICON.src,
   },
 ];
