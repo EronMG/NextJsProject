@@ -6,8 +6,77 @@ import Instagram from "@/Images/instagram_icon.svg";
 
 function Example() {
   return (
-    <section className="flex justify-center items-center">
-      <div className="flex flex-col items-center bg-blue w-[701px] h-[632px] rounded-[8px] lg:w-[935px] lg:h-[843px] lg:rounded-[10.6px] xl:w-[1169px] xl:h-[1054px] xl:rounded-[13.3px] xm:w-[1315px] xm:h-[1186px] xm:rounded-[15px] xx:w-[1440px] xx:h-[1299px] xx:rounded-[16px] xb:w-[1754px] xb:h-[1582px] xb:rounded-[20px]">
+    <section className="flex justify-center items-center px-[10px] md:mx-0 mt-[199px]">
+      <div className="md:hidden flex flex-col items-center bg-blue rounded-[20px]">
+        <h2 className="font-Regular text-[22px] leading-[26.4px] text-center text-white w-[269px] mt-[32px] mb-[12px]">
+          Примеры нейросотрудников
+        </h2>
+        <div className="flex flex-wrap justify-center gap-[10px] [&>*:nth-child(odd)]:bg-cloud [&>*:nth-child(even)]:bg-lime">
+          {exampleArr.map((item, _) => (
+            <div
+              key={item.id}
+              className="flex flex-col size-[280px] rounded-[20px]"
+            >
+              <div className="flex justify-center mt-[13px] mb-[9px]">
+                <img
+                  src={item.img}
+                  alt=""
+                  className={`
+                ${item.id === 1 ? "w-[170px]" : ""}
+                ${item.id === 2 ? "w-[201px]" : ""}
+                ${item.id === 3 ? "w-[168px]" : ""}
+                ${item.id === 4 ? "w-[195px]" : ""}
+                ${item.id === 5 ? "w-[128px]" : ""}
+                ${item.id === 6 ? "w-[175px]" : ""}
+                ${item.id === 7 ? "w-[186px]" : ""}
+                ${item.id === 8 ? "w-[183px]" : ""}
+                h-[171px]`}
+                />
+              </div>
+              <div className="ml-[15px] mb-[14px] text-blue">
+                <p className="font-Medium text-[16px] leading-[20.8px]">
+                  {item.title}
+                </p>
+                <p
+                  className={`
+                  ${item.id === 1 ? "w-[80%]" : ""}
+                  ${item.id === 2 ? "w-[82%]" : ""}
+                  ${item.id === 3 ? "w-[86%]" : ""}
+                  ${item.id === 4 ? "w-[87%]" : ""}
+                  ${item.id === 5 ? "w-[92%]" : ""}
+                  ${item.id === 6 ? "w-[92%]" : ""}
+                  ${item.id === 7 ? "w-[96%]" : ""}
+                  ${item.id === 8 ? "w-[79%]" : ""}
+                  font-Regular text-[12px] leading-[15.6px]`}
+                >
+                  {item.subtitle}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <h2 className="font-Regular text-[16px] leading-[20.8px] text-center text-white mt-[37px]">
+          Нейросотрудник может общаться с клиентом практически во всех
+          мессенджерах
+        </h2>
+        <div className="flex flex-wrap bg-white rounded-[20px] w-[280px] h-[182px] mt-[16px] mb-[10px] pt-[17px] pb-[16px] px-[10px] gap-[16px]">
+          {exampleTickerArr.map((item, _) => (
+            <div
+              key={item.id}
+              className="border-[1px] border-blue rounded-[17px] h-[25px]"
+            >
+              <div className="flex items-center my-[4.85px] ml-[4.95px] mr-[7.25px] gap-[4.4px]">
+                <img src={item.img} alt="" className="size-[15.4px]" />
+                <p className="font-Medium text-dark text-[10px] leading-[13px]">
+                  {item.title}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="hidden md:flex flex-col items-center bg-blue w-[701px] h-[632px] rounded-[8px] lg:w-[935px] lg:h-[843px] lg:rounded-[10.6px] xl:w-[1169px] xl:h-[1054px] xl:rounded-[13.3px] xm:w-[1315px] xm:h-[1186px] xm:rounded-[15px] xx:w-[1440px] xx:h-[1299px] xx:rounded-[16px] xb:w-[1754px] xb:h-[1582px] xb:rounded-[20px]">
         <h2 className="text-white font-Regular text-[14.4px] leading-[18.72px] mt-[34.4px] lg:text-[19.2px] lg:leading-[24.96px] lg:mt-[46px] xl:text-[24px] xl:leading-[31.2px] xl:mt-[57px] xm:mt-[64.5px] xm:text-[27px] xm:leading-[35.1px] xx:mt-[70px] xx:text-[29px] xx:leading-[38px] xb:mt-[86px] xb:text-[36px] xb:leading-[46.8px]">
           Примеры нейросотрудников
         </h2>
